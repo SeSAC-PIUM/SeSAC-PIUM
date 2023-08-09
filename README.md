@@ -1,7 +1,7 @@
 # SeSAC-PIUM
 
 - html, css, js 파일을 생성할 때, 파일명을 폴더명과 동일하게 만들어주세요
-  ex. guide 폴더 > guide.html, guide.css, guide.js
+- ex. guide 폴더 > guide.html, guide.css, guide.js
 - 각 폴더에 html, css, js파일을 생성한 뒤 .gitkeep을 삭제해주세요.
 
 - branch명은 이름n으로 해주세요. [git branch 지현1]
