@@ -1,0 +1,117 @@
+/* 폰트 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* black */
+.main_font_BK_1 {
+  font-family: 'Pretendard-Regular';
+  color: #303030;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* gray */
+.main_font_GY_6 {
+  font-family: 'Pretendard-Regular';
+  color: #464656;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GY_5 {
+  font-family: 'Pretendard-Regular';
+  color: #626273;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GY_4 {
+  font-family: 'Pretendard-Regular';
+  color: #9090a0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GY_3 {
+  font-family: 'Pretendard-Regular';
+  color: #c6c6d0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GY_2 {
+  font-family: 'Pretendard-Regular';
+  color: #e9e9ee;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GY_1 {
+  font-family: 'Pretendard-Regular';
+  color: #f5f5f9;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* green  */
+.main_font_GN_1 {
+  font-family: 'Pretendard-Regular';
+  color: #57dd79;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GN_2 {
+  font-family: 'Pretendard-Regular';
+  color: #b3e56a;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GN_3 {
+  font-family: 'Pretendard-Regular';
+  color: #54be6f;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GN_4 {
+  font-family: 'Pretendard-Regular';
+  color: #c1eac2;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_font_GN_5 {
+  font-family: 'Pretendard-Regular';
+  color: #2da96e;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* yellow */
+.main_font_YE_5 {
+  font-family: 'Pretendard-Regular';
+  color: #fff388;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* BK_1 color: #303030
+  
+  GY_6 color: #464656
+  GY_5 color: #626273
+  GY_4 color: #9090A0
+  GY_3 color: #c6c6d0
+  GY_2 color: #e9e9ee
+  GY_1 color: #f5f5f9
+  
+  GN_1 color: #57DD79
+  GN_2 color: #B3E56A
+  GN_3 color: #54BE6F
+  GN_4 color: #C1EAC2
+  GN_5 color: #2DA96E
+  
+  YE_1 color: #FFF388 */
