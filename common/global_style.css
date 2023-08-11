@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* black */
 .main_font_BK_1 {
   font-family: 'Pretendard-Regular';
