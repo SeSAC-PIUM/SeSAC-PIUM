@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="../common/global_style.css" />
+    <script defer src="./profile.js"></script>
+  </head>
+
+  <style>
+    .profile_container {
+    }
+    .profile_container .profile_header {
+      width: 620px;
+      width: 680px;
+      padding: 64px 0px 40px 0px;
+      text-align: center;
+      border-bottom: 1px solid var(--color-grayscale-600);
+
+      margin: 0 auto;
+    }
+
+    .profile_container .profile_header h1 {
+      color: #464656;
+      font-family: Pretendard;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; /* 32px */
+    }
+    .profile_container .profile_header h1 .profile_header_point {
+      color: #2da96e;
+      font-family: Pretendard;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+    }
+
+    .profile_container .profile_contents_container {
+      margin: 0 auto;
+      max-width: 696px; /* 컨테이너의 최대 너비를 설정 */
+      /* border: 1px solid red; */
+      padding: 40px 16px;
+    }
+
+    .profile_container .profile_contents_container .profile_contents {
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap {
+      display: flex;
+      /* justify-content: space-between; */
+      padding-bottom: 48px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title {
+      width: 144px;
+      position: relative;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title
+      .profile_modal {
+      display: none;
+      position: absolute;
+      top: 24px;
+      left: 0;
+      width: 186px;
+      height: auto;
+      padding: 32px 16px;
+      z-index: 1;
+
+      border-radius: 4px;
+      border: 1px solid #e9e9ee;
+      background: #fff;
+      /* 1 */
+      box-shadow: 2px 2px 4px 0px rgba(211, 211, 211, 0.25);
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title
+      .profile_modal_content {
+      font-weight: 500;
+      line-height: 160%;
+      letter-spacing: -0.14px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .label_container
+      label {
+      margin-right: 32px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title_box {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title_box
+      div {
+      padding-right: 8px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title_box
+      span {
+      display: flex;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .input {
+      display: flex;
+      width: 360px;
+      padding: 16px 32px;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid #e9e9ee;
+    }
+
+    /* .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .input:active {
+      border: 1px solid #2da96e;
+    } */
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .desiredPosition_container {
+      display: flex;
+      width: auto;
+      padding: 16px;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid #e9e9ee;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .profile_content {
+    }
+
+    .profile_contents_container .button_container {
+      margin: 0 auto;
+      width: 360px;
+    }
+
+    .profile_contents_container .button_container .success_button {
+      width: 100%;
+      padding: 16px 0px;
+      border: none;
+      border-radius: 4px;
+      background: #2da96e;
+      color: #ffffff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .styled_dropdown {
+      width: 296px;
+      padding: 16px 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    .styled_dropdown option {
+      padding: 8px 30px;
+    } */
+
+    /* 커스텀 스타일링된 드롭다운 */
+
+    .dropdown_wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .custom_dropdown {
+      position: relative;
+      display: flex;
+      padding-bottom: 8px;
+    }
+
+    .custom_dropdown select {
+      display: none; /* 기본 드롭다운 숨기기 */
+    }
+
+    .custom_dropdown .dropdown_selected {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 360px;
+      height: 50px;
+      padding: 16px 32px;
+      border: 1px solid #e9e9ee;
+      border-radius: 4px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .custom_dropdown .dropdown_list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      display: none;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      background-color: white;
+      padding: 8px 16px;
+      z-index: 1;
+    }
+
+    .custom_dropdown .dropdown_list.active {
+      display: block;
+    }
+
+    .custom_dropdown .dropdown_item {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    input[type='radio'] {
+      /* display: none; */
+    }
+
+    /* 커스텀 라디오 버튼 스타일 */
+    .custom-radio {
+      display: inline-block;
+      width: auto;
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    /* 체크되었을 때 이미지 변경 */
+    .radio-image-1:checked + .custom-radio {
+      /* background-image: url("../src/img/Radio_Button_1.png"); */
+    }
+
+    .radio-image-2:checked + .custom-radio {
+      /* background-image:  url("../src/img/Radio_Button_1.png"); */
+    }
+    .btn-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* padding: 16px; */
+    }
+
+    .btn {
+      display: flex;
+      padding: 8px 16px;
+
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 4px;
+      border: 1px solid #e9e9ee;
+      /* background: #FFF; */
+      font-size: 14px;
+      margin: 4px;
+    }
+
+    .btn:hover,
+    .btn:active {
+      border: 1px solid #2da96e;
+      background-color: #2da96e;
+      color: rgb(239, 239, 239);
+      cursor: pointer;
+    }
+
+    .btn.selected {
+      border: 1px solid #2da96e;
+      background-color: #2da96e;
+      color: rgb(239, 239, 239);
+    }
+  </style>
+
+  <body>
+    <div class="profile_container">
+      <div class="profile_header">
+        <h1>
+          프로젝트를 위한
+          <span class="profile_header_point">기본정보</span> 입력
+        </h1>
+      </div>
+
+      <div class="profile_contents_container">
+        <div class="profile_contents">
+          <div class="profile_content_wrap 01">
+            <div class="title">
+              <div class="title_box">
+                <div>이름</div>
+                <span> <img src="../src/img/Group 629971.png" /></span>
+              </div>
+              <div class="profile_modal">
+                <div class="profile_modal_content">{name.text}</div>
+              </div>
+            </div>
+            <input type="text" class="input" />
+          </div>
+
+          <div class="profile_content_wrap 02">
+            <div class="title">
+              <div class="title_box">
+                <div>수강 교육과정</div>
+                <span> <img src="../src/img/Group 629971.png" /></span>
+              </div>
+            </div>
+
+            <div class="dropdown_wrap">
+              <div class="custom_dropdown">
+                <div class="dropdown_selected">
+                  <div>캠퍼스 선택하기</div>
+                  <span>
+                    <img src="../src/img/dropDown.png" alt="" />
+                  </span>
+                </div>
+
+                <select id="campusDropdown">
+                  <option value="강동캠퍼스">강동캠퍼스</option>
+                  <option value="금천캠퍼스">금천캠퍼스</option>
+                  <option value="여의도캠퍼스">여의도캠퍼스</option>
+                  <option value="기타캠퍼스">기타캠퍼스</option>
+                </select>
+                <div class="dropdown_list">
+                  <div class="dropdown_item">강동캠퍼스</div>
+                  <div class="dropdown_item">금천캠퍼스</div>
+                  <div class="dropdown_item">여의도캠퍼스</div>
+                  <div class="dropdown_item">기타캠퍼스</div>
+                </div>
+              </div>
+
+              <div class="custom_dropdown">
+                <div class="dropdown_selected">
+                  <div>클래스 선택하기</div>
+                  <span>
+                    <img src="../src/img/dropDown.png" alt="" />
+                  </span>
+                </div>
+
+                <select id="campusDropdown">
+                  <option value="웹퍼블리싱">웹퍼블리싱</option>
+                  <option value="마케팅">마케팅</option>
+                </select>
+                <div class="dropdown_list">
+                  <div class="dropdown_item">웹퍼블리싱</div>
+                  <div class="dropdown_item">마케팅</div>
+                </div>
+              </div>
+              <p style="padding-top: 8px; font-size: 14px">
+                나의 수강내역 : <span id="selectedCampus"></span>
+              </p>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 03">
+            <div class="title">
+              <div class="title_box">
+                <div>성별</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-1" />
+                <span class="custom-radio">여자</span>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-2" />
+                <span class="custom-radio">남자</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-2" />
+                <span class="custom-radio">미선택</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 04">
+            <div class="title">
+              <div class="title_box">
+                <div>희망직무</div>
+                <span> <img src="../src/img/Group 629971.png" /></span>
+              </div>
+            </div>
+
+            <div class="desiredPosition_container">
+              <div class="btn-list">
+                <div
+                  class="btn selected"
+                  id="btn selected"
+                  onclick="openAnswer(0)"
+                >
+                  기획
+                </div>
+                <div class="btn" id="btn" onclick="openAnswer(1)">
+                  UX/UI디자인
+                </div>
+                <div class="btn" id="btn" onclick="openAnswer(2)">퍼블리싱</div>
+                <div class="btn" id="btn" onclick="openAnswer(3)">
+                  프론트엔드
+                </div>
+                <div class="btn" id="btn" onclick="openAnswer(4)">백엔드</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 05">
+            <div class="title">
+              <div class="title_box">
+                <div>멘토/멘티</div>
+                <span> <img src="../src/img/Group 629971.png" /></span>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-1" />
+                <span class="custom-radio">멘토</span>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-2" />
+                <span class="custom-radio">멘티</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="button_container">
+          <button class="success_button">가입완료</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const campusDropdown = document.getElementById('campusDropdown');
+      const selectedCampusSpan = document.getElementById('selectedCampus');
+      const dropdownSelected = document.querySelector('.dropdown_selected');
+      const dropdownList = document.querySelector('.dropdown_list');
+
+      campusDropdown.addEventListener('change', () => {
+        selectedCampusSpan.textContent = campusDropdown.value;
+      });
+
+      dropdownSelected.addEventListener('click', () => {
+        dropdownList.classList.toggle('active');
+      });
+
+      // 드롭다운 리스트 아이템을 클릭하여 선택
+      const dropdownItems = document.querySelectorAll('.dropdown_item');
+      dropdownItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          selectedCampusSpan.textContent = item.textContent;
+          dropdownList.classList.remove('active');
+        });
+      });
+      // const campusDropdown = document.getElementById('campusDropdown');
+      // const selectedCampusSpan = document.getElementById('selectedCampus');
+
+      // campusDropdown.addEventListener('change', () => {
+      //   selectedCampusSpan.textContent = campusDropdown.value;
+      // });
+
+      let selectedBtnIndex = 0;
+      const btns = document.querySelectorAll('.btn');
+      // const answers = document.querySelectorAll('.answer');
+
+      function setInitialState() {
+        answers[selectedBtnIndex].classList.add('show');
+        btns[selectedBtnIndex].classList.add('selected');
+      }
+
+      btns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          //모든 explain-answer초기화
+          answers.forEach((answer) => {
+            answer.classList.remove('show');
+          });
+
+          btns.forEach((btn) => {
+            btn.classList.remove('selected');
+          });
+
+          // 선택된 버튼과 연결된 explain-answer만 보이도록 설정
+          answers[index].classList.add('show');
+
+          // 선택된 버튼의 배경색을 변경
+          btns[index].classList.add('selected');
+
+          selectedBtnIndex = index;
+        });
+      });
+
+      selectedBtnIndex;
+
+      // modal hover
+      const profileModal = document.querySelector('.profile_modal');
+      const titleBox = document.querySelector('.title_box');
+
+      titleBox.addEventListener('mouseenter', () => {
+        profileModal.style.display = 'block';
+      });
+
+      titleBox.addEventListener('mouseleave', () => {
+        profileModal.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>

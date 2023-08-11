@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project</title>
+    <link rel="stylesheet" href="../common/global_style.css" />
+  </head>
+
+  <style>
+    .section_3.title {
+      display: flex;
+      align-items: center;
+    }
+    .section_3.title div {
+      color: #303030;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+    }
+
+    .section_3.title span {
+      display: flex;
+      justify-content: center;
+    }
+
+    .section_3.sub_title {
+      display: flex;
+      justify-content: space-between;
+    }
+    .section_3.sub_title div {
+      color: #626273;
+      font-family: Pretendard;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; /* 14px */
+    }
+
+    .card {
+      width: 282px;
+      height: 328px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+      border: 1px solid #f5f5f9;
+    }
+
+    .thumbnail {
+      flex: 1.5;
+      position: relative;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .like_button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .heart_icon::before {
+      content: '\2661'; /* 빈 하트 유니코드 */
+    }
+
+    .like_button.clicked .heart_icon::before {
+      content: '\2665'; /* 빨간 하트 유니코드 */
+      color: red;
+    }
+    .card_content {
+      flex: 1;
+      padding: 16px;
+      /* border-top: 1px solid #ccc; */
+    }
+
+    .card_content h3 {
+      margin: 0;
+    }
+
+    .Recruiting_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 88px;
+      /* border: 1px solid red; */
+    }
+    .Recruiting_container.Recruiting {
+    }
+    .Recruiting_container.Recruiting_member {
+    }
+
+    .Recruiting_container.Recruiting_information {
+    }
+    .Recruiting_container span {
+      display: flex;
+      width: 16px;
+    }
+    .Recruiting_container span img {
+      width: 100%;
+    }
+
+    .Recruiting_container:hover {
+    }
+
+    .modal {
+      display: none;
+      position: absolute;
+      bottom: calc(100% - 32px);
+      bottom: 10px;
+      left: 110px;
+      width: 186px;
+      height: auto;
+      padding: 24px;
+      z-index: 1;
+
+      border-radius: 4px;
+      border: 1px solid #e9e9ee;
+      background: #fff;
+      /* 1 */
+      box-shadow: 2px 2px 4px 0px rgba(211, 211, 211, 0.25);
+    }
+    .modal .group_list {
+      width: 100%;
+    }
+
+    .modal .group_list .group {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #e9e9ee;
+    }
+
+    .modal .group_list .group .group_position {
+      font-size: 14px;
+    }
+
+    .modal .group_list .group .group_position_member {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+
+    .modal .group_list .group .group_position_member .mentor {
+      padding-bottom: 8px;
+    }
+
+    .modal .group_list .group .group_position_member .mentee {
+    }
+
+    .card_footer {
+      flex: 0.3;
+      padding: 16px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      font-size: 14px;
+      border-top: 1px solid #e9e9ee;
+    }
+
+    .card_footer.card_footer_like {
+      width: 32px;
+      display: flex;
+    }
+
+    .card_footer.card_footer_like span {
+    }
+    .card_footer.card_footer_like.card_footer_like_counts {
+    }
+  </style>
+  <body>
+    <!-- <div class="container">
+    <div class="Thumbnail"></div>
+
+</div> -->
+    <div class="section_3 title">
+      <div>곧 마감 프로젝트 🚨</div>
+      <span>
+        <img src="../src/img/next.png" alt="" />
+      </span>
+    </div>
+    <div class="section_3 sub_title main_font_BK_1" style="font-size: 24px">
+      <p>당신만 오면 바로 시작되는 프로젝트!</p>
+      <p>더보기</p>
+    </div>
+    <div class="card">
+      <div class="thumbnail">
+        <img src="../src/img/thumbnail.png" alt="Thumbnail" />
+        <div class="like_button">
+          <span class="heart_icon"></span>
+        </div>
+      </div>
+      <div class="card_content">
+        <h3>[캠퍼스명] 프로젝트 타이틀</h3>
+        <p>프로젝트 설명란입니다.</p>
+      </div>
+      <div class="card_footer">
+        <div class="Recruiting_container">
+          <div class="Recruiting">모집중</div>
+          <div class="Recruiting_member">4/5</div>
+          <span class="Recruiting_information">
+            <img src="../src/img/Group 629971.png" />
+          </span>
+        </div>
+        <div class="modal">
+          <div class="group_list">
+            <div class="group">
+              <div class="group_position">기획</div>
+              <div class="group_position_member">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group_position">UX/UI디자인</div>
+              <div class="group_position_member">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group_position">퍼블리싱</div>
+              <div class="group_position_member">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group_position">프론트엔드</div>
+              <div class="group_position_member">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group" style="border-bottom: none">
+              <div class="group_position">백엔드</div>
+              <div class="group_position_member">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card_footer_like">
+          <span>❤</span>
+          <!-- <img class="heart_image" src="../src/img/Heart_02.png" alt="Heart" /> -->
+          0
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const likeButton = document.querySelector('.like_button');
+      const heartImage = document.querySelector('.heart_image');
+      const cardFooter = document.querySelector('.card_footer_like');
+      const recruitingContainer = document.querySelector(
+        '.Recruiting_container'
+      );
+
+      // project modal hover
+      const modal = document.querySelector('.modal');
+
+      recruitingContainer.addEventListener('mouseenter', () => {
+        modal.style.display = 'block';
+      });
+      recruitingContainer.addEventListener('mouseleave', () => {
+        modal.style.display = 'none';
+      });
+
+      let isClicked = false;
+      let clickCount = 0;
+
+      // 페이지 로드 시 로컬 스토리지에서 클릭 상태를 가져와서 복원
+      //   document.addEventListener('DOMContentLoaded', () => {
+      //     const storedClickCount = localStorage.getItem('clickCount');
+      //     if (storedClickCount) {
+      //       clickCount = parseInt(storedClickCount);
+      //       isClicked = clickCount > 0;
+      //       updateCardFooter();
+      //     }
+      //   });
+
+      likeButton.addEventListener('click', () => {
+        if (!isClicked) {
+          likeButton.classList.add('clicked');
+          clickCount++;
+          isClicked = true;
+        } else {
+          likeButton.classList.remove('clicked');
+          clickCount--;
+          isClicked = false;
+        }
+
+        // 클릭 상태를 로컬 스토리지에 저장
+        localStorage.setItem('clickCount', clickCount.toString());
+
+        updateCardFooter();
+      });
+
+      function updateCardFooter() {
+        cardFooter.textContent = `❤ ${clickCount}`;
+        //   function updateCardFooter() {
+        //     if (isClicked) {
+        //       heartImage.src = '../src/img/Heart_02.png';
+        //     } else {
+        //       heartImage.src = '../src/img/empty_Heart_02.png';
+        //     }
+
+        //     cardFooter.textContent = `${clickCount}`;
+      }
+    </script>
+  </body>
+</html>
