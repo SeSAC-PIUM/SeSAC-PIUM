@@ -4,7 +4,7 @@
 .btn_width_146px {
   width: 146px;
   padding: 12px 0;
-  border: 1px solid #E9E9EE;
+  border: 1px solid #e9e9ee;
   border-radius: 4px;
   text-align: center;
   background-color: #fff;
@@ -63,7 +63,7 @@ main .filter_wrap .filter_btn + ul.on {
   display: flex;
 }
 main .filter_wrap .filter_item_list {
-  border: 1px solid #E9E9EE;
+  border: 1px solid #e9e9ee;
   display: none;
   width: fit-content;
   padding: 16px;
@@ -80,7 +80,7 @@ main .filter_wrap .filter_left .campus_filter .filter_item_list {
   width: 510px;
 }
 main .filter_wrap .filter_left .filter_item_list li {
-  border: 1px solid #E9E9EE;
+  border: 1px solid #e9e9ee;
   padding: 8px 16px;
   background-color: #fff;
   border-radius: 4px;
@@ -91,11 +91,11 @@ main .filter_wrap .filter_left .filter_item_list li {
 }
 main .filter_wrap .filter_left .filter_item_list li.all {
   color: #fff;
-  background-color: #2DA96E;
+  background-color: #2da96e;
 }
 main .filter_wrap .filter_left .filter_item_list li.on {
-  border: 1px solid #2DA96E;
-  color: #2DA96E;
+  border: 1px solid #2da96e;
+  color: #2da96e;
 }
 main .filter_wrap .filter_left .campus_filter .filter_item_list li {
   width: 69px;
@@ -110,10 +110,14 @@ main .filter_wrap .filter_left .filter_selection_wrap .filter_selection_alert {
   display: none;
   position: absolute;
   top: -20px;
-  color: #FF6868;
+  color: #ff6868;
   font-size: 12px;
 }
-main .filter_wrap .filter_left .filter_selection_wrap .filter_selection_alert.on {
+main
+  .filter_wrap
+  .filter_left
+  .filter_selection_wrap
+  .filter_selection_alert.on {
   display: block;
 }
 main .filter_wrap .filter_left .filter_selection_wrap .filter_selection {
@@ -133,7 +137,7 @@ main .filter_wrap .filter_left .filter_selection li::after {
   margin-left: 4px;
 }
 main .filter_wrap .filter_left .filter_submit_btn {
-  background-color: #2DA96E;
+  background-color: #2da96e;
   color: #fff;
   border: none;
   height: fit-content;
@@ -150,7 +154,7 @@ main .filter_wrap .filter_right .recruit_complete_checkbox {
 }
 main .filter_wrap .filter_right .recruit_complete_checkbox i {
   color: #fff;
-  background-color: #2DA96E;
+  background-color: #2da96e;
   font-size: 12px;
   width: 16px;
   text-align: center;
@@ -163,7 +167,7 @@ main .filter_wrap .filter_right .recruit_complete_checkbox i {
 main .filter_wrap .filter_right .recruit_complete_checkbox i.on {
   color: #fff;
   background-color: #fff;
-  border: 1px solid #2DA96E;
+  border: 1px solid #2da96e;
 }
 main .filter_wrap .filter_right .recruit_complete_checkbox i::before {
   position: relative;
