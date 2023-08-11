@@ -186,7 +186,7 @@
         <img src="../src/img/next.png" alt="" />
       </span>
     </div>
-    <div class="section_3 sub_title">
+    <div class="section_3 sub_title main_font_BK_1" style="font-size: 24px">
       <p>당신만 오면 바로 시작되는 프로젝트!</p>
       <p>더보기</p>
     </div>
@@ -267,12 +267,13 @@
       const recruitingContainer = document.querySelector(
         '.Recruiting_container'
       );
+
+      // project modal hover
       const modal = document.querySelector('.modal');
 
       recruitingContainer.addEventListener('mouseenter', () => {
         modal.style.display = 'block';
       });
-
       recruitingContainer.addEventListener('mouseleave', () => {
         modal.style.display = 'none';
       });

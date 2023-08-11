@@ -1,0 +1,21 @@
+:root {
+  /* green scale */
+  --color-main-green: #57dd79;
+  --color-main-light-green: #b3e56a;
+
+  /* grey scale */
+  --color-grayscale-100: #f5f5f9;
+  --color-grayscale-200: #e9e9ee;
+  --color-grayscale-300: #c6c6d0;
+  --color-grayscale-400: #9090a0;
+  --color-grayscale-500: #626273;
+  --color-grayscale-600: #464656;
+
+  /* black */
+  --color-text-black: #303030;
+
+  /* yellow */
+  --color-text-yellow: #fff388;
+
+  /* bold */
+}
