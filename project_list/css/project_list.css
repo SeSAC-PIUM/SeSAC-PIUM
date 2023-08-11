@@ -1,0 +1,160 @@
+@import url(reset.css);
+@import url(/common/global_style.css);
+
+.btn_width_146px {
+  width: 146px;
+  padding: 12px 0;
+  border: 1px solid #E9E9EE;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #fff;
+}
+
+* {
+  font-family: 'Pretendard-Regular';
+}
+body {
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+main {
+  padding-top: 64px;
+}
+main .search_wrap {
+  width: 443px;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 2px solid #000;
+  padding-bottom: 12px;
+}
+main .search_wrap input {
+  text-align: center;
+  flex: 1;
+  font-size: 24px;
+  border: none;
+  font-weight: bold;
+}
+main .search_wrap i {
+  font-size: 24px;
+  padding-right: 10px;
+}
+main .filter_wrap {
+  display: flex;
+  margin-top: 84px;
+  justify-content: space-between;
+}
+main .filter_wrap .filter_left {
+  display: flex;
+  align-items: center;
+}
+main .filter_wrap .filter_left .role_filter {
+  margin-right: 8px;
+}
+main .filter_wrap .filter_btn {
+  cursor: pointer;
+}
+main .filter_wrap .filter_btn i {
+  cursor: pointer;
+  margin-left: 8px;
+}
+main .filter_wrap .filter_btn + ul.on {
+  display: flex;
+}
+main .filter_wrap .filter_item_list {
+  border: 1px solid #E9E9EE;
+  display: none;
+  width: fit-content;
+  padding: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 9px;
+  position: absolute;
+  background-color: #fff;
+}
+main .filter_wrap .filter_left .role_filter .filter_item_list {
+  width: 304px;
+}
+main .filter_wrap .filter_left .campus_filter .filter_item_list {
+  width: 510px;
+}
+main .filter_wrap .filter_left .filter_item_list li {
+  border: 1px solid #E9E9EE;
+  padding: 8px 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+}
+main .filter_wrap .filter_left .filter_item_list li.all {
+  color: #fff;
+  background-color: #2DA96E;
+}
+main .filter_wrap .filter_left .filter_item_list li.on {
+  border: 1px solid #2DA96E;
+  color: #2DA96E;
+}
+main .filter_wrap .filter_left .campus_filter .filter_item_list li {
+  width: 69px;
+}
+main .filter_wrap .filter_left .filter_selection {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+main .filter_wrap .filter_left .filter_selection li {
+  margin-right: 16px;
+}
+main .filter_wrap .filter_left .filter_selection li::after {
+  content: '\f00d';
+  font-family: 'fontawesome';
+  margin-left: 4px;
+  cursor: pointer;
+}
+main .filter_wrap .filter_left .filter_submit_btn {
+  background-color: #2DA96E;
+  color: #fff;
+  border: none;
+  height: fit-content;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+main .filter_wrap .filter_right {
+  display: flex;
+  align-items: center;
+}
+main .filter_wrap .filter_right .recruit_complete_checkbox {
+  margin-right: 21px;
+}
+main .filter_wrap .filter_right .recruit_complete_checkbox i {
+  color: #fff;
+  background-color: #2DA96E;
+  font-size: 12px;
+  width: 16px;
+  text-align: center;
+  height: 16px;
+  vertical-align: top;
+  border-radius: 2px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+main .filter_wrap .filter_right .recruit_complete_checkbox i::before {
+  position: relative;
+  top: 2px;
+}
+main .filter_wrap .filter_right .order_filter .filter_item_list {
+  flex-direction: column;
+  width: 146px;
+  text-align: center;
+}
+main .filter_wrap .filter_right .order_filter .filter_item_list li {
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+main .filter_wrap .filter_right .order_filter .filter_item_list li:last-child {
+  margin-bottom: 0;
+}
