@@ -100,19 +100,37 @@ main .filter_wrap .filter_left .filter_item_list li.on {
 main .filter_wrap .filter_left .campus_filter .filter_item_list li {
   width: 69px;
 }
-main .filter_wrap .filter_left .filter_selection {
-  display: flex;
-  align-items: center;
+main .filter_wrap .filter_left .filter_selection_wrap {
+  position: relative;
+  /* width: 350px; */
   margin-left: 16px;
 }
-main .filter_wrap .filter_left .filter_selection li {
-  margin-right: 16px;
+main .filter_wrap .filter_left .filter_selection_wrap .filter_selection_alert {
+  /* display: block; */
+  display: none;
+  position: absolute;
+  top: -20px;
+  color: #FF6868;
+  font-size: 12px;
 }
+main .filter_wrap .filter_left .filter_selection_wrap .filter_selection_alert.on {
+  display: block;
+}
+main .filter_wrap .filter_left .filter_selection_wrap .filter_selection {
+  display: flex;
+  align-items: center;
+}
+main .filter_wrap .filter_left .filter_selection_wrap .filter_selection li {
+  margin-right: 16px;
+  cursor: pointer;
+}
+/* main .filter_wrap .filter_left .filter_selection_wrap .filter_selection li.on {
+  display: none;
+} */
 main .filter_wrap .filter_left .filter_selection li::after {
   content: '\f00d';
   font-family: 'fontawesome';
   margin-left: 4px;
-  cursor: pointer;
 }
 main .filter_wrap .filter_left .filter_submit_btn {
   background-color: #2DA96E;
@@ -142,6 +160,11 @@ main .filter_wrap .filter_right .recruit_complete_checkbox i {
   margin-left: 8px;
   cursor: pointer;
 }
+main .filter_wrap .filter_right .recruit_complete_checkbox i.on {
+  color: #fff;
+  background-color: #fff;
+  border: 1px solid #2DA96E;
+}
 main .filter_wrap .filter_right .recruit_complete_checkbox i::before {
   position: relative;
   top: 2px;
@@ -150,11 +173,19 @@ main .filter_wrap .filter_right .order_filter .filter_item_list {
   flex-direction: column;
   width: 146px;
   text-align: center;
+  border-radius: 4px;
+  /* justify-content: center; */
 }
 main .filter_wrap .filter_right .order_filter .filter_item_list li {
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
 }
 main .filter_wrap .filter_right .order_filter .filter_item_list li:last-child {
   margin-bottom: 0;
+}
+main .filter_wrap .filter_right .order_filter .filter_item_list li:hover {
+  background-color: rgba(45, 169, 109, 0.5);
 }
