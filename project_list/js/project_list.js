@@ -82,6 +82,10 @@ window.addEventListener('DOMContentLoaded', () => {
       console.log(campus_filter_sum);
       campus_filter_li.forEach((campus_filter_li_ele) => {
         if (campus_filter_li_ele.classList.contains('on')) {
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
           const li = document.createElement('li');
           li.innerText = campus_filter_li_ele.innerText;
           console.log(li);
