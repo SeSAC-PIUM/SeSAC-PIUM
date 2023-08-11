@@ -86,6 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
           li.innerText = campus_filter_li_ele.innerText;
           console.log(li);
           filter_selection.append(li);
+          // console.log(campus_filter_li_ele)
         }
       });
 
