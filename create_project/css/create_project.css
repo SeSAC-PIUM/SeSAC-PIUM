@@ -1,0 +1,24 @@
+@import url(reset.css);
+@import url(/common/global_style.css);
+
+* {
+  font-family: 'Pretendard-Regular';
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+main .page_tit {
+  padding: 64px 0;
+  text-align: center;
+}
+main section {
+
+}
+main section .sec_tit {
+  text-align: center;
+}
+main section .sec_cont_wrap {
+
+}
