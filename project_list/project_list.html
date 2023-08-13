@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/project_list.css">
+  <script src="https://kit.fontawesome.com/e00cbd24a5.js" crossorigin="anonymous"></script>
+  <script defer src="./js/project_list.js"></script>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div class="search_wrap">
+        <input type="text" value="여행">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="filter_wrap">
+        <div class="filter_left">
+          <div class="role_filter">
+            <div class="btn_width_146px filter_btn">
+              직무 선택
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="filter_item_list">
+              <li class="all">전체</li>
+              <li>기획</li>
+              <li>UX/UI디자인</li>
+              <li>퍼블리싱</li>
+              <li>프론트엔드</li>
+              <li>백엔드</li>
+            </ul>
+          </div>
+          <div class="campus_filter">
+            <div class="btn_width_146px filter_btn">
+              캠퍼스 선택
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="filter_item_list">
+              <li class="all">전체</li>
+              <li>강동</li>
+              <li>강서</li>
+              <li>광진</li>
+              <li>금천</li>
+              <li>동작</li>
+              <li>마포</li>
+              <li>서대문</li>
+              <li>용산</li>
+              <li>종로</li>
+              <li>중구</li>
+            </ul>
+          </div>
+          <div class="filter_selection_wrap">
+            <p class="filter_selection_alert">최대 5개까지 선택 가능합니다</p>
+            <ul class="filter_selection"></ul>
+          </div>
+          <button class="filter_submit_btn">완료</button>
+        </div>
+        <div class="filter_right">
+          <div class="recruit_complete_checkbox btn_width_146px">
+            모집완료 포함
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="order_filter">
+            <div class="btn_width_146px filter_btn">
+              최신순
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="filter_item_list">
+              <li>최신순</li>
+              <li>인기순</li>
+              <li>마감임박</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

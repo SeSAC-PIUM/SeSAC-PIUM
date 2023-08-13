@@ -1,0 +1,98 @@
+.leader_wrapper::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 40%;
+  background-color: var(--color-grayscale-400);
+  left: -150px;
+  transform: translateY(65px);
+}
+
+.leader_wrapper {
+  position: relative;
+}
+
+main .inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+main h3 {
+  font-size: 40px;
+  margin-top: 212px;
+  margin-bottom: 100px;
+  text-align: center;
+  font-weight: 600;
+}
+
+main h3 .pium_color {
+  color: #2da96e;
+}
+
+main .inner section {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .inner section h4 {
+  color: var(--color-grayscale-600);
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+main .inner section .member_start {
+  display: flex;
+}
+
+main .inner section .box_wrapper .green_box {
+  width: 282px;
+  height: 124px;
+  background-color: #2da96e;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: center;
+  padding: 2rem;
+  margin-right: 1.5rem;
+}
+
+main .inner section .box_wrapper .green_box .yellowgreen_text {
+  color: #fff388;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+main .inner section .box_wrapper .green_box .white_text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+main .inner section .box_wrapper .green_box span {
+  margin: 3px 0;
+}
+
+main .inner section .box_wrapper .explain_box {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-grayscale-500);
+  line-height: 22.4px;
+  margin-top: 10px;
+  padding: 0 0.5rem;
+}
+
+/* button */
+main .inner .button {
+  display: block;
+  width: 360px;
+  height: 48px;
+  background-color: var(--color-grayscale-600);
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  margin: 160px auto 8%;
+}
