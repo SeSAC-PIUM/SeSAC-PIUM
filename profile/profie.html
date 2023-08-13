@@ -23,23 +23,6 @@
       margin: 0 auto;
     }
 
-    .profile_container .profile_header h1 {
-      color: #464656;
-      font-family: Pretendard;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 100%; /* 32px */
-    }
-    .profile_container .profile_header h1 .profile_header_point {
-      color: #2da96e;
-      font-family: Pretendard;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 100%;
-    }
-
     .profile_container .profile_contents_container {
       margin: 0 auto;
       max-width: 696px; /* 컨테이너의 최대 너비를 설정 */
@@ -86,7 +69,7 @@
       border-radius: 4px;
       border: 1px solid #e9e9ee;
       background: #fff;
-      /* 1 */
+
       box-shadow: 2px 2px 4px 0px rgba(211, 211, 211, 0.25);
     }
 
@@ -322,7 +305,7 @@
         <div class="profile_contents">
           <div class="profile_content_wrap 01">
             <div class="title">
-              <div class="title_box">
+              <div class="title_box" style="border: 1px solid red">
                 <div class="ques_text">이름</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
@@ -507,8 +490,8 @@
       selectedBtnIndex;
 
       // modal hover
-      const profileModal = document.querySelector('.profile_modal');
       const titleBox = document.querySelector('.title_box');
+      const profileModal = document.querySelector('.profile_modal');
 
       titleBox.addEventListener('mouseenter', () => {
         profileModal.style.display = 'block';
