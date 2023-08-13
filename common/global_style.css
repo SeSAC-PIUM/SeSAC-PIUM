@@ -15,6 +15,16 @@
 }
 
 /* 버튼 */
+/* signUp 버튼 */
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-grayscale-200);
+  font-size: 14px;
+  margin: 4px;
+  color: var(--color-grayscale-600);
+}
+
 .button {
   padding: 8px 16px;
   border-radius: 4px;
@@ -25,7 +35,7 @@
 }
 
 .button_default {
-  width: 100px;
+  /* width: 100px; */
   background-color: var(--color-grayscale-100);
   color: var(--color-grayscale-500);
   border: 1px solid var(--color-grayscale-200);
@@ -45,14 +55,22 @@
   border: 1px solid var(--color-main-green);
 }
 
+.input {
+  display: flex;
+  width: 360px;
+  padding: 16px 32px;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--color-grayscale-200);
+}
 /* project_list, profile등 */
-.box_container {
+/* .box_container {
   padding: 16px;
   border-radius: 4px;
   font-size: 14px;
   white-space: nowrap;
   text-align: center;
-}
+} */
 
 /* width, position top bottom 등은 각자 조절해서 사용할 것 */
 .profile_modal {
@@ -69,7 +87,13 @@
   box-shadow: 2px 2px 4px 0px rgba(211, 211, 211, 0.25);
 }
 
-.project_header_container {
+.box {
+  display: flex;
+  width: auto;
+  padding: 16px;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--color-grayscale-200);
 }
 
 /* 카드 */

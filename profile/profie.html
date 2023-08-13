@@ -143,12 +143,12 @@
       .profile_contents
       .profile_content_wrap
       .input {
-      display: flex;
+      /* display: flex;
       width: 360px;
       padding: 16px 32px;
       align-items: center;
       border-radius: 4px;
-      border: 1px solid #e9e9ee;
+      border: 1px solid #e9e9ee; */
     }
 
     /* .profile_container
@@ -294,20 +294,6 @@
       /* padding: 16px; */
     }
 
-    .btn {
-      display: flex;
-      padding: 8px 16px;
-
-      justify-content: center;
-      align-items: center;
-
-      border-radius: 4px;
-      border: 1px solid #e9e9ee;
-      /* background: #FFF; */
-      font-size: 14px;
-      margin: 4px;
-    }
-
     .btn:hover,
     .btn:active {
       border: 1px solid #2da96e;
@@ -324,11 +310,11 @@
   </style>
 
   <body>
-    <div class="profile_container">
+    <div class="profile_container ques_text">
       <div class="profile_header">
-        <div class="title_BK_32px_600">
+        <div class="section_title">
           프로젝트를 위한
-          <span class="title_GR_32px_600">기본정보</span> 입력
+          <span class="section_title_point">기본정보</span> 입력
         </div>
       </div>
 
@@ -337,7 +323,7 @@
           <div class="profile_content_wrap 01">
             <div class="title">
               <div class="title_box">
-                <div>이름</div>
+                <div class="ques_text">이름</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
               <div class="profile_modal">
@@ -350,7 +336,7 @@
           <div class="profile_content_wrap 02">
             <div class="title">
               <div class="title_box">
-                <div>수강 교육과정</div>
+                <div class="ques_text">수강 교육과정</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
             </div>
@@ -375,16 +361,16 @@
                 <option value="강동">강동</option>
               </datalist>
 
-              <p style="padding-top: 8px; font-size: 14px">
+              <!-- <p style="padding-top: 8px; font-size: 14px">
                 나의 수강내역 : <span id="selectedCampus"></span>
-              </p>
+              </p> -->
             </div>
           </div>
 
           <div class="profile_content_wrap 03">
             <div class="title">
               <div class="title_box">
-                <div>성별</div>
+                <div class="ques_text">성별</div>
               </div>
             </div>
             <div class="label_container">
@@ -407,12 +393,12 @@
           <div class="profile_content_wrap 04">
             <div class="title">
               <div class="title_box">
-                <div>희망직무</div>
+                <div class="ques_text">희망직무</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
             </div>
 
-            <div class="desiredPosition_container">
+            <div class="box">
               <div class="btn-list">
                 <div
                   class="btn selected"
@@ -436,7 +422,7 @@
           <div class="profile_content_wrap 05">
             <div class="title">
               <div class="title_box">
-                <div>멘토/멘티</div>
+                <div class="ques_text">멘토/멘티</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
             </div>
