@@ -1,7 +1,8 @@
 :root {
   /* green scale */
-  --color-main-green: #57dd79;
-  --color-main-light-green: #b3e56a;
+  --color-main-green: #2da96e;
+  /* --color-main-green-100: #57dd79; */
+  --color-sub-green: #b3e56a;
 
   /* grey scale */
   --color-grayscale-100: #f5f5f9;

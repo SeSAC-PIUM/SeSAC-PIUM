@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>profile</title>
+    <!-- <link rel="stylesheet" href="../common/root.css" /> -->
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../common/global_style.css" />
     <script defer src="./profile.js"></script>
@@ -142,12 +143,12 @@
       .profile_contents
       .profile_content_wrap
       .input {
-      display: flex;
+      /* display: flex;
       width: 360px;
       padding: 16px 32px;
       align-items: center;
       border-radius: 4px;
-      border: 1px solid #e9e9ee;
+      border: 1px solid #e9e9ee; */
     }
 
     /* .profile_container
@@ -293,20 +294,6 @@
       /* padding: 16px; */
     }
 
-    .btn {
-      display: flex;
-      padding: 8px 16px;
-
-      justify-content: center;
-      align-items: center;
-
-      border-radius: 4px;
-      border: 1px solid #e9e9ee;
-      /* background: #FFF; */
-      font-size: 14px;
-      margin: 4px;
-    }
-
     .btn:hover,
     .btn:active {
       border: 1px solid #2da96e;
@@ -323,12 +310,12 @@
   </style>
 
   <body>
-    <div class="profile_container">
+    <div class="profile_container ques_text">
       <div class="profile_header">
-        <h1>
+        <div class="section_title">
           프로젝트를 위한
-          <span class="profile_header_point">기본정보</span> 입력
-        </h1>
+          <span class="section_title_point">기본정보</span> 입력
+        </div>
       </div>
 
       <div class="profile_contents_container">
@@ -336,7 +323,7 @@
           <div class="profile_content_wrap 01">
             <div class="title">
               <div class="title_box">
-                <div>이름</div>
+                <div class="ques_text">이름</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
               <div class="profile_modal">
@@ -349,61 +336,41 @@
           <div class="profile_content_wrap 02">
             <div class="title">
               <div class="title_box">
-                <div>수강 교육과정</div>
+                <div class="ques_text">수강 교육과정</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
             </div>
 
             <div class="dropdown_wrap">
-              <div class="custom_dropdown">
-                <div class="dropdown_selected">
-                  <div>캠퍼스 선택하기</div>
-                  <span>
-                    <img src="../src/img/dropDown.png" alt="" />
-                  </span>
-                </div>
+              <input
+                autocomplete="off"
+                role="combobox"
+                list="browsers"
+                id="input"
+                name="browsers"
+                placeholder="캠퍼스 선택하기"
+              />
+              <datalist id="browsers" role="listbox">
+                <option value="강동">강동</option>
+                <option value="금천">금천</option>
+                <option value="여의도">여의도</option>
+                <option value="강동">강동</option>
+                <option value="강동">강동</option>
+                <option value="강동">강동</option>
+                <option value="강동">강동</option>
+                <option value="강동">강동</option>
+              </datalist>
 
-                <select id="campusDropdown">
-                  <option value="강동캠퍼스">강동캠퍼스</option>
-                  <option value="금천캠퍼스">금천캠퍼스</option>
-                  <option value="여의도캠퍼스">여의도캠퍼스</option>
-                  <option value="기타캠퍼스">기타캠퍼스</option>
-                </select>
-                <div class="dropdown_list">
-                  <div class="dropdown_item">강동캠퍼스</div>
-                  <div class="dropdown_item">금천캠퍼스</div>
-                  <div class="dropdown_item">여의도캠퍼스</div>
-                  <div class="dropdown_item">기타캠퍼스</div>
-                </div>
-              </div>
-
-              <div class="custom_dropdown">
-                <div class="dropdown_selected">
-                  <div>클래스 선택하기</div>
-                  <span>
-                    <img src="../src/img/dropDown.png" alt="" />
-                  </span>
-                </div>
-
-                <select id="campusDropdown">
-                  <option value="웹퍼블리싱">웹퍼블리싱</option>
-                  <option value="마케팅">마케팅</option>
-                </select>
-                <div class="dropdown_list">
-                  <div class="dropdown_item">웹퍼블리싱</div>
-                  <div class="dropdown_item">마케팅</div>
-                </div>
-              </div>
-              <p style="padding-top: 8px; font-size: 14px">
+              <!-- <p style="padding-top: 8px; font-size: 14px">
                 나의 수강내역 : <span id="selectedCampus"></span>
-              </p>
+              </p> -->
             </div>
           </div>
 
           <div class="profile_content_wrap 03">
             <div class="title">
               <div class="title_box">
-                <div>성별</div>
+                <div class="ques_text">성별</div>
               </div>
             </div>
             <div class="label_container">
@@ -426,12 +393,12 @@
           <div class="profile_content_wrap 04">
             <div class="title">
               <div class="title_box">
-                <div>희망직무</div>
+                <div class="ques_text">희망직무</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
             </div>
 
-            <div class="desiredPosition_container">
+            <div class="box">
               <div class="btn-list">
                 <div
                   class="btn selected"
@@ -455,7 +422,7 @@
           <div class="profile_content_wrap 05">
             <div class="title">
               <div class="title_box">
-                <div>멘토/멘티</div>
+                <div class="ques_text">멘토/멘티</div>
                 <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
             </div>
