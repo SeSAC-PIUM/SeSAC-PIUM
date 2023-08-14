@@ -41,35 +41,45 @@ ul {
   color: var(--color-grayscale-600);
   display: flex;
   align-items: center;
+  width: fit-content;
 }
 
-.button {
+.button_default {
+  width: fit-content;
   padding: 8px 16px;
   border-radius: 4px;
   font-size: 14px;
   white-space: nowrap;
   text-align: center;
   cursor: pointer;
-}
-
-.button_default {
-  /* width: 100px; */
-  background-color: var(--color-grayscale-100);
+  background-color: #ffff;
   color: var(--color-grayscale-500);
   border: 1px solid var(--color-grayscale-200);
 }
 
 .button_selected_all {
-  width: 100px;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
   background-color: var(--color-main-green);
   color: var(--color-grayscale-100);
   border: 1px solid var(--color-main-green);
 }
 
 .button_selected {
-  width: 100px;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
   color: var(--color-main-green);
-  background-color: var(--color-grayscale-100);
+  background-color: #ffff;
   border: 1px solid var(--color-main-green);
 }
 
@@ -173,12 +183,12 @@ ul {
 
 /* 텍스트 */
 /* 1. 로고 28px 500 그레이6 */
-.logo_text {
+/* .logo_text {
   color: var(--color-grayscale-600);
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 2.272px;
-}
+} */
 
 .nav_text {
   color: var(--color-grayscale-600);
@@ -239,8 +249,8 @@ ul {
 }
 
 /* 메인페이지 가장 큰 헤더 텍스트 */
-/* 10. 섹션 타이틀 32px 600 그레이6 -1.28 */
-.section_title {
+/* 10. 페이지 타이틀 32px 600 그레이6 -1.28 */
+.page_title {
   color: var(--color-text-black);
   font-size: 32px;
   font-weight: 600;
@@ -248,12 +258,24 @@ ul {
   word-spacing: -4px;
 }
 
-.section_title_point {
+.page_title_point {
   color: var(--color-main-green);
   font-size: 32px;
   font-weight: 600;
   line-height: 1.4;
   word-spacing: -4px;
+}
+
+.section_title {
+  color: var(--color-grayscale-600);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section_title_point {
+  color: var(--color-main-green);
+  font-size: 24px;
+  font-weight: 600;
 }
 
 /* ** 12.(3중복) 섹션 타이틀 설명 */
