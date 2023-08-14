@@ -5,14 +5,11 @@
   font-family: 'Pretendard-Regular';
 }
 
-.page_tit {
+.section_title {
   padding: 64px 0;
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-}
-.page_tit span {
-  color: #2DA96E;
 }
 section {
   margin-bottom: 160px;
