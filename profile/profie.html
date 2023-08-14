@@ -243,12 +243,14 @@
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">이름</div>
-                <span> <img src="../src/img/Group 629971.png" /></span>
+                <span class="has_modal">
+                  <img src="../src/img/Group 629971.png"
+                /></span>
               </div>
               <div class="profile_modal">
                 <div class="profile_modal_content">
-                  SBA 가입 시 입력하신 이름입니다. 만약 실명과 일치하지 않는다면
-                  마이페이지 - 이름변경 신청을 통해 수정가능합니다
+                  SBA 가입 시 입력한 이름입니다. 만약 실명과 일치하지 않는다면
+                  마이페이지 - 이름변경 신청을 통해 수정 가능합니다
                 </div>
               </div>
             </div>
@@ -317,11 +319,13 @@
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">희망직무</div>
-                <span> <img src="../src/img/Group 629971.png" /></span>
+                <span class="has_modal">
+                  <img src="../src/img/Group 629971.png"
+                /></span>
               </div>
               <div class="profile_modal">
                 <div class="profile_modal_content">
-                  프로젝트에 참여희망하는 직무를 선택해주세요
+                  프로젝트에 참여 희망하는 직무를 선택해주세요
                 </div>
               </div>
             </div>
@@ -347,13 +351,15 @@
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">멘토/멘티</div>
-                <span> <img src="../src/img/Group 629971.png" /></span>
+                <span class="has_modal">
+                  <img src="../src/img/Group 629971.png"
+                /></span>
               </div>
               <div class="profile_modal">
                 <div class="profile_modal_content">
-                  해당 직무를 처음 접하는 교육생들을 위해프로젝트 멘토/멘티
-                  짝꿍제도를 운영합니다.수업을 따라가는데 문제가 없는
-                  수준이라면멘토를 지원해주세요🥰
+                  해당 직무를 처음 접하는 교육생들을 위해 프로젝트 멘토/멘티
+                  짝꿍제도를 운영합니다.수업을 따라가는데 문제가 없는 수준이라면
+                  멘토를 지원해주세요🥰
                 </div>
               </div>
             </div>
@@ -378,14 +384,17 @@
 
     <script>
       // modal hover
-      const profileModal = document.querySelector('.profile_modal');
-      const titleBox = document.querySelector('.title_box');
-      titleBox.addEventListener('mouseenter', () => {
-        profileModal.style.display = 'block';
-      });
-      titleBox.addEventListener('mouseleave', () => {
-        profileModal.style.display = 'none';
-      });
+      const profileModal = document.querySelectorAll('.profile_modal');
+      const titleBox = document.querySelectorAll('.has_modal');
+
+      for (let i = 0; i < titleBox.length; i++) {
+        titleBox[i].addEventListener('mouseenter', () => {
+          profileModal[i].style.display = 'block';
+        });
+        titleBox[i].addEventListener('mouseleave', () => {
+          profileModal[i].style.display = 'none';
+        });
+      }
 
       // drop down
       input.onfocus = function () {

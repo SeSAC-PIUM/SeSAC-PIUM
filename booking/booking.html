@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../common/global_style.css" />
+    <!-- swiper CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <title>booking</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .container .header {
+        padding: 64px 0px;
+        text-align: center;
+        /* border: 1px solid black; */
+      }
+
+      .section .section_header {
+        border-bottom: 1px solid var(--color-grayscale-600);
+        padding-bottom: 16px;
+      }
+
+      .section .section_inner {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .section .section_inner .slide_wrap {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        padding-right: 24px;
+      }
+
+      .section .section_inner .slide_wrap .slide_container {
+        padding-top: 48px;
+      }
+
+      .section .section_inner .slide_wrap .slide_container .slide {
+        border: 1px solid black;
+        width: 690px;
+        height: 400px;
+      }
+
+      .section .section_inner .box_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        /* border: 1px solid red; */
+        padding-top: 80px;
+      }
+      .section .section_inner .box_wrap .box {
+        /* position: fixed; */
+        /* right: 0; */
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+      }
+
+      .section .section_inner .box_wrap .box .button_selected_all {
+        width: 100%;
+        padding: 16px;
+      }
+
+      .section .section_inner .box_wrap .box .box_desc {
+        /* position: fixed; */
+        /* right: 0; */
+
+        padding: 32px 0px;
+        width: 100%;
+      }
+
+      .section .section_inner .box_wrap .box .box_desc .desc {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+        width: 100%;
+        line-height: 150%;
+      }
+
+      .section .section_inner .box_wrap .box .box_desc .desc .desc_tit {
+        width: 88px;
+      }
+      .section .section_inner .box_wrap .box .box_desc .desc .desc_txt {
+        width: 320px;
+      }
+
+      .section .section_inner .box_wrap .box .btn_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid red; */
+      }
+
+      /* slide */
+      .swiper {
+        width: 100%;
+        background-color: antiquewhite;
+        height: 100%;
+      }
+
+      .swiper .swiper-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .swiper .swiper-wrapper .swiper-slide {
+        /* width: 200px;
+        height: 100px;
+        border: 1px solid blue; */
+        /* text-align: center;
+        line-height: 100px; */
+        /* box-sizing: border-box; */
+        /* font-size: 25px; */
+      }
+
+      .swiper .swiper-wrapper .swiper-slide img {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* pagination 커스텀 */
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-main-green);
+      }
+
+      /* 화살표 커스텀 */
+      .swiper1 .swiper-button-prev,
+      .swiper1 .swiper-button-next {
+        color: gray;
+      }
+
+      .swiper1 .swiper-button-prev:hover,
+      .swiper1 .swiper-button-next:hover {
+        color: var(--color-main-green);
+      }
+    </style>
+
+    <div class="container">
+      <div class="header">
+        <div class="page_title">공간예약</div>
+      </div>
+
+      <div class="section">
+        <div class="section_header">
+          <div class="section_title_point">
+            | 강동캠퍼스
+            <span class="section_title"> 스터디 공간을 예약해 보세요</span>
+          </div>
+        </div>
+        <div class="section_inner">
+          <div class="slide_wrap">
+            <div class="slide_container">
+              <div class="section_subtitle">📍 5층 라운지</div>
+              <div class="slide">
+                <div class="swiper swiper1">
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_0.jpg" alt="dg_1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_1.jpg" alt="dg_1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_2.jpg" alt="dg_1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_3.jpg" alt="dg_1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_4.jpg" alt="dg_1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_5.jpg" alt="dg_1" />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slide_container">
+              <div class="section_subtitle">📍4층 라운지</div>
+              <div class="slide">slide_2</div>
+            </div>
+          </div>
+          <aside class="box_wrap">
+            <div class="box">
+              <div class="button_selected_all">예약하기</div>
+              <div class="box_desc">
+                <div class="desc">
+                  <div class="desc_tit">캠퍼스</div>
+                  <div class="desc_txt">강동캠퍼스</div>
+                </div>
+                <div class="desc">
+                  <div class="desc_tit">주소</div>
+                  <div class="desc_txt">
+                    서울특별시 강동구 고덕로 429 팍스애비뉴 4~5층(5호선 강일역)
+                  </div>
+                </div>
+                <div class="desc">
+                  <div class="desc_tit">이용시간</div>
+                  <div class="desc_txt">오전 8:00 ~ 오후 11시 (매일)</div>
+                </div>
+                <div class="desc" style="margin-bottom: 0px">
+                  <div class="desc_tit">연락처</div>
+                  <div class="desc_txt">02-6249-1601</div>
+                </div>
+              </div>
+              <div class="btn_wrap">
+                <div class="btn"># 노트북대여</div>
+                <div class="btn"># 빔 프로젝트 대여</div>
+                <div class="btn"># 주차 불가능</div>
+                <div class="btn"># 간식 제공</div>
+                <div class="btn"># 5호선 강일역</div>
+                <div class="btn"># 8시~23시</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sw = new Swiper('.swiper1', {
+        // direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 6, //slide 간의 gap (margin)
+        loop: true,
+        autoplay: {
+          delay: 1000,
+        },
+        speed: 1000, //like transition
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    </script>
+  </body>
+</html>
