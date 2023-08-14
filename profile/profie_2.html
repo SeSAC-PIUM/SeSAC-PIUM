@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <!-- <link rel="stylesheet" href="../common/root.css" /> -->
+    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="../common/global_style.css" />
+    <script defer src="./profile.js"></script>
+  </head>
+
+  <style>
+    .profile_container {
+    }
+    .profile_container .profile_header {
+      width: 620px;
+      width: 680px;
+      padding: 64px 0px 40px 0px;
+      text-align: center;
+      border-bottom: 1px solid var(--color-grayscale-600);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .profile_container .profile_contents_container {
+      margin: 0 auto;
+      max-width: 696px; /* 컨테이너의 최대 너비를 설정 */
+      /* border: 1px solid red; */
+      padding: 40px 16px;
+    }
+
+    .skip_btn {
+      padding: 8px 16px;
+      background-color: var(--color-grayscale-600);
+      color: var(--color-grayscale-100);
+      border-radius: 40px;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      cursor: pointer;
+    }
+
+    .profile_container .profile_contents_container .profile_contents {
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap {
+      display: flex;
+      /* justify-content: space-between; */
+      padding-bottom: 48px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title {
+      width: 144px;
+      position: relative;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title
+      .title_box {
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .label_container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .label_container
+      label {
+      margin-right: 32px;
+      /* display: flex; */
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title
+      .title_box {
+      display: flex;
+      align-items: center;
+      /* position: relative; */
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title_box
+      div {
+      padding-right: 8px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .title_box
+      span {
+      display: flex;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .desiredPosition_container {
+      display: flex;
+      width: auto;
+      padding: 16px;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid #e9e9ee;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .profile_content {
+    }
+
+    .profile_contents_container .button_container {
+      margin: 0 auto;
+      width: 360px;
+    }
+
+    .profile_contents_container .button_container .success_button {
+      width: 100%;
+      padding: 16px 0px;
+      border: none;
+      border-radius: 4px;
+      background: #2da96e;
+      color: #ffffff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* dropdown */
+    fieldset {
+      width: 296px;
+      border: none;
+      position: relative;
+      /* font-size: 14px;
+      padding: 16px 32px;
+      border-radius: 4px;
+      color: var(--color-grayscale-500);
+      border: 1px solid var(--color-grayscale-400); */
+    }
+    input {
+      font-size: 14px;
+      padding: 16px 32px;
+      border-radius: 4px;
+      color: var(--color-grayscale-500);
+      width: 296px;
+      border: 1px solid var(--color-grayscale-200);
+    }
+
+    datalist {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid var(--color-grayscale-200);
+      border-radius: 4px;
+      width: 296px;
+      margin-top: 8px;
+      padding: 16px 32px;
+    }
+
+    option {
+      background-color: white;
+      padding: 12px 0px;
+      color: var(--color-grayscale-600);
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    option:hover,
+    .active {
+      background-color: var(--color-grayscale-100);
+    }
+
+    /* 커스텀 스타일링된 드롭다운 */
+
+    input[type='radio'] {
+      /* display: none; */
+      width: auto;
+    }
+
+    /* 커스텀 라디오 버튼 스타일 */
+    .custom_radio {
+      display: inline-block;
+      width: auto;
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    /* 체크되었을 때 이미지 변경 */
+    .radio-image-1:checked + .custom-radio {
+      /* background-image: url("../src/img/Radio_Button_1.png"); */
+    }
+
+    .radio-image-2:checked + .custom-radio {
+      /* background-image:  url("../src/img/Radio_Button_1.png"); */
+    }
+    .btn-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* padding: 16px; */
+    }
+
+    .btn:hover,
+    .btn:active {
+      border: 1px solid var(--color-main-green);
+      background-color: var(--color-main-green);
+      color: var(--color-grayscale-100);
+      cursor: pointer;
+    }
+
+    .btn.selected {
+      border: 1px solid var(--color-main-green);
+      background-color: var(--color-main-green);
+      color: var(--color-grayscale-100);
+    }
+
+    .profile_contents_container .button_container {
+      margin: 0 auto;
+      width: 360px;
+    }
+
+    .button_selected_all {
+      padding: 16px 0px;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <div class="profile_container ques_text">
+      <div class="profile_header">
+        <div class="section_title_point">
+          추가정보
+          <span class="section_title">입력</span>
+        </div>
+
+        <span class="skip_btn">SKIP</span>
+      </div>
+
+      <div class="profile_contents_container">
+        <div class="profile_contents">
+          <div class="profile_content_wrap 03">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">취업경험</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-1" />
+                <span class="custom_radio">유</span>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-2" />
+                <span class="custom_radio">무</span>
+              </label>
+
+              <label>
+                <span class="custom_radio" style="padding-right: 24px"
+                  >분야</span
+                >
+                <input type="text" name="radio-group" class="radio-image-2" />
+              </label>
+              <label>
+                <span class="custom_radio" style="padding-right: 24px"
+                  >연차</span
+                >
+                <input
+                  type="text"
+                  name="radio-group"
+                  class="radio-image-2"
+                  style="width: 50px"
+                />
+                <span class="custom_radio" style="padding-right: 24px">년</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 03">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">창업경험</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-1" />
+                <span class="custom_radio">유</span>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-2" />
+                <span class="custom_radio">무</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 04">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">전공</div>
+              </div>
+            </div>
+
+            <input type="text" class="input" />
+          </div>
+
+          <div class="profile_content_wrap 04">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">github 주소</div>
+              </div>
+            </div>
+
+            <input type="text" class="input" />
+          </div>
+
+          <div class="profile_content_wrap 04">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">포트폴리오 파일</div>
+              </div>
+            </div>
+
+            <input type="text" class="input" />
+            <div class="btn" style="margin: 0px 8px; width: auto">파일찾기</div>
+            <!-- <div class="btn" style="margin: 0px 8px; padding: 8px 32px">
+              추가
+            </div> -->
+          </div>
+        </div>
+        <div class="button_container">
+          <button class="button_selected_all">저장하기</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // modal hover
+      const profileModal = document.querySelector('.profile_modal');
+      const titleBox = document.querySelector('.title_box');
+      titleBox.addEventListener('mouseenter', () => {
+        profileModal.style.display = 'block';
+      });
+      titleBox.addEventListener('mouseleave', () => {
+        profileModal.style.display = 'none';
+      });
+
+      // drop down
+      input.onfocus = function () {
+        browsers.style.display = 'block';
+        input.style.borderRadius = '4px';
+      };
+      for (let option of browsers.options) {
+        option.onclick = function () {
+          input.value = option.value;
+          browsers.style.display = 'none';
+          input.style.borderRadius = '4px';
+        };
+      }
+
+      input.oninput = function () {
+        currentFocus = -1;
+        var text = input.value.toUpperCase();
+        for (let option of browsers.options) {
+          if (option.value.toUpperCase().indexOf(text) > -1) {
+            option.style.display = 'block';
+          } else {
+            option.style.display = 'none';
+          }
+        }
+      };
+
+      let currentFocus = -1;
+      input.onkeydown = function (e) {
+        if (e.keyCode == 40) {
+          currentFocus++;
+          addActive(browsers.options);
+        } else if (e.keyCode == 38) {
+          currentFocus--;
+          addActive(browsers.options);
+        } else if (e.keyCode == 13) {
+          e.preventDefault();
+          if (currentFocus > -1) {
+            if (browsers.options) browsers.options[currentFocus].click();
+          }
+        }
+      };
+
+      // box btn 클릭
+      let selectedBtnId = null;
+
+      function openAnswer(btnIndex) {
+        if (selectedBtnId !== null) {
+          document.getElementById(selectedBtnId).classList.remove('selected');
+        }
+
+        selectedBtnId = `btn${btnIndex}`;
+        document.getElementById(selectedBtnId).classList.add('selected');
+      }
+    </script>
+  </body>
+</html>

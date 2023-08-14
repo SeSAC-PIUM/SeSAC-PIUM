@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project</title>
+    <link rel="stylesheet" href="../common/global_style.css" />
+  </head>
+
+  <style>
+    .project_subtitle_wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .Recruiting_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 88px;
+    }
+    .Recruiting_container.Recruiting {
+    }
+    .Recruiting_container.Recruiting_member {
+    }
+
+    .Recruiting_container.Recruiting_information {
+    }
+    .Recruiting_container span {
+      display: flex;
+      /* width: 16px; */
+    }
+    .Recruiting_container span img {
+      width: 100%;
+    }
+
+    .Recruiting_container:hover {
+    }
+
+    .modal {
+      display: none;
+      position: absolute;
+      bottom: calc(100% - 32px);
+      bottom: 10px;
+      left: 110px;
+      /* width: 186px; */
+      width: 250px;
+      height: auto;
+      padding: 24px;
+      z-index: 1;
+      border-radius: 4px;
+      border: 1px solid var(--color-grayscale-200);
+      background: #fff;
+      /* 1 */
+      box-shadow: 2px 2px 4px 0px rgba(211, 211, 211, 0.25);
+    }
+    .modal .group_list {
+      width: 100%;
+    }
+
+    .modal .group_list .group {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--color-grayscale-200);
+    }
+
+    .modal .group_list .group .group_position {
+      font-size: 14px;
+    }
+
+    .modal .group_list .group .group_position_member {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+
+    .modal .group_list .group .group_position_member .mentor {
+      padding-bottom: 8px;
+    }
+
+    .modal .group_list .group .group_position_member .mentee {
+    }
+
+    .card_footer.card_footer_like {
+    }
+
+    .card_footer.card_footer_like span {
+    }
+    .card_footer.card_footer_like.card_footer_like_counts {
+    }
+  </style>
+  <body>
+    <!-- 카드 활용 -->
+    <h1>카드 활용예시</h1>
+    <div class="project_title">
+      프로젝트
+      <span>
+        <img src="../src/img/next.png" alt="" />
+      </span>
+    </div>
+    <div class="project_subtitle_wrap">
+      <div class="project_subtitle">당신만오면</div>
+      <p class="more_text">ss</p>
+    </div>
+
+    <div class="card">
+      <div class="thumb">
+        <img src="../src/img/thumbnail.png" alt="" />
+        <div class="like_button">
+          <div class="heart_icon"></div>
+        </div>
+      </div>
+      <div class="card_body">
+        <div class="card_title">22</div>
+        <div class="card_desc">11</div>
+      </div>
+      <div class="card_footer">111111111</div>
+    </div>
+    <!-- 예시 끝 -->
+
+    <div class="project_title">
+      곧 마감 프로젝트 🚨
+      <span>
+        <img src="../src/img/next.png" alt="" />
+      </span>
+    </div>
+    <div class="project_subtitle_wrap">
+      <p class="project_subtitle">당신만 오면 바로 시작되는 프로젝트!</p>
+      <p class="more_text">더보기</p>
+    </div>
+
+    <div class="card">
+      <div class="thumb">
+        <img src="../src/img/thumbnail.png" alt="Thumb" />
+        <div class="like_button">
+          <span class="heart_icon"></span>
+        </div>
+      </div>
+      <div class="card_body">
+        <p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+        <p class="card_desc">프로젝트 설명란입니다.</p>
+      </div>
+      <div class="card_footer">
+        <div class="Recruiting_container">
+          <div class="card_footer_text">모집중</div>
+          <div class="Recruiting_member card_footer_text">4/5</div>
+          <span class="Recruiting_information">
+            <img src="../src/img/Group 629971.png" />
+          </span>
+        </div>
+        <div class="modal">
+          <div class="group_list">
+            <div class="group">
+              <div class="group_position modal_text_L">기획</div>
+              <div class="group_position_member modal_text_S">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group_position modal_text_L">UX/UI디자인</div>
+              <div class="group_position_member modal_text_S">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group_position modal_text_L">퍼블리싱</div>
+              <div class="group_position_member modal_text_S">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="group_position modal_text_L">프론트엔드</div>
+              <div class="group_position_member modal_text_S">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+
+            <div class="group" style="border-bottom: none">
+              <div class="group_position modal_text_L">백엔드</div>
+              <div class="group_position_member modal_text_S">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card_footer_like">
+          <span>❤</span>
+          <!-- <img class="heart_image" src="../src/img/Heart_02.png" alt="Heart" /> -->
+          0
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const likeButton = document.querySelector('.like_button');
+      const heartImage = document.querySelector('.heart_image');
+      const cardFooter = document.querySelector('.card_footer_like');
+      const recruitingContainer = document.querySelector(
+        '.Recruiting_container'
+      );
+
+      // project modal hover
+      const modal = document.querySelector('.modal');
+
+      recruitingContainer.addEventListener('mouseenter', () => {
+        modal.style.display = 'block';
+      });
+      recruitingContainer.addEventListener('mouseleave', () => {
+        modal.style.display = 'none';
+      });
+
+      let isClicked = false;
+      let clickCount = 0;
+
+      // 페이지 로드 시 로컬 스토리지에서 클릭 상태를 가져와서 복원
+      //   document.addEventListener('DOMContentLoaded', () => {
+      //     const storedClickCount = localStorage.getItem('clickCount');
+      //     if (storedClickCount) {
+      //       clickCount = parseInt(storedClickCount);
+      //       isClicked = clickCount > 0;
+      //       updateCardFooter();
+      //     }
+      //   });
+
+      likeButton.addEventListener('click', () => {
+        if (!isClicked) {
+          likeButton.classList.add('clicked');
+          clickCount++;
+          isClicked = true;
+        } else {
+          likeButton.classList.remove('clicked');
+          clickCount--;
+          isClicked = false;
+        }
+
+        // 클릭 상태를 로컬 스토리지에 저장
+        localStorage.setItem('clickCount', clickCount.toString());
+
+        updateCardFooter();
+      });
+
+      function updateCardFooter() {
+        cardFooter.textContent = `❤ ${clickCount}`;
+        //   function updateCardFooter() {
+        //     if (isClicked) {
+        //       heartImage.src = '../src/img/Heart_02.png';
+        //     } else {
+        //       heartImage.src = '../src/img/empty_Heart_02.png';
+        //     }
+
+        //     cardFooter.textContent = `${clickCount}`;
+      }
+    </script>
+  </body>
+</html>

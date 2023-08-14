@@ -1,18 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SeSAC PIUM</title>
     <link rel="stylesheet" href="./common/global_style.css" />
     <link rel="stylesheet" href="./main/index.css" />
+    <script src="./includeHTML.js"></script>
+
     <script defer src="./main/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <h1>main page</h1>
-    <h1>class name 활용 예시</h1>
-    <p class="main_font_GY_6">class name을 main_font_GY_6</p>
-    <p class="main_font_GY_3">class name을 "main_font_GY_3"로 입력한 p</p>
-    <p class="main_font_GN_1">sub_font</p>
+    <header include-html="./header.html"></header>
+    <div class="advert_box">
+      <div class="advert">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./main/image/silde5.png" alt="slide1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./main/image/slide2.png" alt="slide2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./main/image/slide3.png" alt="slide3" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            <img src="./main/image/ad_left.png" alt="" />
+          </div>
+          <div class="swiper-button-next">
+            <img src="./main/image/ad_right.png" alt="" />
+          </div>
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="box_wrap">
+          <div class="matching_box">
+            <div class="matichin">랜덤매칭 신청</div>
+          </div>
+          <div class="making_pr_box">
+            <div class="making_pr">프로젝트 생성</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="section1">
+        <div class="sub_wrap">
+          <div class="sub_tit">프로젝트의 시작 🌱</div>
+          <div class="sub_tit2">직무별 <span>프로젝트 둘러보기</span></div>
+        </div>
+        <div class="select_wrap">
+          <div class="select">
+            <div class="select_menu">전체보기</div>
+            <div class="select_menu">기획</div>
+            <div class="select_menu">UX/UI디자인</div>
+            <div class="select_menu">퍼블리싱</div>
+            <div class="select_menu">프론트엔드</div>
+            <div class="select_menu">백엔드</div>
+          </div>
+        </div>
+      </section>
+      <section class="section2">
+        <div class="deadline_project_box">
+          <div class="deadline_project main_font_BK_1">곧 마감 프로젝트 🚨</div>
+          <div class="deadline_project_sub main_font_GY_5">
+            당신만 오면 바로 시작되는 프로젝트!
+          </div>
+        </div>
+        <div class="project_box_wrap">
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart"></div>
+              <div class="animation_heart"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart2"></div>
+              <div class="animation_heart2"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart3"></div>
+              <div class="animation_heart3"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart4"></div>
+              <div class="animation_heart4"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section3">
+        <div class="new_project_box">
+          <div class="new_project main_font_BK_1">최신 프로젝트 🎈</div>
+          <div class="new_project_sub main_font_GY_5">
+            새로운 프로젝트를 탐색해봐요!
+          </div>
+        </div>
+        <div class="project_box_wrap">
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart5"></div>
+              <div class="animation_heart5"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart6"></div>
+              <div class="animation_heart6"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart7"></div>
+              <div class="animation_heart7"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+          <div class="project_box main_font_GY_1">
+            <div class="project_picture">
+              <div class="heart8"></div>
+              <div class="animation_heart8"></div>
+            </div>
+            <div class="project_tit main_font_BK_1">
+              [캠퍼스명] 프로젝트 타이틀
+            </div>
+            <div class="main_font_GY_5">프로젝트 설명란입니다.</div>
+            <hr class="main_font_GY_2" />
+            <div class="project_state main_font_GY_5">
+              모집중 4/5 <span>?</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section4">
+        <div class="completed_project_box">
+          <div class="completed_project main_font_BK_1">완성 프로젝트 ✨</div>
+          <div class="completed_project_sub main_font_GY_5">
+           피움에서 완성된 프로젝트 모음
+          </div>
+          <div class="completed_project_picture">
+            <div><img src="./main/image/completed_pro1.png" alt="completed_pro1"></div>
+            <div><img src="./main/image/completed_pro2.png" alt="completed_pro2"></div>
+            <div><img src="./main/image/completed_pro3.png" alt="completed_pro3"></div>
+            <div><img src="./main/image/completed_pro4.png" alt="completed_pro4"></div>
+          </div>
+      </section>
+      <section></section>
+    </main>
+    <footer include-html="./footer.html"></footer>
   </body>
 </html>

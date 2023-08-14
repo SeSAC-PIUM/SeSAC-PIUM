@@ -1,0 +1,1040 @@
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+/* header */
+/* container */
+header {
+  width: 100%;
+  height: 112px;
+  flex-shrink: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+}
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  padding: 16px 0 12px 0;
+}
+.logo {
+  display: flex;
+}
+.logo nav img {
+  width: 36px;
+  height: 36px;
+}
+.logo h1 {
+  color: var(--gy-6, #464656);
+  font-family: Roboto;
+  font-size: 28.4px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 28.4px */
+  letter-spacing: 2.272px;
+}
+.login_wrap {
+}
+.login_wrap .login_logout {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.login_wrap .login_logout .search_outline {
+}
+.login_wrap .login_logout .search_outline .search {
+  display: flex;
+  height: 36px;
+  padding: 8px 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 999px;
+  background: var(--gy-1, #f5f5f9);
+}
+.login_wrap .login_logout .search_outline .search input {
+  height: 24px;
+}
+.login_wrap .login_logout .search_outline.search .search_img {
+}
+.login_wrap .login_logout .alarm {
+  width: 28px;
+  height: 28px;
+  padding: 1px 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.login_wrap .login_logout .profile {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* container2 */
+header .container2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  padding: 0 0 16px 0;
+}
+header .container2 ul {
+  display: flex;
+}
+
+header .container2 li {
+  color: #c6c6d0;
+  margin-right: 12px;
+}
+header .container2 li a {
+}
+/* advert_box */
+.advert_box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+/* advert */
+.advert {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 112px;
+}
+/* swiper */
+.swiper {
+  width: 906px;
+  height: 260px;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.swiper-slide img {
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.box_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.matching_box {
+  width: 282px;
+  height: 124px;
+  display: flex;
+  padding: 42px 32px 32px 119px;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 8px;
+  background: #2da96e;
+}
+
+.making_pr_box {
+  width: 282px;
+  height: 124px;
+  display: flex;
+  padding: 42px 32px 32px 119px;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 8px;
+  background: #2da96e;
+}
+/* main */
+main {
+}
+/* section*/
+main section {
+  cursor: pointer;
+}
+
+main section .sub_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+main section .sub_wrap .sub_tit {
+  color: var(--gy-6, #464656);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.56px;
+  margin-bottom: 12px;
+}
+main section .sub_wrap .sub_tit2 {
+  color: #2da96e;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  margin-bottom: 14px;
+}
+main section .sub_wrap .sub_tit2 span {
+  color: var(--gy-6, #464656);
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.28px;
+}
+
+main section .select_wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+main section .select {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+main section .select .select_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 65px;
+  border-radius: 4px;
+  background: #4f4f4f;
+  box-shadow: 2px 2px 4px 0px rgba(223, 223, 223, 0.25);
+  cursor: pointer;
+}
+
+/* section2 */
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+.section2 .deadline_project_box {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+.section2 .deadline_project {
+  margin-bottom: 12px;
+}
+section .deadline_project_sub {
+  margin-bottom: 24px;
+}
+section .project_box_wrap {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+section .project_box {
+  width: 282px;
+  height: 318px;
+  border: 2px solid #f5f5f9;
+  border-radius: 8px;
+  margin-bottom: 80px;
+}
+section .project_box .project_picture {
+  width: 100%;
+  height: 140px;
+  background-color: #2da96e;
+  border-radius: 8px 8px 0px 0px;
+  margin-bottom: 16px;
+}
+section .project_box .project_tit {
+  margin-bottom: 16px;
+}
+section .project_box .project_state {
+  display: flex;
+  width: 248px;
+  height: 48px;
+  align-items: center;
+  margin: 0 16px;
+}
+section .project_box .project_state span {
+  width: 16px;
+  height: 16px;
+  background-color: #e9e9ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* heart button */
+.heart {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 780px;
+  left: 599px;
+}
+.animation_heart.animation {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+@keyframes popup {
+  100% {
+    transform: scale(1.5) rotate(-45deg);
+    opacity: 0;
+  }
+}
+/* heart button2 */
+.heart2 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart2::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart2::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 780px;
+  left: 904.5px;
+}
+.animation_heart2.animation2 {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart2::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart2::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+/* heart button3 */
+.heart3 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart3::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart3::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart3 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 780px;
+  left: 1211px;
+}
+.animation_heart3.animation3 {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart3::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart3::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+/* heart button4 */
+.heart4 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart4::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart4::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart4 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 780px;
+  left: 1517px;
+}
+.animation_heart4.animation4 {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart4::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart4::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+/* section3 */
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+.section3 .new_project_box {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+.section3 .new_project {
+  margin-bottom: 12px;
+}
+section .new_project_sub {
+  margin-bottom: 24px;
+}
+section .project_box_wrap {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+section .project_box {
+  width: 282px;
+  height: 318px;
+  border: 2px solid #f5f5f9;
+  border-radius: 8px;
+  margin-bottom: 80px;
+}
+section .project_box .project_picture {
+  width: 100%;
+  height: 140px;
+  background-color: #2da96e;
+  border-radius: 8px 8px 0px 0px;
+  margin-bottom: 16px;
+}
+section .project_box .project_tit {
+  margin-bottom: 16px;
+}
+section .project_box .project_state {
+  display: flex;
+  width: 248px;
+  height: 48px;
+  align-items: center;
+  margin: 0 16px;
+}
+section .project_box .project_state span {
+  width: 16px;
+  height: 16px;
+  background-color: #e9e9ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* heart button5 */
+.heart5 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart5::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart5::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart5 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 1335.5px;
+  left: 599px;
+}
+.animation_heart5.animation5 {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart5::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart5::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+/* heart button6 */
+.heart6 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart6::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart6::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart6 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 1335.5px;
+  left: 904.5px;
+}
+.animation_heart6.animation6 {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart6::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart6::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+/* heart button7 */
+.heart7 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart7::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart7::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart7 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 1335.5px;
+  left: 1211px;
+}
+.animation_heart7.animation7 {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart7::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart7::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+/* heart button8 */
+.heart8 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 2px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  left: 245px;
+  top: 15px;
+}
+.heart8::before {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart8::after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.animation_heart8 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff2727;
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 2px;
+  cursor: pointer;
+  visibility: hidden;
+  top: 1335.5px;
+  left: 1517px;
+}
+.animation_heart8.animation8 {
+  animation: popup 0.5s linear;
+  visibility: visible;
+}
+.animation_heart8::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  right: 0;
+  background: inherit;
+  border-radius: 50%;
+}
+.animation_heart8::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  background: inherit;
+  border-radius: 50%;
+}
+/* section4 */
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+.section4 .completed_project_box {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+.section4 .completed_project {
+  margin-bottom: 12px;
+}
+section .completed_project_sub {
+  margin-bottom: 24px;
+}
+.section4 .completed_project_picture {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* footer */
+.footer {
+  border-top: 1px solid #e9e9ee;
+  width: 100%;
+  height: 38px;
+  position: absolute;
+}
+.footer .footer_Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 16px;
+}
+.footer .footer_Content .left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer .footer_Content .left .left1 {
+  display: flex;
+  margin-right: 16px;
+}
+.footer .footer_Content .left .left1 a img {
+  margin-right: 8px;
+}
+.footer .footer_Content .left .left2 {
+  display: flex;
+}
+.footer .footer_Content .left .left2 a {
+  margin-left: 16px;
+}
+.footer .footer_Content .right {
+  display: flex;
+  flex-direction: row;
+}
+.footer .footer_Content .right a:nth-child(2) {
+  margin-right: 12px;
+}
+
+.footer .footer_Content .right a:nth-child(3) {
+  margin-right: 12px;
+}
+
+.footer .footer_Content .right a {
+  margin-right: 8px;
+}
+.footer .footer_Content .right div img {
+  margin-right: 8px;
+}
