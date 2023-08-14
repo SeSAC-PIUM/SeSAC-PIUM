@@ -278,6 +278,14 @@ ul {
   font-weight: 600;
 }
 
+.section_subtitle {
+  color: var(--color-grayscale-600);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  padding-bottom: 16px;
+}
+
 /* ** 12.(3중복) 섹션 타이틀 설명 */
 .desc_text {
   /* 위에 작성함. 필요없는 코드지만 헷갈릴까봐 일단 공간 차지 해두었어요. 확인 후 삭제 예정*/
