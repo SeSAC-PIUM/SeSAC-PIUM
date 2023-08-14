@@ -32,19 +32,12 @@ header {
 .logo {
   display: flex;
 }
-.logo nav img {
-  width: 36px;
-  height: 36px;
+.logo_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
 }
-.logo h1 {
-  color: var(--gy-6, #464656);
-  font-family: Roboto;
-  font-size: 28.4px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%; /* 28.4px */
-  letter-spacing: 2.272px;
-}
+
 .login_wrap {
 }
 .login_wrap .login_logout {
@@ -126,41 +119,61 @@ header .container2 li a {
 .swiper-slide {
   overflow: hidden;
 }
-
+.swiper-slide .count {
+  position: relative;
+  top: 218px;
+  left: 830px;
+  width: 60px;
+  height: 26px;
+  border-radius: 999px;
+  background-color: #f5f5f9;
+  text-align: center;
+  line-height: 26px;
+}
+.swiper-slide .slide-tit {
+  position: relative;
+  top: 35px;
+  left: 80px;
+}
+.swiper-slide .slide-tit div {
+  margin-bottom: 24px;
+}
 .swiper-slide img {
+  position: relative;
+  top: -150px;
+  left: 639px;
+}
+.ad_left,
+.ad_right {
+  display: none;
 }
 
+.advert_box .advert .swiper:hover .ad_left,
+.advert_box .advert .swiper:hover .ad_right {
+  display: block;
+}
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
 }
-
+/* 랜덤매칭 신청&프로젝트 생성 */
 .box_wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.matching_box {
+.green_box {
   width: 282px;
   height: 124px;
-  display: flex;
-  padding: 42px 32px 32px 119px;
-  justify-content: flex-end;
-  align-items: center;
+  background-color: #2da96e;
   border-radius: 8px;
-  background: #2da96e;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.making_pr_box {
-  width: 282px;
-  height: 124px;
-  display: flex;
-  padding: 42px 32px 32px 119px;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 8px;
-  background: #2da96e;
-}
 /* main */
 main {
 }
@@ -178,33 +191,10 @@ main section .sub_wrap {
 }
 
 main section .sub_wrap .sub_tit {
-  color: var(--gy-6, #464656);
-  font-family: Pretendard;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -0.56px;
   margin-bottom: 12px;
 }
 main section .sub_wrap .sub_tit2 {
-  color: #2da96e;
-  font-family: Pretendard;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -1.28px;
   margin-bottom: 14px;
-}
-main section .sub_wrap .sub_tit2 span {
-  color: var(--gy-6, #464656);
-  font-family: Pretendard;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -1.28px;
 }
 
 main section .select_wrap {
@@ -221,6 +211,7 @@ main section .select {
 }
 
 main section .select .select_menu {
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
