@@ -14,6 +14,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Pretendard Variable';
+  word-break: keep-all;
 }
 
 a {
@@ -42,6 +43,30 @@ ul {
   display: flex;
   align-items: center;
   width: fit-content;
+}
+
+.btn_save {
+  width: 100%;
+  padding: 16px 0px;
+  border: none;
+  border-radius: 4px;
+  background: var(--color-main-green);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn_delete {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-grayscale-200);
+  font-size: 14px;
+  margin: 4px;
+  color: var(--color-grayscale-100);
+  background: var(--color-grayscale-600);
+  align-items: center;
+  cursor: pointer;
 }
 
 .button_default {
@@ -85,20 +110,13 @@ ul {
 
 .input {
   display: flex;
-  width: 360px;
+  width: 300px;
   padding: 16px 32px;
   align-items: center;
   border-radius: 4px;
   border: 1px solid var(--color-grayscale-200);
+  color: var(--color-grayscale-500);
 }
-/* project_list, profile등 */
-/* .box_container {
-  padding: 16px;
-  border-radius: 4px;
-  font-size: 14px;
-  white-space: nowrap;
-  text-align: center;
-} */
 
 /* width, position top bottom 등은 각자 조절해서 사용할 것 */
 .profile_modal {
@@ -106,7 +124,7 @@ ul {
   position: absolute;
   top: 24px;
   left: 0;
-  width: 257px;
+  width: 264px;
   padding: 16px 32px;
   z-index: 1;
   border-radius: 4px;
@@ -114,7 +132,7 @@ ul {
   background: #fff;
   box-shadow: 2px 2px 4px 0px rgba(211, 211, 211, 0.25);
   line-height: 160%;
-  letter-spacing: -0.14px;
+  word-spacing: -0.14px;
   word-break: keep-all;
 }
 
@@ -330,10 +348,6 @@ ul {
   color: var(--color-grayscale-500);
   font-size: 14px;
   font-weight: 400;
-}
-
-.modal_text_L {
-  /* 위에 작성함. 필요없는 코드지만 헷갈릴까봐 일단 공간 차지 해두었어요. 확인 후 삭제 예정*/
 }
 
 .modal_text_S {
