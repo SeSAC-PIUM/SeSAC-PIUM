@@ -56,6 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (campus_filter_li_click.classList.contains('all')) {
         campus_filter_li.forEach((campus_filter_li_ele) => {
           campus_filter_li_ele.classList.remove('on');
+          filter_selection.innerText = '';
         });
         campus_filter_li_click.parentElement.classList.remove('on');
         return;

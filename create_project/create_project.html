@@ -4,23 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../common/global_style.css">
   <link rel="stylesheet" href="./css/create_project.css">
   <script src="https://kit.fontawesome.com/e00cbd24a5.js" crossorigin="anonymous"></script>
+  <script defer src="./js/create_project.js"></script>
 </head>
 <body>
   <div class="container">
     <main>
-      <p class="page_tit"><span>프로젝트</span> 생성</p>
+      <p class="page_title"><span class="page_title_point">프로젝트</span> 생성</p>
       <section>
-        <p class="sec_tit">프로젝트 기본 정보를 입력해주세요.</p>
+        <p class="section_title">프로젝트 기본 정보를 입력해주세요.</p>
         <p class="border_bottom"></p>
         <div class="sec_cont_wrap flex_box_column">
           <div class="flex_box_row">
             <div class="select_box flex_item">
-              <p class="card_tit">작업 공간</p>
+              <p class="card_title">작업 공간</p>
               <div class="dropdown_btn">
                 <input type="text" class="dropdown_btn_input">
-                <i class="fa-solid fa-chevron-down"></i>
+                <!-- <i class="fa-solid fa-chevron-down"></i> -->
               </div>
               <ul class="dropdown_list">
                 <li>장소 미정</li>
@@ -39,32 +41,57 @@
               </ul>
             </div>
             <div class="select_box flex_item">
-              <p class="card_tit">진행 기간</p>
-              <div class="dropdown_btn">
-                <input type="text" class="dropdown_btn_input">
-                <i class="fa-solid fa-chevron-down"></i>
+              <p class="card_title">진행 기간</p>
+              <div class="flex_box_row">
+                <div class="date_input_wrap flex_item">
+                  <div class="dropdown_btn">
+                    <input type="text" class="dropdown_btn_input">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                  <ul class="dropdown_list">
+                    <li>장소 미정</li>
+                    <li>영등포캠퍼스</li>
+                    <li>금천캠퍼스</li>
+                    <li>마포캠퍼스</li>
+                    <li>용산캠퍼스</li>
+                    <li>강동캠퍼스</li>
+                    <li>강서캠퍼스</li>
+                    <li>동작캠퍼스</li>
+                    <li>광진캠퍼스</li> 
+                    <li>서대문캠퍼스</li>
+                    <li>중구캠퍼스</li>
+                    <li>종로캠퍼스</li>
+                    <li class="flex_box_row">직접입력<input type="text" class="flex_item"></li>
+                  </ul>
+                </div>
+                <div class="date_input_wrap flex_item">
+                  <div class="dropdown_btn">
+                    <input type="text" class="dropdown_btn_input">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                  <ul class="dropdown_list">
+                    <li>장소 미정</li>
+                    <li>영등포캠퍼스</li>
+                    <li>금천캠퍼스</li>
+                    <li>마포캠퍼스</li>
+                    <li>용산캠퍼스</li>
+                    <li>강동캠퍼스</li>
+                    <li>강서캠퍼스</li>
+                    <li>동작캠퍼스</li>
+                    <li>광진캠퍼스</li> 
+                    <li>서대문캠퍼스</li>
+                    <li>중구캠퍼스</li>
+                    <li>종로캠퍼스</li>
+                    <li class="flex_box_row">직접입력<input type="text" class="flex_item"></li>
+                  </ul>
+                </div>
               </div>
-              <ul class="dropdown_list">
-                <li>장소 미정</li>
-                <li>영등포캠퍼스</li>
-                <li>금천캠퍼스</li>
-                <li>마포캠퍼스</li>
-                <li>용산캠퍼스</li>
-                <li>강동캠퍼스</li>
-                <li>강서캠퍼스</li>
-                <li>동작캠퍼스</li>
-                <li>광진캠퍼스</li> 
-                <li>서대문캠퍼스</li>
-                <li>중구캠퍼스</li>
-                <li>종로캠퍼스</li>
-                <li class="flex_box_row">직접입력<input type="text" class="flex_item"></li>
-              </ul>
             </div>
           </div>
           <div class="chips_wrap">
-            <p class="card_tit">작업 요일</p>
+            <p class="card_title">작업 요일</p>
             <ul class="chips_list flex_box_row">
-              <li>요일 미정</li>
+              <li class="undecided">요일 미정</li>
               <li>월요일</li>
               <li>화요일</li>
               <li>수요일</li>
@@ -75,7 +102,7 @@
             </ul>
           </div>
           <div class="chips_wrap">
-            <p class="card_tit">모집 기술</p>
+            <p class="card_title">모집 기술</p>
             <ul class="chips_list flex_box_row">
               <li>Javascript</li>
               <li>Typescript</li>
@@ -91,16 +118,17 @@
             </ul>
           </div>
           <div class="box_wrap">
-            <p class="card_tit">나의 포지션</p>
+            <p class="card_title">나의 포지션</p>
             <div class="box">프론트엔드 / 멘토</div>
           </div>
           <div class="add_select_box">
-            <p class="card_tit">모집 포지션</p>
+            <p class="card_title">모집 포지션</p>
+            <ul class="recruit_position_list"></ul>
             <div class="flex_box_row">
               <div class="select_box flex_item">
                 <div class="dropdown_btn">
-                  <input type="text" class="dropdown_btn_input">
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <input type="text" class="role_input dropdown_btn_input">
+                  <!-- <i class="fa-solid fa-chevron-down"></i> -->
                 </div>
                 <ul class="dropdown_list">
                   <li>기획</li>
@@ -112,15 +140,15 @@
               </div>
               <div class="plus_minus_btn flex_box_row">
                 멘토
-                <i class="fa-solid fa-minus"></i>
-                1명
-                <i class="fa-solid fa-plus"></i>
+                <i class="mentor_btn_minus fa-solid fa-minus"></i>
+                <span><span class="mentor_num">1</span>명</span>
+                <i class="mentor_btn_plus fa-solid fa-plus"></i>
               </div>
               <div class="plus_minus_btn flex_box_row">
                 멘티
-                <i class="fa-solid fa-minus"></i>
-                1명
-                <i class="fa-solid fa-plus"></i>
+                <i class="mentee_btn_minus fa-solid fa-minus"></i>
+                <span><span class="mentee_num">1</span>명</span>
+                <i class="mentee_btn_plus fa-solid fa-plus"></i>
               </div>
               <div class="add_btn">추가</div>
             </div>
@@ -128,22 +156,26 @@
         </div>
       </section>
       <section>
-        <p class="sec_tit">프로젝트 대표 이미지를 설정해주세요.</p>
+        <p class="section_title">프로젝트 대표 이미지를 설정해주세요.</p>
         <p class="border_bottom"></p>
-        <div class="upload_file_wrap box">
-          Choose File
+        <div class="file_upload_box">
+          <img class="preview_img" src="" alt="">
         </div>
+        <label class="file_upload_button">
+          업로드
+          <input type="file" class="file_upload_input" accept="image/*">
+        </label>
       </section>
       <section>
-        <p class="sec_tit">프로젝트에 대해 소개해주세요</p>
+        <p class="section_title">프로젝트에 대해 소개해주세요</p>
         <p class="border_bottom"></p>
         <div class="flex_box_column">
           <div class="input_box">
-            <p class="card_tit">프로젝트명</p>
+            <p class="card_title">프로젝트명</p>
             <input type="text">
           </div>
           <div class="input_box">
-            <p class="card_tit">프로젝트 설명</p>
+            <p class="card_title">프로젝트 설명</p>
             <textarea rows="30" valu></textarea>
           </div>
         </div>

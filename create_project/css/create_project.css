@@ -5,24 +5,25 @@
   font-family: 'Pretendard-Regular';
 }
 
-.page_tit {
+.dropdown_list li:hover,
+.chips_list li:hover {
+  background-color: #2da96e;
+  color: var(--color-grayscale-100);
+}
+.page_title {
   padding: 64px 0;
   text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-}
-.page_tit span {
-  color: #2DA96E;
 }
 section {
   margin-bottom: 160px;
 }
-.sec_tit {
-  font-size: 24px;
+section:last-child {
+  margin-bottom: 50px;
+}
+.section_title {
   border-left: 4px solid #2da96e;
   padding-left: 12px;
   margin-bottom: 16px;
-  font-weight: bold;
 }
 .border_bottom {
   width: 100%;
@@ -47,9 +48,8 @@ section {
 .select_box {
   
 }
-.card_tit {
-  margin-bottom: 12px;
-  font-size: 18px;
+.card_title {
+  font-weight: bold;
 }
 .dropdown_btn {
   position: relative;
@@ -58,22 +58,37 @@ section {
   border-radius: 10px;
   border: 1px solid #E9E9EE;
 }
+.dropdown_btn.selected {
+  border: 1px solid #2DA96E;
+}
 .dropdown_btn i {
   position: absolute;
   right: 32px;
   top: 16px;
+  color: var(--color-grayscale-300);
+  cursor: pointer;
 }
 .dropdown_btn_input {
-  padding: 16px 32px;
+  padding: 16px 20px;
   width: 100%;
   border-radius: 10px;
   border: none;
 }
+.dropdown_btn_input:focus {
+  outline: none;
+}
 .dropdown_list {
+  display: none;
+  position: absolute;
+  width: 100%;
   border-radius: 10px;
   padding: 10px;
   border: 1px solid #E9E9EE;
   background-color: #fff;
+  z-index: 99;
+}
+.dropdown_list.on {
+  display: block;
 }
 .dropdown_list li {
   height: 40px;
@@ -84,10 +99,12 @@ section {
   cursor: pointer;
 }
 .dropdown_list li:hover {
-  background-color: rgba(45, 169, 109, 0.5);
+  background-color: #2da96e;
+  color: var(--color-grayscale-100);
 }
 .dropdown_list li.on {
   background-color: #2da96e;
+  color: var(--color-grayscale-100);
 }
 .dropdown_list li input {
   margin-left: 10px;
@@ -106,8 +123,11 @@ section {
   padding: 8px 16px;
   border: 1px solid #E9E9EE;
   border-radius: 4px;
-  background-color: #fff;
   cursor: pointer;
+}
+.chips_list li.on {
+  background-color: #2DA96E;
+  color: #fff;
 }
 .box {
   border-radius: 10px;
@@ -130,42 +150,75 @@ section {
   cursor: pointer;
 }
 .input_box input {
-  padding: 16px 32px;
+  padding: 16px 20px;
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
   border: 1px solid #E9E9EE;
 }
+.input_box input:focus {
+  outline: 1px solid #2DA96E;
+}
 .input_box textarea {
   width: 100%;
-  padding: 16px 16px;
+  padding: 16px 20px;
   border-radius: 10px;
   border: 1px solid #E9E9EE;
   resize: none;
+}
+.input_box textarea:focus {
+  outline: 1px solid #2DA96E;
 }
 
 
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 20px;
 }
 main .page_tit {
 }
 main section {
 
 }
-main section .sec_tit {
-
+main section .sec_cont_wrap .select_box {
+  position: relative;
 }
-main section .flex_box_column {
+main section > .flex_box_column {
   gap: 48px;
 }
 main section .sec_cont_wrap > .flex_box_row {
   gap: 24px;
 }
-main section .sec_cont_wrap .select_box .dropdown_list li {
+main section .sec_cont_wrap .select_box .flex_box_row {
+  gap: 10px;
+}
+main section .sec_cont_wrap .select_box .flex_box_row .date_input_wrap {
+  position: relative;
+}
+main section .sec_cont_wrap .select_box .dropdown_list li:last-child {
   align-items: center;
 }
+main section .sec_cont_wrap .select_box .dropdown_list li:last-child input {
+  padding-left: 10px;
+}
+main section .sec_cont_wrap .add_select_box .recruit_position_list li {
+  margin-bottom: 12px;
+}
+main section .sec_cont_wrap .add_select_box .recruit_position_list li i {
+  content: '\f00d';
+  font-family: 'fontawesome';
+  margin-left: 10px;
+  transform: translateY(1px);
+  cursor: pointer;
+}
+/* main section .sec_cont_wrap .add_select_box .recruit_position_list li::after {
+  content: '\f00d';
+  font-family: 'fontawesome';
+  margin-left: 10px;
+  transform: translateY(1px);
+  cursor: pointer;
+} */
 main section .sec_cont_wrap .add_select_box .flex_box_row {
   gap: 12px;
 }
@@ -179,4 +232,31 @@ main section .sec_cont_wrap .add_select_box .plus_minus_btn i {
   text-align: center;
   line-height: 16px;
   cursor: pointer;
+}
+main section .file_upload_box {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1.5;
+  border-radius: 10px;
+  border: 1px solid #E9E9EE;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+main section .file_upload_box img {
+  width: 100%;
+  height: 100%;
+}
+main section .file_upload_button {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  background-color:#2DA96E;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+main section .file_upload_input {
+  display: none;
 }
