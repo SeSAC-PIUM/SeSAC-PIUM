@@ -11,6 +11,7 @@
     />
     <!-- swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <title>booking</title>
   </head>
   <body>
@@ -104,7 +105,7 @@
       /* slide */
       .swiper {
         width: 100%;
-        background-color: antiquewhite;
+        /* background-color: antiquewhite; */
         height: 100%;
       }
 
@@ -136,13 +137,13 @@
       }
 
       /* 화살표 커스텀 */
-      .swiper1 .swiper-button-prev,
-      .swiper1 .swiper-button-next {
+      .swiper .swiper-button-prev,
+      .swiper .swiper-button-next {
         color: gray;
       }
 
-      .swiper1 .swiper-button-prev:hover,
-      .swiper1 .swiper-button-next:hover {
+      .swiper .swiper-button-prev:hover,
+      .swiper .swiper-button-next:hover {
         color: var(--color-main-green);
       }
     </style>
@@ -194,7 +195,34 @@
             </div>
             <div class="slide_container">
               <div class="section_subtitle">📍4층 라운지</div>
-              <div class="slide">slide_2</div>
+              <div class="slide">
+                <div class="swiper swiper2">
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_0.jpg" alt="gd_1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_1.jpg" alt="gd_2" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_2.jpg" alt="gd_3" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_3.jpg" alt="gd_4" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_4.jpg" alt="gd_5" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../src/img/gd_5.jpg" alt="gd_6" />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
             </div>
           </div>
           <aside class="box_wrap">
@@ -235,26 +263,45 @@
     </div>
 
     <script>
-      const sw = new Swiper('.swiper1', {
-        // direction: 'vertical',
+      const slide1 = new Swiper('.swiper1', {
         slidesPerView: 1,
-        spaceBetween: 6, //slide 간의 gap (margin)
+        spaceBetween: 6,
         loop: true,
         autoplay: {
           delay: 1000,
         },
-        speed: 1000, //like transition
-
+        speed: 1000,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper1 .swiper-button-next',
+          prevEl: '.swiper1 .swiper-button-prev',
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper1 .swiper-pagination',
           clickable: true,
         },
         scrollbar: {
-          el: '.swiper-scrollbar',
+          el: '.swiper1 .swiper-scrollbar',
+        },
+      });
+
+      const slide2 = new Swiper('.swiper2', {
+        slidesPerView: 1,
+        spaceBetween: 6,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        speed: 1000,
+        navigation: {
+          nextEl: '.swiper2 .swiper-button-next',
+          prevEl: '.swiper2 .swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper2 .swiper-pagination',
+          clickable: true,
+        },
+        scrollbar: {
+          el: '.swiper2 .swiper-scrollbar',
         },
       });
     </script>
