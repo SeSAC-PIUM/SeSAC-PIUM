@@ -227,757 +227,283 @@ main section .select .select_menu {
 .section2 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
-  cursor: pointer;
 }
-.section2 .deadline_project_box {
+.section2 .section2_wrap {
   width: 1200px;
+}
+.section2 .pr_tit {
   display: flex;
-  flex-direction: column;
 }
-.section2 .deadline_project {
-  margin-bottom: 12px;
-}
-section .deadline_project_sub {
-  margin-bottom: 24px;
-}
-section .project_box_wrap {
+.section2 .project_subtitle_wrap {
   width: 1200px;
   display: flex;
   justify-content: space-between;
 }
-section .project_box {
-  width: 282px;
-  height: 318px;
-  border: 2px solid #f5f5f9;
-  border-radius: 8px;
-  margin-bottom: 80px;
-}
-section .project_box .project_picture {
-  width: 100%;
-  height: 140px;
-  background-color: #2da96e;
-  border-radius: 8px 8px 0px 0px;
-  margin-bottom: 16px;
-}
-section .project_box .project_tit {
-  margin-bottom: 16px;
-}
-section .project_box .project_state {
+.section2 .card_wrap {
   display: flex;
-  width: 248px;
-  height: 48px;
-  align-items: center;
-  margin: 0 16px;
+  justify-content: space-between;
 }
-section .project_box .project_state span {
-  width: 16px;
-  height: 16px;
-  background-color: #e9e9ee;
-  border-radius: 50%;
+
+.section2 .card_footer .Recruiting_container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.Recruiting_container span img {
+  width: 100%;
 }
 
-/* heart button */
-.heart {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
+.modal .group_list {
+  width: 100%;
+}
+
+.modal .group_list .group {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
 }
-.heart::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.heart::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.animation_heart {
-  position: absolute;
+.modal .group_list .group .group_position_member {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 780px;
-  left: 599px;
+  flex-direction: column;
 }
-.animation_heart.animation {
-  animation: popup 0.5s linear;
-  visibility: visible;
+
+.modal .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
 }
-.animation_heart::after {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
-}
-.animation_heart::before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
-}
-@keyframes popup {
-  100% {
-    transform: scale(1.5) rotate(-45deg);
-    opacity: 0;
-  }
-}
-/* heart button2 */
-.heart2 {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
+/*  card 2*/
+.section2 .card_footer .Recruiting_container2 {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
 }
-.heart2::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
+.Recruiting_container2 span img {
   width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
 }
 
-.heart2::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
+.modal2 .group_list {
   width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
 }
 
-.animation_heart2 {
-  position: absolute;
+.modal2 .group_list .group {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 780px;
-  left: 904.5px;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
 }
-.animation_heart2.animation2 {
-  animation: popup 0.5s linear;
-  visibility: visible;
-}
-.animation_heart2::after {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
-}
-.animation_heart2::before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
-}
-/* heart button3 */
-.heart3 {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
+.modal2 .group_list .group .group_position_member {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
-}
-.heart3::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
+  flex-direction: column;
 }
 
-.heart3::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
+.modal2 .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
 }
 
-.animation_heart3 {
-  position: absolute;
+/* card3 */
+.section2 .card_footer .Recruiting_container3 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 780px;
-  left: 1211px;
 }
-.animation_heart3.animation3 {
-  animation: popup 0.5s linear;
-  visibility: visible;
-}
-.animation_heart3::after {
-  position: absolute;
-  content: '';
-  height: 100%;
+.Recruiting_container3 span img {
   width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
-}
-.animation_heart3::before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
 }
 
-/* heart button4 */
-.heart4 {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
+.modal3 .group_list {
+  width: 100%;
+}
+
+.modal3 .group_list .group {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
 }
-.heart4::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.heart4::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.animation_heart4 {
-  position: absolute;
+.modal3 .group_list .group .group_position_member {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 780px;
-  left: 1517px;
-}
-.animation_heart4.animation4 {
-  animation: popup 0.5s linear;
-  visibility: visible;
-}
-.animation_heart4::after {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
-}
-.animation_heart4::before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
+  flex-direction: column;
 }
 
+.modal3 .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
+}
+
+/* card4*/
+.section2 .card_footer .Recruiting_container4 {
+  display: flex;
+}
+.Recruiting_container4 span img {
+  width: 100%;
+}
+
+.modal4 .group_list {
+  width: 100%;
+}
+
+.modal4 .group_list .group {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
+}
+.modal4 .group_list .group .group_position_member {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal4 .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
+}
 /* section3 */
 .section3 {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
-  cursor: pointer;
 }
-.section3 .new_project_box {
+.section3 .section3_wrap {
   width: 1200px;
+}
+.section3 .pr_tit {
   display: flex;
-  flex-direction: column;
 }
-.section3 .new_project {
-  margin-bottom: 12px;
-}
-section .new_project_sub {
-  margin-bottom: 24px;
-}
-section .project_box_wrap {
+.section3 .project_subtitle_wrap {
   width: 1200px;
   display: flex;
   justify-content: space-between;
 }
-section .project_box {
-  width: 282px;
-  height: 318px;
-  border: 2px solid #f5f5f9;
-  border-radius: 8px;
-  margin-bottom: 80px;
-}
-section .project_box .project_picture {
-  width: 100%;
-  height: 140px;
-  background-color: #2da96e;
-  border-radius: 8px 8px 0px 0px;
-  margin-bottom: 16px;
-}
-section .project_box .project_tit {
-  margin-bottom: 16px;
-}
-section .project_box .project_state {
+.section3 .card_wrap {
   display: flex;
-  width: 248px;
-  height: 48px;
-  align-items: center;
-  margin: 0 16px;
-}
-section .project_box .project_state span {
-  width: 16px;
-  height: 16px;
-  background-color: #e9e9ee;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* heart button5 */
-.heart5 {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
-}
-.heart5::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
+  justify-content: space-between;
 }
 
-.heart5::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.animation_heart5 {
-  position: absolute;
+.section3 .card_footer .Recruiting_container5 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 1335.5px;
-  left: 599px;
 }
-.animation_heart5.animation5 {
-  animation: popup 0.5s linear;
-  visibility: visible;
-}
-.animation_heart5::after {
-  position: absolute;
-  content: '';
-  height: 100%;
+.Recruiting_container5 span img {
   width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
-}
-.animation_heart5::before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
 }
 
-/* heart button6 */
-.heart6 {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
+.modal5 .group_list {
+  width: 100%;
+}
+
+.modal5 .group_list .group {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
 }
-.heart6::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.heart6::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.animation_heart6 {
-  position: absolute;
+.modal5 .group_list .group .group_position_member {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 1335.5px;
-  left: 904.5px;
+  flex-direction: column;
 }
-.animation_heart6.animation6 {
-  animation: popup 0.5s linear;
-  visibility: visible;
+
+.modal5 .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
 }
-.animation_heart6::after {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
-}
-.animation_heart6::before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
-}
-/* heart button7 */
-.heart7 {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
+/*  card 6*/
+.section3 .card_footer .Recruiting_container6 {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
 }
-.heart7::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
+.Recruiting_container6 span img {
   width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
 }
 
-.heart7::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
+.modal6 .group_list {
   width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
 }
 
-.animation_heart7 {
-  position: absolute;
+.modal6 .group_list .group {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 1335.5px;
-  left: 1211px;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
 }
-.animation_heart7.animation7 {
-  animation: popup 0.5s linear;
-  visibility: visible;
-}
-.animation_heart7::after {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
-}
-.animation_heart7::before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
-}
-
-/* heart button8 */
-.heart8 {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: #c9c9c9;
+.modal6 .group_list .group .group_position_member {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0 0 0 2px;
-  transform: rotate(-45deg);
-  cursor: pointer;
-  left: 245px;
-  top: 15px;
-}
-.heart8::before {
-  position: absolute;
-  content: '';
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
+  flex-direction: column;
 }
 
-.heart8::after {
-  position: absolute;
-  content: '';
-  right: -50%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: 50%;
+.modal6 .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
 }
 
-.animation_heart8 {
-  position: absolute;
+/* card7 */
+.section3 .card_footer .Recruiting_container7 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  background-color: #ff2727;
-  transform: rotate(-45deg);
-  border-radius: 0 0 0 2px;
-  cursor: pointer;
-  visibility: hidden;
-  top: 1335.5px;
-  left: 1517px;
 }
-.animation_heart8.animation8 {
-  animation: popup 0.5s linear;
-  visibility: visible;
-}
-.animation_heart8::after {
-  position: absolute;
-  content: '';
-  height: 100%;
+.Recruiting_container7 span img {
   width: 100%;
-  top: -50%;
-  right: 0;
-  background: inherit;
-  border-radius: 50%;
 }
-.animation_heart8::before {
-  position: absolute;
-  content: '';
-  height: 100%;
+
+.modal7 .group_list {
   width: 100%;
-  top: 0;
-  right: -50%;
-  background: inherit;
-  border-radius: 50%;
 }
+
+.modal7 .group_list .group {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
+}
+.modal7 .group_list .group .group_position_member {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal7 .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
+}
+
+/* card8*/
+.section3 .card_footer .Recruiting_container8 {
+  display: flex;
+}
+.Recruiting_container8 span img {
+  width: 100%;
+}
+
+.modal8 .group_list {
+  width: 100%;
+}
+
+.modal8 .group_list .group {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
+}
+.modal8 .group_list .group .group_position_member {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal8 .group_list .group .group_position_member .mentor {
+  padding-bottom: 8px;
+}
+
 /* section4 */
 .section4 {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
-  cursor: pointer;
 }
-.section4 .completed_project_box {
+.section4 .section4_wrap {
+  width: 1200px;
+}
+.section4 .pr_tit {
+  display: flex;
+}
+.section4 .project_subtitle_wrap {
   width: 1200px;
   display: flex;
-  flex-direction: column;
-}
-.section4 .completed_project {
-  margin-bottom: 12px;
-}
-section .completed_project_sub {
-  margin-bottom: 24px;
+  justify-content: space-between;
 }
 .section4 .completed_project_picture {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 /* footer */
@@ -997,6 +523,8 @@ section .completed_project_sub {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 .footer .footer_Content .left .left1 {
   display: flex;
