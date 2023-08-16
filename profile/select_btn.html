@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../common/global_style.css" />
+
+    <style>
+      .btn:hover,
+      .btn:active {
+        border: 1px solid var(--color-main-green);
+        background-color: var(--color-main-green);
+        color: var(--color-grayscale-100);
+        cursor: pointer;
+      }
+
+      .btn.selected {
+        border: 1px solid var(--color-main-green);
+        background-color: var(--color-main-green);
+        color: var(--color-grayscale-100);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="btn-list">
+        <div
+          class="btn"
+          id="btn0"
+          style="
+            height: 80px;
+            /* width: 120px; */
+            text-align: center;
+            line-height: 150%;
+          "
+          onclick="openAnswer(0)"
+        >
+          조용히 차근차근 천천히
+        </div>
+        <div
+          class="btn"
+          id="btn1"
+          style="
+            height: 80px;
+            /* width: 120px; */
+            text-align: center;
+            line-height: 150%;
+          "
+          onclick="openAnswer(1)"
+        >
+          활발하게 진도이상으로 빠르게
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // box btn 클릭
+      let selectedBtnId = null;
+
+      function openAnswer(btnIndex) {
+        if (selectedBtnId !== null) {
+          document.getElementById(selectedBtnId).classList.remove('selected');
+        }
+
+        selectedBtnId = `btn${btnIndex}`;
+        document.getElementById(selectedBtnId).classList.add('selected');
+      }
+    </script>
+  </body>
+</html>
