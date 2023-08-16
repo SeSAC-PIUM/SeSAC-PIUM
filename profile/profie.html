@@ -14,19 +14,16 @@
     .profile_container {
     }
     .profile_container .profile_header {
-      width: 620px;
-      width: 680px;
-      padding: 64px 0px 40px 0px;
+      padding: 64px 16px 40px 16px;
       text-align: center;
-      border-bottom: 1px solid var(--color-grayscale-600);
       margin: 0 auto;
     }
 
     .profile_container .profile_contents_container {
       margin: 0 auto;
-      max-width: 696px; /* 컨테이너의 최대 너비를 설정 */
-      /* border: 1px solid red; */
+      max-width: 696px;
       padding: 40px 16px;
+      border-top: 1px solid var(--color-grayscale-600);
     }
 
     .profile_container .profile_contents_container .profile_contents {
@@ -37,6 +34,7 @@
       .profile_contents
       .profile_content_wrap {
       display: flex;
+      flex-wrap: wrap;
       /* justify-content: space-between; */
       padding-bottom: 48px;
     }
@@ -56,6 +54,7 @@
       .profile_content_wrap
       .title
       .title_box {
+      padding-bottom: 16px;
     }
 
     .profile_container
@@ -64,6 +63,7 @@
       .profile_content_wrap
       .label_container {
       display: flex;
+      width: 300px;
     }
 
     .profile_container
@@ -127,10 +127,10 @@
 
     .profile_contents_container .button_container {
       margin: 0 auto;
-      width: 360px;
+      max-width: 360px;
     }
 
-    .profile_contents_container .button_container .success_button {
+    /* .profile_contents_container .button_container .success_button {
       width: 100%;
       padding: 16px 0px;
       border: none;
@@ -140,11 +140,13 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
-    }
+      cursor: pointer;
+    } */
 
     /* dropdown */
     fieldset {
-      width: 296px;
+      /* width: auto; */
+      width: 300px;
       border: none;
       position: relative;
       padding-bottom: 8px;
@@ -155,7 +157,7 @@
       border-radius: 4px;
       color: var(--color-grayscale-500);
       width: 100%;
-      border: 1px solid var(--color-grayscale-400);
+      border: 1px solid var(--color-grayscale-200);
     }
 
     datalist {
@@ -163,7 +165,7 @@
       background-color: #fff;
       border: 1px solid var(--color-grayscale-200);
       border-radius: 4px;
-      width: 296px;
+      width: 300px;
       margin-top: 8px;
       padding: 16px 32px;
       z-index: 1;
@@ -376,8 +378,8 @@
               <div class="profile_modal">
                 <div class="profile_modal_content">
                   해당 직무를 처음 접하는 교육생들을 위해 프로젝트 멘토/멘티
-                  짝꿍제도를 운영합니다.수업을 따라가는데 문제가 없는 수준이라면
-                  멘토를 지원해주세요🥰
+                  짝꿍제도를 운영합니다. 수업을 따라가는데 문제가 없는
+                  수준이라면 멘토를 지원해주세요🥰
                 </div>
               </div>
             </div>
@@ -395,7 +397,7 @@
           </div>
         </div>
         <div class="button_container">
-          <button class="success_button">가입완료</button>
+          <button class="btn_save">가입완료</button>
         </div>
       </div>
     </div>

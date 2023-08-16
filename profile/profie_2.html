@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>profile</title>
+    <title>profile-2</title>
     <!-- <link rel="stylesheet" href="../common/root.css" /> -->
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../common/global_style.css" />
@@ -14,30 +14,31 @@
     .profile_container {
     }
     .profile_container .profile_header {
-      width: 620px;
-      width: 680px;
-      padding: 64px 0px 40px 0px;
+      padding: 64px 16px 40px 16px;
       text-align: center;
-      border-bottom: 1px solid var(--color-grayscale-600);
       margin: 0 auto;
       position: relative;
     }
 
     .profile_container .profile_contents_container {
       margin: 0 auto;
-      max-width: 696px; /* 컨테이너의 최대 너비를 설정 */
-      /* border: 1px solid red; */
+      max-width: 696px;
       padding: 40px 16px;
+      border-top: 1px solid var(--color-grayscale-600);
     }
 
     .skip_btn {
-      padding: 8px 16px;
+      width: 100%;
+      padding: 16px;
       background-color: var(--color-grayscale-600);
       color: var(--color-grayscale-100);
-      border-radius: 40px;
-      position: absolute;
-      top: 70px;
-      right: 0;
+      border-radius: 4px;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 4px;
+      /* position: absolute; */
+      /* top: 64px; */
+      /* right: 0; */
       cursor: pointer;
     }
 
@@ -49,7 +50,7 @@
       .profile_contents
       .profile_content_wrap {
       display: flex;
-      /* justify-content: space-between; */
+      flex-wrap: wrap;
       padding-bottom: 48px;
     }
 
@@ -68,23 +69,42 @@
       .profile_content_wrap
       .title
       .title_box {
+      padding-bottom: 16px;
     }
 
     .profile_container
       .profile_contents_container
       .profile_contents
       .profile_content_wrap
-      .label_container {
+      .answer_container {
+      width: 300px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .answer_container
+      .radio_container {
+      padding-bottom: 16px;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
+      .answer_container
+      .input_wrap {
+      padding-bottom: 16px;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
     }
 
     .profile_container
       .profile_contents_container
       .profile_contents
       .profile_content_wrap
-      .label_container
+      .answer_container
       label {
       margin-right: 32px;
       /* display: flex; */
@@ -141,19 +161,7 @@
 
     .profile_contents_container .button_container {
       margin: 0 auto;
-      width: 360px;
-    }
-
-    .profile_contents_container .button_container .success_button {
-      width: 100%;
-      padding: 16px 0px;
-      border: none;
-      border-radius: 4px;
-      background: #2da96e;
-      color: #ffffff;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
+      max-width: 360px;
     }
 
     /* dropdown */
@@ -172,7 +180,7 @@
       padding: 16px 32px;
       border-radius: 4px;
       color: var(--color-grayscale-500);
-      width: 296px;
+      width: 300px;
       border: 1px solid var(--color-grayscale-200);
     }
 
@@ -204,6 +212,7 @@
     input[type='radio'] {
       /* display: none; */
       width: auto;
+      accent-color: green;
     }
 
     /* 커스텀 라디오 버튼 스타일 */
@@ -246,7 +255,8 @@
 
     .profile_contents_container .button_container {
       margin: 0 auto;
-      width: 360px;
+      max-width: 360px;
+      padding: 32px 0px;
     }
 
     .button_selected_all {
@@ -262,61 +272,62 @@
   <body>
     <div class="profile_container ques_text">
       <div class="profile_header">
-        <div class="section_title_point">
+        <div class="page_title_point">
           추가정보
-          <span class="section_title">입력</span>
+          <span class="page_title">입력</span>
         </div>
-
-        <span class="skip_btn">SKIP</span>
+        <div class="section_title_desc">1/2</div>
+        <!-- <span class="skip_btn">SKIP</span> -->
       </div>
 
       <div class="profile_contents_container">
         <div class="profile_contents">
-          <div class="profile_content_wrap 03">
+          <div class="profile_content_wrap 01">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">취업경험</div>
               </div>
             </div>
-            <div class="label_container">
-              <label>
-                <input type="radio" name="radio-group" class="radio-image-1" />
-                <span class="custom_radio">유</span>
-              </label>
+            <div class="answer_container">
+              <div class="radio_container">
+                <label>
+                  <input
+                    type="radio"
+                    name="radio-group"
+                    class="radio-image-1"
+                  />
+                  <span class="custom_radio">유</span>
+                </label>
 
-              <label>
-                <input type="radio" name="radio-group" class="radio-image-2" />
-                <span class="custom_radio">무</span>
-              </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="radio-group"
+                    class="radio-image-2"
+                  />
+                  <span class="custom_radio">무</span>
+                </label>
+              </div>
 
-              <label>
-                <span class="custom_radio" style="padding-right: 24px"
-                  >분야</span
-                >
-                <input type="text" name="radio-group" class="radio-image-2" />
-              </label>
-              <label>
-                <span class="custom_radio" style="padding-right: 24px"
-                  >연차</span
-                >
-                <input
-                  type="text"
-                  name="radio-group"
-                  class="radio-image-2"
-                  style="width: 50px"
-                />
-                <span class="custom_radio" style="padding-right: 24px">년</span>
-              </label>
+              <div class="input_wrap">
+                <span style="padding-right: 16px">분야</span>
+                <input type="text" class="input" />
+              </div>
+              <div class="input_wrap">
+                <span style="padding-right: 16px">연차</span>
+                <input type="text" class="input" style="width: 50px" />
+                <span style="padding-left: 8px">년</span>
+              </div>
             </div>
           </div>
 
-          <div class="profile_content_wrap 03">
+          <div class="profile_content_wrap 02">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">창업경험</div>
               </div>
             </div>
-            <div class="label_container">
+            <div class="answer_container">
               <label>
                 <input type="radio" name="radio-group" class="radio-image-1" />
                 <span class="custom_radio">유</span>
@@ -329,7 +340,7 @@
             </div>
           </div>
 
-          <div class="profile_content_wrap 04">
+          <div class="profile_content_wrap 03">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">전공</div>
@@ -349,22 +360,49 @@
             <input type="text" class="input" />
           </div>
 
-          <div class="profile_content_wrap 04">
+          <div class="profile_content_wrap 05">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">포트폴리오 파일</div>
               </div>
             </div>
-
-            <input type="text" class="input" />
-            <div class="btn" style="margin: 0px 8px; width: auto">파일찾기</div>
-            <!-- <div class="btn" style="margin: 0px 8px; padding: 8px 32px">
-              추가
+            <!-- <div
+              class="answer_container"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 400px;
+                width: 100%;
+              "
+            > -->
+            <!-- <input type="text" class="input" style="margin-right: 8px" /> -->
+            <div class="answer_container">
+              <input type="file" id="fileInput" style="margin-bottom: 8px" />
+              <input type="file" id="fileInput" />
+              <!-- <button class="btn btn_add_file">파일 추가</button> -->
+              <ul id="fileList"></ul>
+              <!-- <div class="btn btn_add_file" style="margin: 4px 4px 4px 0px">
+              파일찾기
             </div> -->
+            </div>
+          </div>
+          <!-- </div> -->
+
+          <div class="profile_content_wrap 06">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">포트폴리오 링크</div>
+              </div>
+            </div>
+            <div class="answer_container">
+              <input type="text" class="input" style="margin-bottom: 8px" />
+              <input type="text" class="input" />
+            </div>
           </div>
         </div>
         <div class="button_container">
-          <button class="button_selected_all">저장하기</button>
+          <div class="skip_btn">SKIP</div>
+          <button class="btn_save">저장하기</button>
         </div>
       </div>
     </div>
@@ -431,6 +469,54 @@
 
         selectedBtnId = `btn${btnIndex}`;
         document.getElementById(selectedBtnId).classList.add('selected');
+      }
+
+      //file upload
+      const fileInput = document.getElementById('fileInput');
+      const fileList = document.getElementById('fileList');
+      const btnUpload = document.querySelector('.btn_add_file');
+
+      btnUpload.addEventListener('click', () => {
+        fileInput.click();
+      });
+
+      // 기존에 저장된 파일 정보 불러오기
+      const storedFiles = JSON.parse(localStorage.getItem('files')) || [];
+
+      storedFiles.forEach((fileName) => {
+        const listItem = createListItem(fileName);
+        fileList.appendChild(listItem);
+      });
+
+      fileInput.addEventListener('change', (event) => {
+        const selectedFile = event.target.files[0];
+        if (selectedFile) {
+          const listItem = createListItem(selectedFile.name);
+          fileList.appendChild(listItem);
+
+          // 파일 정보 저장
+          storedFiles.push(selectedFile.name);
+          localStorage.setItem('files', JSON.stringify(storedFiles));
+        }
+      });
+
+      function createListItem(fileName) {
+        const listItem = document.createElement('li');
+        listItem.textContent = fileName;
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '삭제';
+        deleteButton.classList.add('btn_delete');
+        deleteButton.addEventListener('click', () => {
+          listItem.remove();
+
+          // 파일 정보 업데이트 및 저장
+          storedFiles.splice(storedFiles.indexOf(fileName), 1);
+          localStorage.setItem('files', JSON.stringify(storedFiles));
+        });
+
+        listItem.appendChild(deleteButton);
+        return listItem;
       }
     </script>
   </body>
