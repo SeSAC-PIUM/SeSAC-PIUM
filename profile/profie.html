@@ -169,7 +169,7 @@
       /* padding: 16px; */
     }
 
-    .btn:hover,
+    /* .btn:hover, */
     .btn:active {
       border: 1px solid var(--color-main-green);
       background-color: var(--color-main-green);
@@ -254,7 +254,7 @@
                   role="combobox"
                   list="browsers1"
                   type="text"
-                  id="input2"
+                  id="class_select"
                   name="browsers"
                   placeholder="클래스 선택"
                 />
@@ -504,9 +504,9 @@
         },
       ];
 
-      input2.onfocus = function () {
+      class_select.onfocus = function () {
         browsers1.innerHTML = '';
-        input2.value = '';
+        class_select.value = '';
 
         for (let i = 0; i < campusClasses.length; i++) {
           if (input.value == campusClasses[i].name) {
