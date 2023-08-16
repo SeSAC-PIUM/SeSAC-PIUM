@@ -271,10 +271,10 @@
     }
 
     .button_selected_all {
-      padding: 16px 0px;
+      padding: 16px 32px;
       border: none;
       border-radius: 4px;
-      width: 100%;
+      /* width: 100%; */
       font-weight: 600;
       cursor: pointer;
     }
@@ -405,13 +405,19 @@
             > -->
             <!-- <input type="text" class="input" style="margin-right: 8px" /> -->
             <div class="answer_container">
-              <input type="file" id="fileInput" style="margin-bottom: 8px" />
-              <input type="file" id="fileInput" />
-              <!-- <button class="btn btn_add_file">파일 추가</button> -->
-              <ul id="fileList"></ul>
-              <!-- <div class="btn btn_add_file" style="margin: 4px 4px 4px 0px">
-              파일찾기
-            </div> -->
+              <input type="file" id="fileInput" style="display: none" />
+              <button
+                class="btn_add_file button_selected_all"
+                style="margin-bottom: 8px"
+              >
+                파일 추가
+              </button>
+              <div
+                class="box"
+                style="max-width: 300px; width: 100%; padding: 24px 16px"
+              >
+                <ul id="fileList"></ul>
+              </div>
             </div>
           </div>
           <!-- </div> -->
@@ -451,45 +457,45 @@
       });
 
       // drop down
-      input.onfocus = function () {
-        browsers.style.display = 'block';
-        input.style.borderRadius = '4px';
-      };
-      for (let option of browsers.options) {
-        option.onclick = function () {
-          input.value = option.value;
-          browsers.style.display = 'none';
-          input.style.borderRadius = '4px';
-        };
-      }
+      // input.onfocus = function () {
+      //   browsers.style.display = 'block';
+      //   input.style.borderRadius = '4px';
+      // };
+      // for (let option of browsers.options) {
+      //   option.onclick = function () {
+      //     input.value = option.value;
+      //     browsers.style.display = 'none';
+      //     input.style.borderRadius = '4px';
+      //   };
+      // }
 
-      input.oninput = function () {
-        currentFocus = -1;
-        var text = input.value.toUpperCase();
-        for (let option of browsers.options) {
-          if (option.value.toUpperCase().indexOf(text) > -1) {
-            option.style.display = 'block';
-          } else {
-            option.style.display = 'none';
-          }
-        }
-      };
+      // input.oninput = function () {
+      //   currentFocus = -1;
+      //   var text = input.value.toUpperCase();
+      //   for (let option of browsers.options) {
+      //     if (option.value.toUpperCase().indexOf(text) > -1) {
+      //       option.style.display = 'block';
+      //     } else {
+      //       option.style.display = 'none';
+      //     }
+      //   }
+      // };
 
-      let currentFocus = -1;
-      input.onkeydown = function (e) {
-        if (e.keyCode == 40) {
-          currentFocus++;
-          addActive(browsers.options);
-        } else if (e.keyCode == 38) {
-          currentFocus--;
-          addActive(browsers.options);
-        } else if (e.keyCode == 13) {
-          e.preventDefault();
-          if (currentFocus > -1) {
-            if (browsers.options) browsers.options[currentFocus].click();
-          }
-        }
-      };
+      // let currentFocus = -1;
+      // input.onkeydown = function (e) {
+      //   if (e.keyCode == 40) {
+      //     currentFocus++;
+      //     addActive(browsers.options);
+      //   } else if (e.keyCode == 38) {
+      //     currentFocus--;
+      //     addActive(browsers.options);
+      //   } else if (e.keyCode == 13) {
+      //     e.preventDefault();
+      //     if (currentFocus > -1) {
+      //       if (browsers.options) browsers.options[currentFocus].click();
+      //     }
+      //   }
+      // };
 
       // box btn 클릭
       let selectedBtnId = null;

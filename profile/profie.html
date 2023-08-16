@@ -65,19 +65,6 @@
       width: 300px;
     }
 
-    /* .profile_container
-      .profile_contents_container
-      .profile_contents
-      .profile_content_wrap
-      .label_container
-      label {
-      margin-right: 32px;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      padding-bottom: 16px;
-    } */
-
     .profile_container
       .profile_contents_container
       .profile_contents
@@ -133,19 +120,6 @@
       max-width: 360px;
     }
 
-    /* .profile_contents_container .button_container .success_button {
-      width: 100%;
-      padding: 16px 0px;
-      border: none;
-      border-radius: 4px;
-      background: #2da96e;
-      color: #ffffff;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      cursor: pointer;
-    } */
-
     /* dropdown */
     fieldset {
       /* width: auto; */
@@ -188,23 +162,14 @@
       background-color: var(--color-grayscale-100);
     }
 
-    /* 커스텀 스타일링된 드롭다운 */
-
-    /* input[type='radio'] {
-      display: none;
-      width: auto;
-      accent-color: green;
-      margin-right: 8px;
-    } */
-
-    .btn-list {
+    .btn_list {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       /* padding: 16px; */
     }
 
-    .btn:hover,
+    /* .btn:hover, */
     .btn:active {
       border: 1px solid var(--color-main-green);
       background-color: var(--color-main-green);
@@ -289,7 +254,7 @@
                   role="combobox"
                   list="browsers1"
                   type="text"
-                  id="input2"
+                  id="class_select"
                   name="browsers"
                   placeholder="클래스 선택"
                 />
@@ -338,18 +303,20 @@
             </div>
 
             <div class="box">
-              <div class="btn-list">
-                <div class="btn" id="btn0" onclick="openAnswer(0)">기획</div>
-                <div class="btn" id="btn1" onclick="openAnswer(1)">
+              <div class="btn_list">
+                <div class="btn" id="btn0" onclick="toggleAnswer(0)">기획</div>
+                <div class="btn" id="btn1" onclick="toggleAnswer(1)">
                   UX/UI디자인
                 </div>
-                <div class="btn" id="btn2" onclick="openAnswer(2)">
+                <div class="btn" id="btn2" onclick="toggleAnswer(2)">
                   퍼블리싱
                 </div>
-                <div class="btn" id="btn3" onclick="openAnswer(3)">
+                <div class="btn" id="btn3" onclick="toggleAnswer(3)">
                   프론트엔드
                 </div>
-                <div class="btn" id="btn4" onclick="openAnswer(4)">백엔드</div>
+                <div class="btn" id="btn4" onclick="toggleAnswer(4)">
+                  백엔드
+                </div>
               </div>
             </div>
           </div>
@@ -537,9 +504,9 @@
         },
       ];
 
-      input2.onfocus = function () {
+      class_select.onfocus = function () {
         browsers1.innerHTML = '';
-        input2.value = '';
+        class_select.value = '';
 
         for (let i = 0; i < campusClasses.length; i++) {
           if (input.value == campusClasses[i].name) {
@@ -566,15 +533,19 @@
       }
 
       // box btn 클릭
-      let selectedBtnId = null;
+      const selectedBtnIds = [];
 
-      function openAnswer(btnIndex) {
-        if (selectedBtnId !== null) {
-          document.getElementById(selectedBtnId).classList.remove('selected');
+      function toggleAnswer(btnIndex) {
+        const clickedBtnId = `btn${btnIndex}`;
+        const clickedBtn = document.getElementById(clickedBtnId);
+
+        if (selectedBtnIds.includes(clickedBtnId)) {
+          selectedBtnIds.splice(selectedBtnIds.indexOf(clickedBtnId), 1);
+          clickedBtn.classList.remove('selected');
+        } else {
+          selectedBtnIds.push(clickedBtnId);
+          clickedBtn.classList.add('selected');
         }
-
-        selectedBtnId = `btn${btnIndex}`;
-        document.getElementById(selectedBtnId).classList.add('selected');
       }
     </script>
   </body>
