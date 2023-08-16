@@ -7,11 +7,9 @@
     <!-- swiper CSS CDN -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <!-- swiper JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <title>booking</title>
   </head>
   <body>
@@ -36,10 +34,21 @@
         justify-content: space-between;
       }
 
+      @media screen and (max-width: 1200px) {
+        .section .section_inner {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .section .section_inner .slide_wrap {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
       .section .section_inner .slide_wrap {
         display: flex;
         flex-direction: column;
-        /* border: 1px solid red; */
+        border: 1px solid red;
         padding-right: 24px;
       }
 
@@ -48,8 +57,9 @@
       }
 
       .section .section_inner .slide_wrap .slide_container .slide {
-        border: 1px solid black;
-        width: 690px;
+        /* border: 1px solid black; */
+        max-width: 690px;
+        width: 100%;
         height: 400px;
       }
 
@@ -57,7 +67,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        /* border: 1px solid red; */
+        border: 1px solid blue;
         padding-top: 80px;
       }
       .section .section_inner .box_wrap .box {
@@ -263,45 +273,24 @@
     </div>
 
     <script>
-      const slide1 = new Swiper('.swiper1', {
+      const swiper = new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 6,
         loop: true,
         autoplay: {
-          delay: 1000,
+          delay: 2000,
         },
-        speed: 1000,
+        speed: 2000,
         navigation: {
-          nextEl: '.swiper1 .swiper-button-next',
-          prevEl: '.swiper1 .swiper-button-prev',
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
         pagination: {
-          el: '.swiper1 .swiper-pagination',
+          el: '.swiper-pagination',
           clickable: true,
         },
         scrollbar: {
-          el: '.swiper1 .swiper-scrollbar',
-        },
-      });
-
-      const slide2 = new Swiper('.swiper2', {
-        slidesPerView: 1,
-        spaceBetween: 6,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-        },
-        speed: 1000,
-        navigation: {
-          nextEl: '.swiper2 .swiper-button-next',
-          prevEl: '.swiper2 .swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper2 .swiper-pagination',
-          clickable: true,
-        },
-        scrollbar: {
-          el: '.swiper2 .swiper-scrollbar',
+          el: '.swiper-scrollbar',
         },
       });
     </script>
