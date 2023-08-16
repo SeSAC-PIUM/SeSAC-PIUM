@@ -23,8 +23,10 @@
   display: flex;
   margin-right: 16px;
 }
-.footer .footer_Content .left .left1 img {
+.footer .footer_Content .left .left1 div img {
   margin-right: 8px;
+}
+.footer .footer_Content .left .left1 span img {
 }
 .footer .footer_Content .left .left2 {
   display: flex;
