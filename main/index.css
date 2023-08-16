@@ -16,6 +16,7 @@
   width: 906px;
   height: 260px;
   margin: 0 !important;
+  border-radius: 8px;
 }
 
 .swiper-slide {
@@ -81,7 +82,6 @@ main {
 }
 /* section*/
 main section {
-  cursor: pointer;
 }
 
 main section .sub_wrap {
@@ -137,6 +137,10 @@ main section .select .select_menu {
 }
 .section2 .pr_tit {
   display: flex;
+  line-height: 24px;
+}
+.section2 .pr_tit span {
+  margin-left: 8px;
 }
 .section2 .project_subtitle_wrap {
   width: 1200px;
@@ -146,6 +150,9 @@ main section .select .select_menu {
 .section2 .card_wrap {
   display: flex;
   justify-content: space-between;
+}
+.section2 .card_wrap div div div {
+  cursor: pointer;
 }
 
 .section2 .card_footer .Recruiting_container {
@@ -266,6 +273,10 @@ main section .select .select_menu {
 }
 .section3 .pr_tit {
   display: flex;
+  line-height: 24px;
+}
+.section3 .pr_tit span {
+  margin-left: 8px;
 }
 .section3 .project_subtitle_wrap {
   width: 1200px;
@@ -275,6 +286,9 @@ main section .select .select_menu {
 .section3 .card_wrap {
   display: flex;
   justify-content: space-between;
+}
+.section3 .card_wrap div div div {
+  cursor: pointer;
 }
 
 .section3 .card_footer .Recruiting_container5 {
@@ -396,6 +410,7 @@ main section .select .select_menu {
 }
 .section4 .pr_tit {
   display: flex;
+  line-height: 24px;
 }
 .section4 .project_subtitle_wrap {
   width: 1200px;
