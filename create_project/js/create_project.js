@@ -68,6 +68,26 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
 
+  $.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    showMonthAfterYear: true,
+    yearSuffix: '년'
+  });
+  
+  $(function () {
+    $('.date_btn_input').datepicker();
+  });
+
+
+
+
   const mentor_num_value = document.querySelector('.mentor_num');
   const mentee_num_value = document.querySelector('.mentee_num');
   const mentor_btn_minus = document.querySelector('.mentor_btn_minus');
@@ -82,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
   
   mentor_btn_minus.addEventListener('click', ()=>{
     // minusNum(mentor_num, mentor_num_sum, mentor_num_value)
-    if(mentor_num_sum < 1)
+    if(mentor_num_sum <= 1)
     return
     mentor_num--
     mentor_num_sum =+ mentor_num
@@ -98,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
   })
   mentee_btn_minus.addEventListener('click', ()=>{
     // minusNum(mentee_num, mentee_num_sum, mentee_num_value)
-    if(mentee_num_sum < 1)
+    if(mentee_num_sum <= 1)
     return
     mentee_num--
     mentee_num_sum =+ mentee_num
@@ -149,10 +169,10 @@ window.addEventListener('DOMContentLoaded', () => {
     recruit_position_list_li.append(xmark)
 
     role_input.value = ''
-    mentor_num_sum = 1
-    mentor_num_value.innerText = mentor_num_sum
-    mentee_num_sum = 1
-    mentee_num_value.innerText = mentee_num_sum
+    // mentor_num_sum = 1
+    // mentor_num_value.innerText = mentor_num_sum
+    // mentee_num_sum = 1
+    // mentee_num_value.innerText = mentee_num_sum
 
     const recruit_position_list_xmark = document.querySelectorAll('.fa-xmark');
 
