@@ -37,4 +37,5 @@ button {
   border: none;
   margin: auto;
   margin-bottom: 80px;
+  cursor: pointer;
 }
