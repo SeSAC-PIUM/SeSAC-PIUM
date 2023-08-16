@@ -547,6 +547,65 @@
           clickedBtn.classList.add('selected');
         }
       }
+
+      //항목을 다 채워야 다음페이지로 넘어갈 수 있게 설정
+      function validateInputs() {
+        const nameInput = document.querySelector(
+          '.profile_content_wrap.01 input'
+        );
+        const classSelectInput = document.querySelector(
+          '.profile_content_wrap.02 input'
+        );
+        const selectedRadio = document.querySelector(
+          '.profile_content_wrap.03 input:checked'
+        );
+
+        const selectedJob = document.querySelector(
+          '.profile_content_wrap.04 .btn:selected'
+        );
+        const selectedMentor = document.querySelector(
+          '.profile_content_wrap.05 input:checked'
+        );
+
+        if (!nameInput.value) {
+          alert('이름을 입력해주세요.');
+          return false;
+        }
+
+        if (!classSelectInput.value) {
+          alert('수강 교육과정을 선택해주세요.');
+          return false;
+        }
+
+        if (!selectedRadio) {
+          alert('성별을 선택해주세요.');
+          return false;
+        }
+
+        // 희망직무와 멘토/멘티 항목 추가
+        if (!selectedJob) {
+          alert('희망직무를 선택해주세요.');
+          return false;
+        }
+
+        if (!selectedMentor) {
+          alert('멘토/멘티를 선택해주세요.');
+          return false;
+        }
+
+        return true; // 모든 항목이 유효하다면 true 반환
+      }
+
+      function goToNextPage() {
+        if (validateInputs()) {
+          // 모든 항목이 유효하다면 다음 페이지로 이동
+          window.location.href = '../profile/profie_2.html';
+        }
+      }
+
+      // 가입완료 버튼 클릭 시 validateInputs 함수 호출
+      const btnSave = document.querySelector('.btn_save');
+      btnSave.addEventListener('click', goToNextPage);
     </script>
   </body>
 </html>
