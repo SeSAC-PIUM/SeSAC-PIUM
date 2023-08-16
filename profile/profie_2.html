@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PIUM - signup 추가정보(1/2)</title>
+    <title>PIUM</title>
     <!-- <link rel="stylesheet" href="../common/root.css" /> -->
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../common/global_style.css" />
@@ -293,7 +293,7 @@
 
       <div class="profile_contents_container">
         <div class="profile_contents">
-          <div class="profile_content_wrap 01">
+          <div class="profile_content_wrap one_1">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">취업경험</div>
@@ -341,7 +341,7 @@
             </div>
           </div>
 
-          <div class="profile_content_wrap 02">
+          <div class="profile_content_wrap two_1">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">창업경험</div>
@@ -368,7 +368,7 @@
             </div>
           </div>
 
-          <div class="profile_content_wrap 03">
+          <div class="profile_content_wrap three_1">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">전공</div>
@@ -378,7 +378,7 @@
             <input type="text" class="input" />
           </div>
 
-          <div class="profile_content_wrap 04">
+          <div class="profile_content_wrap four_1">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">github 주소</div>
@@ -388,7 +388,7 @@
             <input type="text" class="input" />
           </div>
 
-          <div class="profile_content_wrap 05">
+          <div class="profile_content_wrap five_1">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">포트폴리오 파일</div>
@@ -422,7 +422,7 @@
           </div>
           <!-- </div> -->
 
-          <div class="profile_content_wrap 06">
+          <div class="profile_content_wrap six_1">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">포트폴리오 링크</div>
@@ -438,9 +438,9 @@
           <a href="../selection/selection.html" target="_blank">
             <div class="skip_btn">SKIP</div>
           </a>
-          <a href="../profile/profie_3.html">
-            <button class="btn_save">저장하기</button>
-          </a>
+          <!-- <a href="../profile/profie_3.html"> -->
+          <button class="btn_save">저장하기</button>
+          <!-- </a> -->
         </div>
       </div>
     </div>
@@ -455,47 +455,6 @@
       titleBox.addEventListener('mouseleave', () => {
         profileModal.style.display = 'none';
       });
-
-      // drop down
-      // input.onfocus = function () {
-      //   browsers.style.display = 'block';
-      //   input.style.borderRadius = '4px';
-      // };
-      // for (let option of browsers.options) {
-      //   option.onclick = function () {
-      //     input.value = option.value;
-      //     browsers.style.display = 'none';
-      //     input.style.borderRadius = '4px';
-      //   };
-      // }
-
-      // input.oninput = function () {
-      //   currentFocus = -1;
-      //   var text = input.value.toUpperCase();
-      //   for (let option of browsers.options) {
-      //     if (option.value.toUpperCase().indexOf(text) > -1) {
-      //       option.style.display = 'block';
-      //     } else {
-      //       option.style.display = 'none';
-      //     }
-      //   }
-      // };
-
-      // let currentFocus = -1;
-      // input.onkeydown = function (e) {
-      //   if (e.keyCode == 40) {
-      //     currentFocus++;
-      //     addActive(browsers.options);
-      //   } else if (e.keyCode == 38) {
-      //     currentFocus--;
-      //     addActive(browsers.options);
-      //   } else if (e.keyCode == 13) {
-      //     e.preventDefault();
-      //     if (currentFocus > -1) {
-      //       if (browsers.options) browsers.options[currentFocus].click();
-      //     }
-      //   }
-      // };
 
       // box btn 클릭
       let selectedBtnId = null;
@@ -566,6 +525,60 @@
           }
         }
       }
+
+      //항목을 다 채워야 다음페이지로 넘어갈 수 있게 설정
+      function validateInputs() {
+        const employmentInput = document.querySelector(
+          '.profile_content_wrap.one_1 input:checked'
+        );
+        const foundedInput = document.querySelector(
+          '.profile_content_wrap.two_1 input:checked'
+        );
+
+        const majorInput = document.querySelector(
+          '.profile_content_wrap.three_1 input'
+        );
+
+        const addressInput = document.querySelector(
+          '.profile_content_wrap.four_1 input'
+        );
+
+        const fileInput = document.querySelector(
+          '.profile_content_wrap.five_1 .btn.selected'
+        );
+
+        const portfolioInput = document.querySelector(
+          '.profile_content_wrap.six_1 input'
+        );
+
+        if (!employmentInput) {
+          alert('취업경험을 입력해 주세요');
+        } else if (!foundedInput) {
+          alert('창업경험을 선택해주세요.');
+        } else if (!majorInput.value) {
+          alert('전공을 입력해주세요.');
+        } else if (!addressInput.value) {
+          alert("github 주소를 입력해주세요. 없다면 '없음'이라고 작성해주세요");
+        } else if (!portfolioInput.value) {
+          alert(
+            "포트폴리오 링크를 입력해주세요. 없다면 '없음'이라고 작성해주세요"
+          );
+        } else {
+          // 모든 항목이 유효하다면 true 반환
+          return true;
+        }
+      }
+
+      function goToNextPage() {
+        if (validateInputs()) {
+          // 모든 항목이 유효하다면 다음 페이지로 이동
+          window.location.href = '../profile/profie_3.html';
+        }
+      }
+
+      // 가입완료 버튼 클릭 시 함수 호출
+      const btnSave = document.querySelector('.btn_save');
+      btnSave.addEventListener('click', goToNextPage);
     </script>
   </body>
 </html>

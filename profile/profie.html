@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PIUM - signup</title>
+    <title>PIUM</title>
     <!-- <link rel="stylesheet" href="../common/root.css" /> -->
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../common/global_style.css" />
@@ -195,7 +195,7 @@
 
       <div class="profile_contents_container">
         <div class="profile_contents">
-          <div class="profile_content_wrap 01">
+          <div class="profile_content_wrap one">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">이름</div>
@@ -213,7 +213,7 @@
             <input type="text" class="input" style="width: 300px" />
           </div>
 
-          <div class="profile_content_wrap 02">
+          <div class="profile_content_wrap two">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">수강 교육과정</div>
@@ -230,9 +230,6 @@
                   placeholder="캠퍼스 선택"
                   type="text"
                 />
-                <!-- <span class="downdrop_span"
-                ><img src="../src/img/dropDown.png" alt=""
-              /></span> -->
 
                 <datalist id="browsers" role="listbox">
                   <option value="강동캠퍼스">강동캠퍼스</option>
@@ -255,16 +252,16 @@
                   list="browsers1"
                   type="text"
                   id="class_select"
-                  name="browsers"
+                  name="browsers2"
                   placeholder="클래스 선택"
                 />
 
-                <datalist id="browsers1" role="listbox"> </datalist>
+                <datalist id="browsers2" role="listbox"> </datalist>
               </fieldset>
             </div>
           </div>
 
-          <div class="profile_content_wrap 03">
+          <div class="profile_content_wrap three">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">성별</div>
@@ -287,7 +284,7 @@
             </div>
           </div>
 
-          <div class="profile_content_wrap 04">
+          <div class="profile_content_wrap four">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">희망직무</div>
@@ -321,7 +318,7 @@
             </div>
           </div>
 
-          <div class="profile_content_wrap 05">
+          <div class="profile_content_wrap five">
             <div class="title">
               <div class="title_box">
                 <div class="ques_text">멘토/멘티</div>
@@ -358,11 +355,11 @@
             </div>
           </div>
         </div>
-        <a href="../profile/profie_2.html">
-          <div class="button_container">
-            <button class="btn_save">가입완료</button>
-          </div>
-        </a>
+        <!-- <a href="../profile/profie_2.html"> -->
+        <div class="button_container">
+          <button class="btn_save">가입완료</button>
+        </div>
+        <!-- </a> -->
       </div>
     </div>
 
@@ -381,6 +378,7 @@
       }
 
       // drop down
+      // 캠퍼스 선택
       input.onfocus = function () {
         browsers.value = '';
         browsers.style.display = 'block';
@@ -422,6 +420,51 @@
         }
       };
 
+      // 클래스 선택
+      const classSelect = document.querySelector('#class_select');
+
+      classSelect.onfocus = function () {
+        browsers2.value = '';
+        browsers2.style.display = 'block';
+        classSelect.style.borderRadius = '4px';
+      };
+      for (let option of browsers2.options) {
+        option.onclick = function () {
+          classSelect.value = option.value;
+          browsers2.style.display = 'none';
+          classSelect.style.borderRadius = '4px';
+        };
+      }
+
+      classSelect.oninput = function () {
+        currentFocus2 = -1;
+        var text = classSelect.value;
+        for (let option of browsers2.options) {
+          if (option.value.toUpperCase().indexOf(text) > -1) {
+            option.style.display = 'block';
+          } else {
+            option.style.display = 'none';
+          }
+        }
+      };
+
+      let currentFocus2 = -1;
+      classSelect.onkeydown = function (e) {
+        if (e.keyCode == 40) {
+          currentFocus2++;
+          addActive(browsers2.options);
+        } else if (e.keyCode == 38) {
+          currentFocus2--;
+          addActive(browsers2.options);
+        } else if (e.keyCode == 13) {
+          e.preventDefault();
+          if (currentFocus2 > -1) {
+            if (browsers2.options) browsers2.options[currentFocus2].click();
+          }
+        }
+      };
+
+      console.log(class_select);
       const campusClasses = [
         {
           name: '강동캠퍼스',
@@ -547,6 +590,61 @@
           clickedBtn.classList.add('selected');
         }
       }
+
+      //항목을 다 채워야 다음페이지로 넘어갈 수 있게 설정
+      function validateInputs() {
+        const nameInput = document.querySelector(
+          '.profile_content_wrap.one input'
+        );
+        const campusSelectInput = document.querySelector(
+          '.profile_content_wrap.two #input'
+        );
+
+        const classSelectInput = document.querySelector(
+          '.profile_content_wrap.two #class_select'
+        );
+
+        const selectedRadio = document.querySelector(
+          '.profile_content_wrap.three input:checked'
+        );
+
+        const selectedJob = document.querySelector(
+          '.profile_content_wrap.four .btn.selected'
+        );
+
+        const selectedMentor = document.querySelector(
+          '.profile_content_wrap.five input:checked'
+        );
+
+        if (!nameInput.value) {
+          alert('이름을 입력해 주세요');
+        } else if (!campusSelectInput.value) {
+          alert('캠퍼스를 선택해주세요.');
+        } else if (!classSelectInput.value) {
+          alert('클래스를 선택해주세요.');
+        } else if (!selectedRadio) {
+          alert('성별을 선택해주세요.');
+        } else if (!selectedJob) {
+          alert('희망직무를 선택해주세요');
+        } else if (!selectedMentor) {
+          alert('멘토/멘티를 선택해주세요');
+        } else {
+          // 모든 항목이 유효하다면 true 반환
+          return true;
+        }
+      }
+
+      function goToNextPage() {
+        if (validateInputs()) {
+          // 모든 항목이 유효하다면 다음 페이지로 이동
+          window.location.href = '../profile/profie_2.html';
+        }
+      }
+
+      console.log(validateInputs);
+      // 가입완료 버튼 클릭 시 함수 호출
+      const btnSave = document.querySelector('.btn_save');
+      btnSave.addEventListener('click', goToNextPage);
     </script>
   </body>
 </html>
