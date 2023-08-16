@@ -8,7 +8,7 @@
 .footer .footer_Content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   margin: 12px 16px;
 }
 .footer .footer_Content .left {
@@ -17,12 +17,13 @@
   justify-content: space-evenly;
   justify-content: center;
   align-items: center;
+  line-height: 16px;
 }
 .footer .footer_Content .left .left1 {
   display: flex;
   margin-right: 16px;
 }
-.footer .footer_Content .left .left1 a img {
+.footer .footer_Content .left .left1 img {
   margin-right: 8px;
 }
 .footer .footer_Content .left .left2 {

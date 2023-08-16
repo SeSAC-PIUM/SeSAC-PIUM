@@ -385,6 +385,13 @@ input[type='radio'] {
   font-weight: 600;
   letter-spacing: 0.96px;
 }
+.footer_text2 {
+  color: var(--color-grayscale-500);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.96px;
+  font-family: 'Roboto', sans-serif;
+}
 
 /* green  */
 .main_font_GN_1 {
