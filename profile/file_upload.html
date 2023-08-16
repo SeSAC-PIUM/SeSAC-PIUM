@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>File Upload and Delete Example with Local Storage</title>
+    <title>File Upload</title>
     <link rel="stylesheet" href="../common/global_style.css" />
 
     <style></style>
   </head>
   <body>
+    <div class="box" style="width: 300px; height: auto">
+      <ul id="fileList"></ul>
+    </div>
     <input type="file" id="fileInput" style="display: none" />
-    <button class="btn_add_file">파일 추가</button>
-    <ul id="fileList"></ul>
+    <button class="btn_add_file button_selected_all" style="margin-top: 8px">
+      파일 추가
+    </button>
 
     <script>
       const fileInput = document.getElementById('fileInput');

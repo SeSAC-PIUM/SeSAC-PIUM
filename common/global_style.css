@@ -76,8 +76,8 @@ input[type='radio'] {
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid var(--color-grayscale-200);
-  font-size: 14px;
-  margin: 4px;
+  font-size: 12px;
+  margin: 8px;
   color: var(--color-grayscale-100);
   background: var(--color-grayscale-600);
   align-items: center;
@@ -153,7 +153,7 @@ input[type='radio'] {
 
 .box {
   display: flex;
-  width: auto;
+  width: fit-content;
   padding: 16px;
   align-items: center;
   border-radius: 4px;
