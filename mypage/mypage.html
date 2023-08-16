@@ -91,7 +91,6 @@
         text-align: center;
         flex-direction: column;
         border-radius: 4px;
-        border: 1px solid var(--color-grayscale-200);
         margin-right: 8px;
         line-height: 150%;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -119,7 +118,7 @@
         /* flex: 3; */
         width: 100%;
         height: 80%;
-        padding: 8px;
+        padding: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -157,7 +156,7 @@
         border: 1px solid var(--color-grayscale-200);
       }
 
-      .cards-container::-webkit-scrollbar {
+      .cards_container::-webkit-scrollbar {
         width: 0;
       }
     </style>
@@ -213,7 +212,9 @@
           </div>
         </section>
         <section>
-          <div class="section_title">희망 포지션</div>
+          <div class="section_subtitle">
+            <span class="section_title_point">|</span> 희망 포지션
+          </div>
           <div class="cards_col">
             <div class="card_xs card_mentor">
               <p>UX/UI디자인</p>
@@ -227,7 +228,10 @@
         </section>
 
         <section>
-          <div class="section_title">백그라운드</div>
+          <div class="section_subtitle">
+            <span class="section_title_point">|</span>
+            백그라운드
+          </div>
 
           <div class="cards_container">
             <div class="cards">
@@ -238,28 +242,48 @@
                   <div>UX/UI 디자이너</div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card_s_header">창업 경험</div>
-                <div class="card_s_body">무</div>
-              </div>
+
               <div class="card">
                 <div class="card_s_header">github 주소</div>
-                <div class="card_s_body">바로가기</div>
+                <a href="https://github.com/lkf6214" target="_blank">
+                  <div class="card_s_body">바로가기</div>
+                </a>
               </div>
               <div class="card">
                 <div class="card_s_header">포트폴리오 파일</div>
+
                 <div class="card_s_body">....</div>
               </div>
               <div class="card">
                 <div class="card_s_header">포트폴리오 링크</div>
-                <div class="card_s_body">....</div>
+                <div class="card_s_body">
+                  <a
+                    href="https://3-24.netlify.app/"
+                    target="_blank"
+                    class="section_title_desc"
+                    >링크 1</a
+                  >
+                  <a
+                    href="http://swspeech.co.kr"
+                    target="_blank"
+                    class="section_title_desc"
+                  >
+                    링크 2</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_s_header">창업 경험</div>
+                <div class="card_s_body">무</div>
               </div>
             </div>
           </div>
         </section>
 
         <section>
-          <div class="section_title">팀프로젝트 희망사항</div>
+          <div class="section_subtitle">
+            <span class="section_title_point">|</span> 팀프로젝트 희망사항
+          </div>
           <div class="cards_container">
             <div class="cards">
               <div class="card">
