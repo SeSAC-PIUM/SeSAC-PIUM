@@ -22,6 +22,7 @@ header {
   align-items: center;
   position: fixed;
   z-index: 9999;
+  top: 0;
 }
 .container {
   display: inline-flex;
@@ -60,7 +61,7 @@ header {
 }
 .login_wrap .login_logout .search_outline .search .text {
   background: var(--gy-1, #f5f5f9);
-  background-image: url(./src/img//search.png);
+  background-image: url(/src/img//search.png);
   background-repeat: no-repeat;
   background-position: 160px;
 }
