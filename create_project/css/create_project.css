@@ -111,6 +111,32 @@ section:last-child {
   height: 30px;
   width: 100%;
 }
+.date_btn {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #E9E9EE;
+}
+.date_btn.selected {
+  border: 1px solid #2DA96E;
+}
+.date_btn i {
+  position: absolute;
+  right: 32px;
+  top: 16px;
+  color: var(--color-grayscale-300);
+  cursor: pointer;
+}
+.date_btn_input {
+  padding: 16px 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+.date_btn_input:focus {
+  outline: 1px solid #2DA96E;
+}
 .chips_list {
   gap: 12px;
   padding: 16px;
@@ -259,4 +285,14 @@ main section .file_upload_button {
 }
 main section .file_upload_input {
   display: none;
+}
+main .submit_btn {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.dropdown_list li.active {
+  background-color: #333 !important;
+  color: #eee !important;
 }
