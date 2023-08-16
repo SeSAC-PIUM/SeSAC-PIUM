@@ -31,6 +31,21 @@ ul {
   padding: 0;
 }
 
+label {
+  margin-right: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 8px;
+}
+
+input[type='radio'] {
+  /* display: none; */
+  /* width: auto; */
+  accent-color: green;
+  margin-right: 8px;
+}
+
 /* 버튼 */
 /* signUp 버튼 */
 .btn {

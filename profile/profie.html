@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>profile</title>
+    <title>PIUM - signup</title>
     <!-- <link rel="stylesheet" href="../common/root.css" /> -->
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../common/global_style.css" />
@@ -35,8 +35,7 @@
       .profile_content_wrap {
       display: flex;
       flex-wrap: wrap;
-      /* justify-content: space-between; */
-      padding-bottom: 48px;
+      padding-bottom: 40px;
     }
 
     .profile_container
@@ -54,7 +53,7 @@
       .profile_content_wrap
       .title
       .title_box {
-      padding-bottom: 16px;
+      padding-bottom: 8px;
     }
 
     .profile_container
@@ -66,15 +65,18 @@
       width: 300px;
     }
 
-    .profile_container
+    /* .profile_container
       .profile_contents_container
       .profile_contents
       .profile_content_wrap
       .label_container
       label {
       margin-right: 32px;
-      /* display: flex; */
-    }
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding-bottom: 16px;
+    } */
 
     .profile_container
       .profile_contents_container
@@ -103,6 +105,7 @@
       .title_box
       span {
       display: flex;
+      cursor: pointer;
     }
 
     .profile_container
@@ -187,29 +190,13 @@
 
     /* 커스텀 스타일링된 드롭다운 */
 
-    input[type='radio'] {
-      /* display: none; */
+    /* input[type='radio'] {
+      display: none;
       width: auto;
       accent-color: green;
-    }
+      margin-right: 8px;
+    } */
 
-    /* 커스텀 라디오 버튼 스타일 */
-    .custom_radio {
-      display: inline-block;
-      width: auto;
-      background-size: cover;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-
-    /* 체크되었을 때 이미지 변경 */
-    .radio-image-1:checked + .custom-radio {
-      /* background-image: url("../src/img/Radio_Button_1.png"); */
-    }
-
-    .radio-image-2:checked + .custom-radio {
-      /* background-image:  url("../src/img/Radio_Button_1.png"); */
-    }
     .btn-list {
       display: flex;
       justify-content: center;
@@ -385,20 +372,30 @@
             </div>
             <div class="label_container">
               <label>
-                <input type="radio" name="radio-group" class="radio-image-1" />
+                <input
+                  type="radio"
+                  name="radio-group-1"
+                  class="radio-image-1"
+                />
                 <span class="custom-radio">멘토</span>
               </label>
 
               <label>
-                <input type="radio" name="radio-group" class="radio-image-2" />
+                <input
+                  type="radio"
+                  name="radio-group-1"
+                  class="radio-image-2"
+                />
                 <span class="custom-radio">멘티</span>
               </label>
             </div>
           </div>
         </div>
-        <div class="button_container">
-          <button class="btn_save">가입완료</button>
-        </div>
+        <a href="../profile/profie_2.html">
+          <div class="button_container">
+            <button class="btn_save">가입완료</button>
+          </div>
+        </a>
       </div>
     </div>
 
