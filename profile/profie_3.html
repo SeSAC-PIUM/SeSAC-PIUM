@@ -14,16 +14,19 @@
     .profile_container {
     }
     .profile_container .profile_header {
-      padding: 64px 16px 40px 16px;
+      width: 620px;
+      width: 680px;
+      padding: 64px 0px 40px 0px;
       text-align: center;
+      border-bottom: 1px solid var(--color-grayscale-600);
       margin: 0 auto;
     }
 
     .profile_container .profile_contents_container {
       margin: 0 auto;
-      max-width: 696px;
+      max-width: 696px; /* 컨테이너의 최대 너비를 설정 */
+      /* border: 1px solid red; */
       padding: 40px 16px;
-      border-top: 1px solid var(--color-grayscale-600);
     }
 
     .profile_container .profile_contents_container .profile_contents {
@@ -34,7 +37,6 @@
       .profile_contents
       .profile_content_wrap {
       display: flex;
-      flex-wrap: wrap;
       /* justify-content: space-between; */
       padding-bottom: 48px;
     }
@@ -54,7 +56,6 @@
       .profile_content_wrap
       .title
       .title_box {
-      padding-bottom: 16px;
     }
 
     .profile_container
@@ -63,8 +64,6 @@
       .profile_content_wrap
       .label_container {
       display: flex;
-      width: 300px;
-      flex-wrap: wrap;
     }
 
     .profile_container
@@ -74,10 +73,7 @@
       .label_container
       label {
       margin-right: 32px;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
+      /* display: flex; */
     }
 
     .profile_container
@@ -131,10 +127,10 @@
 
     .profile_contents_container .button_container {
       margin: 0 auto;
-      max-width: 360px;
+      width: 360px;
     }
 
-    /* .profile_contents_container .button_container .success_button {
+    .profile_contents_container .button_container .success_button {
       width: 100%;
       padding: 16px 0px;
       border: none;
@@ -144,23 +140,25 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
-      cursor: pointer;
-    } */
+    }
 
     /* dropdown */
     fieldset {
-      /* width: auto; */
-      width: 300px;
+      width: 296px;
       border: none;
       position: relative;
-      padding-bottom: 8px;
+      /* font-size: 14px;
+      padding: 16px 32px;
+      border-radius: 4px;
+      color: var(--color-grayscale-500);
+      border: 1px solid var(--color-grayscale-400); */
     }
-    input[type='text'] {
+    input {
       font-size: 14px;
       padding: 16px 32px;
       border-radius: 4px;
       color: var(--color-grayscale-500);
-      width: 100%;
+      width: 296px;
       border: 1px solid var(--color-grayscale-200);
     }
 
@@ -169,19 +167,17 @@
       background-color: #fff;
       border: 1px solid var(--color-grayscale-200);
       border-radius: 4px;
-      width: 300px;
+      width: 296px;
       margin-top: 8px;
       padding: 16px 32px;
-      z-index: 1;
     }
 
     option {
       background-color: white;
-      padding: 12px 8px;
+      padding: 12px 0px;
       color: var(--color-grayscale-600);
       font-size: 14px;
       cursor: pointer;
-      z-index: 2;
     }
 
     option:hover,
@@ -194,8 +190,6 @@
     input[type='radio'] {
       /* display: none; */
       width: auto;
-      accent-color: green;
-      margin-right: 8px;
     }
 
     .btn-list {
@@ -218,69 +212,29 @@
       background-color: var(--color-main-green);
       color: var(--color-grayscale-100);
     }
-
-    .skip_btn {
-      width: 100%;
-      padding: 16px;
-      background-color: var(--color-grayscale-600);
-      color: var(--color-grayscale-100);
-      border-radius: 4px;
-      font-size: 16px;
-      text-align: center;
-      margin-bottom: 4px;
-      /* position: absolute; */
-      /* top: 64px; */
-      /* right: 0; */
-      cursor: pointer;
-    }
   </style>
 
   <body>
     <div class="profile_container ques_text">
       <div class="profile_header">
-        <div class="page_title_point">
-          추가정보
-          <span class="page_title">입력</span>
+        <div class="section_title">
+          프로젝트를 위한
+          <span class="section_title_point">기본정보</span> 입력
         </div>
-        <div class="section_title_desc">2/2</div>
       </div>
 
       <div class="profile_contents_container">
         <div class="profile_contents">
-          <div class="profile_content_wrap 04">
+          <div class="profile_content_wrap 01">
             <div class="title">
               <div class="title_box">
-                <div class="ques_text">원하는 팀 성향</div>
+                <div class="ques_text">이름</div>
+                <span> <img src="../src/img/Group 629971.png" /></span>
               </div>
-            </div>
-
-            <div class="box">
-              <div class="btn-list">
-                <div
-                  class="btn"
-                  id="btn0"
-                  style="
-                    height: 80px;
-                    /* width: 120px; */
-                    text-align: center;
-                    line-height: 150%;
-                  "
-                  onclick="openAnswer(0)"
-                >
-                  조용히 차근차근 천천히
-                </div>
-                <div
-                  class="btn"
-                  id="btn1"
-                  style="
-                    height: 80px;
-                    /* width: 120px; */
-                    text-align: center;
-                    line-height: 150%;
-                  "
-                  onclick="openAnswer(1)"
-                >
-                  활발하게 진도이상으로 빠르게
+              <div class="profile_modal">
+                <div class="profile_modal_content">
+                  SBA 가입 시 입력하신 이름입니다. 만약 실명과 일치하지 않는다면
+                  마이페이지 - 이름변경 신청을 통해 수정가능합니다
                 </div>
               </div>
             </div>
@@ -318,44 +272,42 @@
           <div class="profile_content_wrap 02">
             <div class="title">
               <div class="title_box">
-                <div class="ques_text">작업공간 희망지역</div>
+                <div class="ques_text">수강 교육과정</div>
               </div>
             </div>
-            <div class="select_class">
-              <fieldset>
-                <input
-                  autocomplete="off"
-                  role="combobox"
-                  list=""
-                  id="input"
-                  name="browsers"
-                  placeholder="캠퍼스 선택"
-                  type="text"
-                />
-                <!-- <span class="downdrop_span"
+
+            <fieldset>
+              <input
+                autocomplete="off"
+                role="combobox"
+                list=""
+                id="input"
+                name="browsers"
+                placeholder="캠퍼스 선택"
+              />
+              <!-- <span class="downdrop_span"
                 ><img src="../src/img/dropDown.png" alt=""
               /></span> -->
 
-                <datalist id="browsers" role="listbox">
-                  <option value="강동캠퍼스">강동캠퍼스</option>
-                  <option value="강서캠퍼스">강서캠퍼스</option>
-                  <option value="광진캠퍼스">광진캠퍼스</option>
-                  <option value="금천캠퍼스">금천캠퍼스</option>
-                  <option value="동작캠퍼스">동작캠퍼스</option>
-                  <option value="마포캠퍼스">마포캠퍼스</option>
-                  <option value="서대문캠퍼스">서대문캠퍼스</option>
-                  <option value="용산캠퍼스">용산캠퍼스</option>
-                  <option value="종로캠퍼스">종로캠퍼스</option>
-                  <option value="중구캠퍼스">중구캠퍼스</option>
-                </datalist>
-              </fieldset>
-            </div>
+              <datalist id="browsers" role="listbox">
+                <option value="강동캠퍼스">강동캠퍼스</option>
+                <option value="강서캠퍼스">강서캠퍼스</option>
+                <option value="광진캠퍼스">광진캠퍼스</option>
+                <option value="금천캠퍼스">금천캠퍼스</option>
+                <option value="동작캠퍼스">동작캠퍼스</option>
+                <option value="마포캠퍼스">마포캠퍼스</option>
+                <option value="서대문캠퍼스">서대문캠퍼스</option>
+                <option value="용산캠퍼스">용산캠퍼스</option>
+                <option value="종로캠퍼스">종로캠퍼스</option>
+                <option value="중구캠퍼스">중구캠퍼스</option>
+              </datalist>
+            </fieldset>
           </div>
 
           <div class="profile_content_wrap 03">
             <div class="title">
               <div class="title_box">
-                <div class="ques_text">온오프라인</div>
+                <div class="ques_text">성별</div>
               </div>
             </div>
             <div class="label_container">
@@ -375,13 +327,51 @@
             </div>
           </div>
 
+          <div class="profile_content_wrap 04">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">희망직무</div>
+                <span> <img src="../src/img/Group 629971.png" /></span>
+              </div>
+              <div class="profile_modal">
+                <div class="profile_modal_content">
+                  프로젝트에 참여희망하는 직무를 선택해주세요
+                </div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="btn-list">
+                <div class="btn" id="btn0" onclick="openAnswer(0)">기획</div>
+                <div class="btn" id="btn1" onclick="openAnswer(1)">
+                  UX/UI디자인
+                </div>
+                <div class="btn" id="btn2" onclick="openAnswer(2)">
+                  퍼블리싱
+                </div>
+                <div class="btn" id="btn3" onclick="openAnswer(3)">
+                  프론트엔드
+                </div>
+                <div class="btn" id="btn4" onclick="openAnswer(4)">백엔드</div>
+              </div>
+            </div>
+          </div>
+
           <div class="profile_content_wrap 05">
             <div class="title">
               <div class="title_box">
-                <div class="ques_text">작업 선호 날짜</div>
+                <div class="ques_text">멘토/멘티</div>
+                <span> <img src="../src/img/Group 629971.png" /></span>
+              </div>
+              <div class="profile_modal">
+                <div class="profile_modal_content">
+                  해당 직무를 처음 접하는 교육생들을 위해프로젝트 멘토/멘티
+                  짝꿍제도를 운영합니다.수업을 따라가는데 문제가 없는
+                  수준이라면멘토를 지원해주세요🥰
+                </div>
               </div>
             </div>
-            <div class="label_container" style="flex-wrap: wrap">
+            <div class="label_container">
               <label>
                 <input type="radio" name="radio-group-7" />
                 <span class="custom-radio">무관</span>
@@ -425,9 +415,18 @@
     </div>
 
     <script>
+      // modal hover
+      const profileModal = document.querySelector('.profile_modal');
+      const titleBox = document.querySelector('.title_box');
+      titleBox.addEventListener('mouseenter', () => {
+        profileModal.style.display = 'block';
+      });
+      titleBox.addEventListener('mouseleave', () => {
+        profileModal.style.display = 'none';
+      });
+
       // drop down
       input.onfocus = function () {
-        browsers.value = '';
         browsers.style.display = 'block';
         input.style.borderRadius = '4px';
       };
@@ -441,7 +440,7 @@
 
       input.oninput = function () {
         currentFocus = -1;
-        var text = input.value;
+        var text = input.value.toUpperCase();
         for (let option of browsers.options) {
           if (option.value.toUpperCase().indexOf(text) > -1) {
             option.style.display = 'block';
@@ -467,36 +466,8 @@
         }
       };
 
-      input2.onfocus = function () {
-        browsers1.innerHTML = '';
-        input2.value = '';
-
-        for (let i = 0; i < campusClasses.length; i++) {
-          if (input.value == campusClasses[i].name) {
-            for (let el of campusClasses[i].classes) {
-              const option = document.createElement('option');
-              option.append(el);
-              browsers1.append(option);
-            }
-          }
-        }
-      };
-
-      function addActive(x) {
-        if (!x) return false;
-        removeActive(x);
-        if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = x.length - 1;
-        x[currentFocus].classList.add('active');
-      }
-      function removeActive(x) {
-        for (var i = 0; i < x.length; i++) {
-          x[i].classList.remove('active');
-        }
-      }
-
       // box btn 클릭
-      const selectedBtnId = null;
+      let selectedBtnId = null;
 
       function openAnswer(btnIndex) {
         if (selectedBtnId !== null) {
