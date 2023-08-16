@@ -291,7 +291,6 @@ main .submit_btn {
   max-width: 200px;
   margin: 0 auto;
 }
-
 .dropdown_list li.active {
   background-color: #333 !important;
   color: #eee !important;

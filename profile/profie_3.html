@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>profile</title>
+    <title>PIUM - signup 추가정보(2/2)</title>
     <!-- <link rel="stylesheet" href="../common/root.css" /> -->
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../common/global_style.css" />
@@ -192,23 +192,6 @@
       width: auto;
     }
 
-    /* 커스텀 라디오 버튼 스타일 */
-    .custom_radio {
-      display: inline-block;
-      width: auto;
-      background-size: cover;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-
-    /* 체크되었을 때 이미지 변경 */
-    .radio-image-1:checked + .custom-radio {
-      /* background-image: url("../src/img/Radio_Button_1.png"); */
-    }
-
-    .radio-image-2:checked + .custom-radio {
-      /* background-image:  url("../src/img/Radio_Button_1.png"); */
-    }
     .btn-list {
       display: flex;
       justify-content: center;
@@ -255,7 +238,35 @@
                 </div>
               </div>
             </div>
-            <input type="text" class="input" />
+          </div>
+
+          <div class="profile_content_wrap 03">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">MBTI</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-5"
+                  class="radio-group-5"
+                />
+                <input
+                  type="text"
+                  class="input"
+                  name="radio-group-5"
+                  placeholder="직접입력"
+                  onclick="handleRadioClick('radio-group-5')"
+                />
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group-5" />
+                <span class="custom_radio">비공개</span>
+              </label>
+            </div>
           </div>
 
           <div class="profile_content_wrap 02">
@@ -301,17 +312,17 @@
             </div>
             <div class="label_container">
               <label>
-                <input type="radio" name="radio-group" class="radio-image-1" />
-                <span class="custom_radio">여자</span>
+                <input type="radio" name="radio-group-6" />
+                <span class="custom_radio">무관</span>
               </label>
 
               <label>
-                <input type="radio" name="radio-group" class="radio-image-2" />
-                <span class="custom_radio">남자</span>
+                <input type="radio" name="radio-group-6" />
+                <span class="custom_radio">온라인</span>
               </label>
               <label>
-                <input type="radio" name="radio-group" class="radio-image-2" />
-                <span class="custom_radio">미선택</span>
+                <input type="radio" name="radio-group-6" />
+                <span class="custom_radio">오프라인</span>
               </label>
             </div>
           </div>
@@ -362,19 +373,43 @@
             </div>
             <div class="label_container">
               <label>
-                <input type="radio" name="radio-group" class="radio-image-1" />
-                <span class="custom-radio">멘토</span>
+                <input type="radio" name="radio-group-7" />
+                <span class="custom-radio">무관</span>
               </label>
 
               <label>
-                <input type="radio" name="radio-group" class="radio-image-2" />
-                <span class="custom-radio">멘티</span>
+                <input type="radio" name="radio-group-7" />
+                <span class="custom-radio">주일</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-group-7" />
+                <span class="custom-radio">주말</span>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-7"
+                  class="radio-group-7"
+                  style="margin-right: 8px"
+                />
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="직접입력"
+                  onclick="handleRadioClick('radio-group-7')"
+                />
               </label>
             </div>
           </div>
         </div>
         <div class="button_container">
-          <button class="success_button">가입완료</button>
+          <a href="../selection/selection.html" target="_blank">
+            <div class="skip_btn">SKIP</div>
+          </a>
+          <a href="../selection/selection.html" target="_blank">
+            <button class="btn_save">가입완료</button>
+          </a>
         </div>
       </div>
     </div>
@@ -441,6 +476,17 @@
 
         selectedBtnId = `btn${btnIndex}`;
         document.getElementById(selectedBtnId).classList.add('selected');
+      }
+
+      //input창 클릭 시 radio버튼 선택
+      function handleRadioClick(targetRadioClass) {
+        const radioButtons = document.querySelectorAll(`.${targetRadioClass}`);
+
+        for (const radio of radioButtons) {
+          if (radio.type === 'radio') {
+            radio.checked = true;
+          }
+        }
       }
     </script>
   </body>

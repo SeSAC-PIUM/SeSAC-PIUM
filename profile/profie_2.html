@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>profile-2</title>
+    <title>PIUM - signup 추가정보(1/2)</title>
     <!-- <link rel="stylesheet" href="../common/root.css" /> -->
     <link rel="stylesheet" href="./profile.css" />
     <link rel="stylesheet" href="../common/global_style.css" />
@@ -51,7 +51,7 @@
       .profile_content_wrap {
       display: flex;
       flex-wrap: wrap;
-      padding-bottom: 48px;
+      padding-bottom: 40px;
     }
 
     .profile_container
@@ -76,8 +76,18 @@
       .profile_contents_container
       .profile_contents
       .profile_content_wrap
+      .label_container {
+      width: 300px;
+      display: flex;
+    }
+
+    .profile_container
+      .profile_contents_container
+      .profile_contents
+      .profile_content_wrap
       .answer_container {
       width: 300px;
+      /* display: flex; */
     }
 
     .profile_container
@@ -87,6 +97,7 @@
       .answer_container
       .radio_container {
       padding-bottom: 16px;
+      display: flex;
     }
 
     .profile_container
@@ -289,12 +300,12 @@
               </div>
             </div>
             <div class="answer_container">
-              <div class="radio_container">
+              <div class="label_container">
                 <label>
                   <input
                     type="radio"
-                    name="radio-group"
-                    class="radio-image-1"
+                    name="radio-group-3"
+                    class="radio-group-3"
                   />
                   <span class="custom_radio">유</span>
                 </label>
@@ -302,7 +313,7 @@
                 <label>
                   <input
                     type="radio"
-                    name="radio-group"
+                    name="radio-group-3"
                     class="radio-image-2"
                   />
                   <span class="custom_radio">무</span>
@@ -311,11 +322,20 @@
 
               <div class="input_wrap">
                 <span style="padding-right: 16px">분야</span>
-                <input type="text" class="input" />
+                <input
+                  type="text"
+                  class="input"
+                  onclick="handleRadioClick('radio-group-3')"
+                />
               </div>
               <div class="input_wrap">
                 <span style="padding-right: 16px">연차</span>
-                <input type="text" class="input" style="width: 50px" />
+                <input
+                  type="text"
+                  class="input"
+                  style="width: 50px"
+                  onclick="handleRadioClick('radio-group-3')"
+                />
                 <span style="padding-left: 8px">년</span>
               </div>
             </div>
@@ -327,14 +347,22 @@
                 <div class="ques_text">창업경험</div>
               </div>
             </div>
-            <div class="answer_container">
+            <div class="label_container">
               <label>
-                <input type="radio" name="radio-group" class="radio-image-1" />
+                <input
+                  type="radio"
+                  name="radio-group-4"
+                  class="radio-image-1"
+                />
                 <span class="custom_radio">유</span>
               </label>
 
               <label>
-                <input type="radio" name="radio-group" class="radio-image-2" />
+                <input
+                  type="radio"
+                  name="radio-group-4"
+                  class="radio-image-2"
+                />
                 <span class="custom_radio">무</span>
               </label>
             </div>
@@ -401,8 +429,12 @@
           </div>
         </div>
         <div class="button_container">
-          <div class="skip_btn">SKIP</div>
-          <button class="btn_save">저장하기</button>
+          <a href="../selection/selection.html" target="_blank">
+            <div class="skip_btn">SKIP</div>
+          </a>
+          <a href="../profile/profie_3.html">
+            <button class="btn_save">저장하기</button>
+          </a>
         </div>
       </div>
     </div>
@@ -517,6 +549,16 @@
 
         listItem.appendChild(deleteButton);
         return listItem;
+      }
+      //input창 클릭 시 radio버튼 선택
+      function handleRadioClick(targetRadioClass) {
+        const radioButtons = document.querySelectorAll(`.${targetRadioClass}`);
+
+        for (const radio of radioButtons) {
+          if (radio.type === 'radio') {
+            radio.checked = true;
+          }
+        }
       }
     </script>
   </body>
