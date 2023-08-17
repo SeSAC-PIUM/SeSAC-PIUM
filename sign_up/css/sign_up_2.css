@@ -175,7 +175,7 @@ fieldset {
   color: var(--color-grayscale-500);
   border: 1px solid var(--color-grayscale-400); */
 }
-input {
+.input_text {
   font-size: 14px;
   padding: 16px 32px;
   border-radius: 4px;
