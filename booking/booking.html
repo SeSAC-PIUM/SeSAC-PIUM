@@ -17,6 +17,8 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
+        /* border: 1px solid black; */
+        padding-bottom: 48px;
       }
       .container .header {
         padding: 64px 0px;
@@ -24,13 +26,20 @@
         /* border: 1px solid black; */
       }
 
+      .section {
+        padding: 0px 16px;
+      }
+
       .section .section_header {
         border-bottom: 1px solid var(--color-grayscale-600);
         padding-bottom: 16px;
+        /* margin-bottom: 48px; */
       }
 
       .section .section_inner {
         display: flex;
+        flex-direction: row-reverse;
+        /* flex-wrap: wrap; */
         justify-content: space-between;
       }
 
@@ -45,11 +54,11 @@
           width: 100%;
         }
       }
+
       .section .section_inner .slide_wrap {
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
-        padding-right: 24px;
+        /* border: 1px solid purple; */
       }
 
       .section .section_inner .slide_wrap .slide_container {
@@ -58,17 +67,21 @@
 
       .section .section_inner .slide_wrap .slide_container .slide {
         /* border: 1px solid black; */
-        max-width: 690px;
+        max-width: 660px;
         width: 100%;
-        height: 400px;
       }
 
       .section .section_inner .box_wrap {
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        border: 1px solid blue;
+        /* justify-content: center; */
+        /* align-items: flex-start; */
+        /* border: 1px solid blue; */
         padding-top: 80px;
+        padding: 80px 16px 0px 16px;
+
+        /* max-width: 500px; */
+        width: 100%;
+        /* margin-bottom: 48px; */
       }
       .section .section_inner .box_wrap .box {
         /* position: fixed; */
@@ -76,6 +89,10 @@
         display: flex;
         flex-direction: column;
         padding: 32px;
+        width: 100%;
+        height: fit-content;
+        /* flex-wrap: wrap;
+        align-content: space-between; */
       }
 
       .section .section_inner .box_wrap .box .button_selected_all {
@@ -84,9 +101,6 @@
       }
 
       .section .section_inner .box_wrap .box .box_desc {
-        /* position: fixed; */
-        /* right: 0; */
-
         padding: 32px 0px;
         width: 100%;
       }
@@ -115,7 +129,6 @@
       /* slide */
       .swiper {
         width: 100%;
-        /* background-color: antiquewhite; */
         height: 100%;
       }
 
@@ -126,17 +139,24 @@
 
       .swiper .swiper-wrapper .swiper-slide {
         /* width: 200px;
-        height: 100px;
-        border: 1px solid blue; */
+        height: 100px; */
+        /* border: 1px solid blue; */
+        /* align-items: center; */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         /* text-align: center;
-        line-height: 100px; */
-        /* box-sizing: border-box; */
-        /* font-size: 25px; */
+        line-height: 100px;
+        box-sizing: border-box;
+        font-size: 25px; */
       }
 
       .swiper .swiper-wrapper .swiper-slide img {
         width: 100%;
         height: 100%;
+        /* height: auto; */
+        object-fit: cover;
       }
 
       /* pagination 커스텀 */
@@ -171,6 +191,39 @@
           </div>
         </div>
         <div class="section_inner">
+          <aside class="box_wrap">
+            <div class="box">
+              <div class="button_selected_all">예약하기</div>
+              <div class="box_desc">
+                <div class="desc">
+                  <div class="desc_tit">캠퍼스</div>
+                  <div class="desc_txt">강동캠퍼스</div>
+                </div>
+                <div class="desc">
+                  <div class="desc_tit">주소</div>
+                  <div class="desc_txt">
+                    서울특별시 강동구 고덕로 429 팍스애비뉴 4~5층(5호선 강일역)
+                  </div>
+                </div>
+                <div class="desc">
+                  <div class="desc_tit">이용시간</div>
+                  <div class="desc_txt">오전 8:00 ~ 오후 11시 (매일)</div>
+                </div>
+                <div class="desc" style="margin-bottom: 0px">
+                  <div class="desc_tit">연락처</div>
+                  <div class="desc_txt">02-6249-1601</div>
+                </div>
+              </div>
+              <div class="btn_wrap">
+                <div class="btn"># 노트북대여</div>
+                <div class="btn"># 빔 프로젝트 대여</div>
+                <div class="btn"># 주차 불가능</div>
+                <div class="btn"># 간식 제공</div>
+                <div class="btn"># 5호선 강일역</div>
+                <div class="btn"># 8시~23시</div>
+              </div>
+            </div>
+          </aside>
           <div class="slide_wrap">
             <div class="slide_container">
               <div class="section_subtitle">📍 5층 라운지</div>
@@ -235,39 +288,6 @@
               </div>
             </div>
           </div>
-          <aside class="box_wrap">
-            <div class="box">
-              <div class="button_selected_all">예약하기</div>
-              <div class="box_desc">
-                <div class="desc">
-                  <div class="desc_tit">캠퍼스</div>
-                  <div class="desc_txt">강동캠퍼스</div>
-                </div>
-                <div class="desc">
-                  <div class="desc_tit">주소</div>
-                  <div class="desc_txt">
-                    서울특별시 강동구 고덕로 429 팍스애비뉴 4~5층(5호선 강일역)
-                  </div>
-                </div>
-                <div class="desc">
-                  <div class="desc_tit">이용시간</div>
-                  <div class="desc_txt">오전 8:00 ~ 오후 11시 (매일)</div>
-                </div>
-                <div class="desc" style="margin-bottom: 0px">
-                  <div class="desc_tit">연락처</div>
-                  <div class="desc_txt">02-6249-1601</div>
-                </div>
-              </div>
-              <div class="btn_wrap">
-                <div class="btn"># 노트북대여</div>
-                <div class="btn"># 빔 프로젝트 대여</div>
-                <div class="btn"># 주차 불가능</div>
-                <div class="btn"># 간식 제공</div>
-                <div class="btn"># 5호선 강일역</div>
-                <div class="btn"># 8시~23시</div>
-              </div>
-            </div>
-          </aside>
         </div>
       </div>
     </div>
