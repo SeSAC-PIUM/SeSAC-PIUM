@@ -154,7 +154,8 @@
       color: var(--color-grayscale-600);
       font-size: 14px;
       cursor: pointer;
-      z-index: 2;
+      z-index: 1;
+      overflow: hidden;
     }
 
     option:hover,
@@ -364,107 +365,8 @@
     </div>
 
     <script>
-      // modal hover
-      const profileModal = document.querySelectorAll('.profile_modal');
-      const titleBox = document.querySelectorAll('.has_modal');
-
-      for (let i = 0; i < titleBox.length; i++) {
-        titleBox[i].addEventListener('mouseenter', () => {
-          profileModal[i].style.display = 'block';
-        });
-        titleBox[i].addEventListener('mouseleave', () => {
-          profileModal[i].style.display = 'none';
-        });
-      }
-
       // drop down
-      // 캠퍼스 선택
-      input.onfocus = function () {
-        browsers.value = '';
-        browsers.style.display = 'block';
-        input.style.borderRadius = '4px';
-      };
-      for (let option of browsers.options) {
-        option.onclick = function () {
-          input.value = option.value;
-          browsers.style.display = 'none';
-          input.style.borderRadius = '4px';
-        };
-      }
-
-      input.oninput = function () {
-        currentFocus = -1;
-        var text = input.value;
-        for (let option of browsers.options) {
-          if (option.value.toUpperCase().indexOf(text) > -1) {
-            option.style.display = 'block';
-          } else {
-            option.style.display = 'none';
-          }
-        }
-      };
-
-      let currentFocus = -1;
-      input.onkeydown = function (e) {
-        if (e.keyCode == 40) {
-          currentFocus++;
-          addActive(browsers.options);
-        } else if (e.keyCode == 38) {
-          currentFocus--;
-          addActive(browsers.options);
-        } else if (e.keyCode == 13) {
-          e.preventDefault();
-          if (currentFocus > -1) {
-            if (browsers.options) browsers.options[currentFocus].click();
-          }
-        }
-      };
-
-      // 클래스 선택
-      const classSelect = document.querySelector('#class_select');
-
-      classSelect.onfocus = function () {
-        browsers2.value = '';
-        browsers2.style.display = 'block';
-        classSelect.style.borderRadius = '4px';
-      };
-      for (let option of browsers2.options) {
-        option.onclick = function () {
-          classSelect.value = option.value;
-          browsers2.style.display = 'none';
-          classSelect.style.borderRadius = '4px';
-        };
-      }
-
-      classSelect.oninput = function () {
-        currentFocus2 = -1;
-        var text = classSelect.value;
-        for (let option of browsers2.options) {
-          if (option.value.toUpperCase().indexOf(text) > -1) {
-            option.style.display = 'block';
-          } else {
-            option.style.display = 'none';
-          }
-        }
-      };
-
-      let currentFocus2 = -1;
-      classSelect.onkeydown = function (e) {
-        if (e.keyCode == 40) {
-          currentFocus2++;
-          addActive(browsers2.options);
-        } else if (e.keyCode == 38) {
-          currentFocus2--;
-          addActive(browsers2.options);
-        } else if (e.keyCode == 13) {
-          e.preventDefault();
-          if (currentFocus2 > -1) {
-            if (browsers2.options) browsers2.options[currentFocus2].click();
-          }
-        }
-      };
-
-      console.log(class_select);
+      // modal hover
       const campusClasses = [
         {
           name: '강동캠퍼스',
@@ -546,18 +448,122 @@
           ],
         },
       ];
+      const profileModal = document.querySelectorAll('.profile_modal');
+      const titleBox = document.querySelectorAll('.has_modal');
 
-      class_select.onfocus = function () {
-        browsers1.innerHTML = '';
-        class_select.value = '';
+      for (let i = 0; i < titleBox.length; i++) {
+        titleBox[i].addEventListener('mouseenter', () => {
+          profileModal[i].style.display = 'block';
+        });
+        titleBox[i].addEventListener('mouseleave', () => {
+          profileModal[i].style.display = 'none';
+        });
+      }
 
+      // drop down
+      // 캠퍼스 선택
+      input.onfocus = function () {
+        browsers.value = '';
+        browsers.style.display = 'block';
+        input.style.borderRadius = '4px';
+      };
+      for (let option of browsers.options) {
+        option.onclick = function () {
+          input.value = option.value;
+          browsers.style.display = 'none';
+          input.style.borderRadius = '4px';
+        };
+      }
+
+      input.oninput = function () {
+        currentFocus = -1;
+        var text = input.value;
+        for (let option of browsers.options) {
+          if (option.value.toUpperCase().indexOf(text) > -1) {
+            option.style.display = 'block';
+          } else {
+            option.style.display = 'none';
+          }
+        }
+      };
+
+      let currentFocus = -1;
+      input.onkeydown = function (e) {
+        if (e.keyCode == 40) {
+          currentFocus++;
+          addActive(browsers.options);
+        } else if (e.keyCode == 38) {
+          currentFocus--;
+          addActive(browsers.options);
+        } else if (e.keyCode == 13) {
+          e.preventDefault();
+          if (currentFocus > -1) {
+            if (browsers.options) browsers.options[currentFocus].click();
+          }
+        }
+      };
+
+      // 클래스 선택
+      const classSelect = document.querySelector('#class_select');
+
+      classSelect.onfocus = function () {
+        browsers2.innerHTML = '';
+        // class_select.value = '';
         for (let i = 0; i < campusClasses.length; i++) {
           if (input.value == campusClasses[i].name) {
             for (let el of campusClasses[i].classes) {
               const option = document.createElement('option');
+              console.log(el);
               option.append(el);
-              browsers1.append(option);
+              option.setAttribute('value', el);
+              browsers2.append(option);
             }
+          }
+        }
+        // browsers2.value = '';
+        browsers2.style.display = 'block';
+        classSelect.style.borderRadius = '4px';
+        for (let option of browsers2.options) {
+          console.log(option);
+          option.onclick = function () {
+            classSelect.value = option.value;
+            browsers2.style.display = 'none';
+            classSelect.style.borderRadius = '4px';
+            console.log(option.value);
+            console.log('얍');
+          };
+        }
+      };
+
+      classSelect.oninput = function () {
+        currentFocus2 = -1;
+        var text = classSelect.value;
+        for (let option of browsers2.options) {
+          if (option.value.toUpperCase().indexOf(text) > -1) {
+            option.style.display = 'block';
+          } else {
+            option.style.display = 'none';
+          }
+        }
+      };
+
+      let currentFocus2 = -1;
+      classSelect.onkeydown = function (e) {
+        if (e.key == 'ArrowUp') {
+          console.log(e.key);
+          currentFocus2--;
+          addActive2(browsers2.options);
+        } else if (e.key == 'ArrowDown') {
+          console.log(e.key);
+          currentFocus2++;
+          addActive2(browsers2.options);
+          console.log(browsers2.options);
+          console.log(currentFocus2);
+        } else if (e.keyCode == 13) {
+          e.preventDefault();
+          if (currentFocus2 > -1) {
+            if (browsers2.options) browsers2.options[currentFocus2].click();
+            console.log(browsers2.options[currentFocus2]);
           }
         }
       };
@@ -569,12 +575,19 @@
         if (currentFocus < 0) currentFocus = x.length - 1;
         x[currentFocus].classList.add('active');
       }
+
+      function addActive2(x) {
+        if (!x) return false;
+        removeActive(x);
+        if (currentFocus2 >= x.length) currentFocus2 = 0;
+        if (currentFocus2 < 0) currentFocus2 = x.length - 1;
+        x[currentFocus2].classList.add('active');
+      }
       function removeActive(x) {
         for (var i = 0; i < x.length; i++) {
           x[i].classList.remove('active');
         }
       }
-
       // box btn 클릭
       const selectedBtnIds = [];
 

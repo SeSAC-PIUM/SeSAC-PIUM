@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIUM</title>
+    <link rel="stylesheet" href="./css/sign_up_3.css" />
+    <link rel="stylesheet" href="../common/global_style.css" />
+    <script defer src="./js/sign_up_3.js"></script>
+    <script src="../includeHTML.js"></script>
+  </head>
+
+  <body>
+    <div class="profile_container ques_text">
+      <header include-html="../common/header.html"></header>
+      <div class="profile_header">
+        <div class="page_title_point">
+          추가정보
+          <span class="page_title">입력</span>
+        </div>
+        <div class="section_title_desc">2/2</div>
+      </div>
+
+      <div class="profile_contents_container">
+        <div class="profile_contents">
+          <div class="profile_content_wrap 01">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">원하는 팀 성향</div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="btn-list">
+                <div
+                  class="btn"
+                  id="btn0"
+                  style="
+                    height: 80px;
+                    /* width: 120px; */
+                    text-align: center;
+                    line-height: 150%;
+                  "
+                  onclick="openAnswer(0)"
+                >
+                  조용히 차근차근 천천히
+                </div>
+                <div
+                  class="btn"
+                  id="btn1"
+                  style="
+                    height: 80px;
+                    /* width: 120px; */
+                    text-align: center;
+                    line-height: 150%;
+                  "
+                  onclick="openAnswer(1)"
+                >
+                  활발하게 진도이상으로 빠르게
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 02">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">MBTI</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-5"
+                  class="radio-group-5"
+                />
+                <input
+                  type="text"
+                  class="input"
+                  name="radio-group-5"
+                  placeholder="직접입력"
+                  onclick="handleRadioClick('radio-group-5')"
+                />
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group-5" />
+                <span class="custom_radio">비공개</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 03">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">작업공간 희망지역</div>
+              </div>
+            </div>
+            <div class="select_class">
+              <fieldset>
+                <input
+                  autocomplete="off"
+                  role="combobox"
+                  list=""
+                  id="input"
+                  name="browsers"
+                  placeholder="캠퍼스 선택"
+                  type="text"
+                />
+                <!-- <span class="downdrop_span"
+                ><img src="../src/img/dropDown.png" alt=""
+              /></span> -->
+
+                <datalist id="browsers" role="listbox">
+                  <option value="강동캠퍼스">강동캠퍼스</option>
+                  <option value="강서캠퍼스">강서캠퍼스</option>
+                  <option value="광진캠퍼스">광진캠퍼스</option>
+                  <option value="금천캠퍼스">금천캠퍼스</option>
+                  <option value="동작캠퍼스">동작캠퍼스</option>
+                  <option value="마포캠퍼스">마포캠퍼스</option>
+                  <option value="서대문캠퍼스">서대문캠퍼스</option>
+                  <option value="용산캠퍼스">용산캠퍼스</option>
+                  <option value="종로캠퍼스">종로캠퍼스</option>
+                  <option value="중구캠퍼스">중구캠퍼스</option>
+                </datalist>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 04">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">온오프라인</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input type="radio" name="radio-group-6" />
+                <span class="custom_radio">무관</span>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group-6" />
+                <span class="custom_radio">온라인</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-group-6" />
+                <span class="custom_radio">오프라인</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap 05">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">작업 선호 날짜</div>
+              </div>
+            </div>
+            <div class="label_container" style="flex-wrap: wrap">
+              <label>
+                <input type="radio" name="radio-group-7" />
+                <span class="custom-radio">무관</span>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group-7" />
+                <span class="custom-radio">주일</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-group-7" />
+                <span class="custom-radio">주말</span>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-7"
+                  class="radio-group-7"
+                  style="margin-right: 8px"
+                />
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="직접입력"
+                  onclick="handleRadioClick('radio-group-7')"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="button_container">
+          <a href="../selection/selection.html" target="_blank">
+            <div class="skip_btn">SKIP</div>
+          </a>
+          <a href="../selection/selection.html" target="_blank">
+            <button class="btn_save">가입완료</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer include-html="../common/footer.html"></footer>
+  </body>
+</html>

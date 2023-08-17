@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIUM</title>
+    <link rel="stylesheet" href="../common/global_style.css" />
+    <link rel="stylesheet" href="./css/sign_up.css" />
+    <script defer src="./js/sign_up.js"></script>
+    <script src="../includeHTML.js"></script>
+  </head>
+
+  <body>
+    <div class="profile_container ques_text">
+      <header include-html="../common/header.html"></header>
+      <div class="profile_header">
+        <div class="page_title">
+          프로젝트를 위한
+          <span class="page_title_point">기본정보</span> 입력
+        </div>
+      </div>
+
+      <div class="profile_contents_container">
+        <div class="profile_contents">
+          <div class="profile_content_wrap one">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">이름</div>
+                <span class="has_modal">
+                  <img src="../src/img/Group 629971.png"
+                /></span>
+              </div>
+              <div class="profile_modal">
+                <div class="profile_modal_content">
+                  SBA 가입 시 입력한 이름입니다. 만약 실명과 일치하지 않는다면
+                  마이페이지 - 이름변경 신청을 통해 수정 가능합니다
+                </div>
+              </div>
+            </div>
+            <input type="text" class="input" style="width: 300px" />
+          </div>
+
+          <div class="profile_content_wrap two">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">수강 교육과정</div>
+              </div>
+            </div>
+            <div class="select_class">
+              <fieldset>
+                <input
+                  autocomplete="off"
+                  role="combobox"
+                  list=""
+                  id="input"
+                  name="browsers"
+                  placeholder="캠퍼스 선택"
+                  type="text"
+                />
+
+                <datalist id="browsers" role="listbox">
+                  <option value="강동캠퍼스">강동캠퍼스</option>
+                  <option value="강서캠퍼스">강서캠퍼스</option>
+                  <option value="광진캠퍼스">광진캠퍼스</option>
+                  <option value="금천캠퍼스">금천캠퍼스</option>
+                  <option value="동작캠퍼스">동작캠퍼스</option>
+                  <option value="마포캠퍼스">마포캠퍼스</option>
+                  <option value="서대문캠퍼스">서대문캠퍼스</option>
+                  <option value="용산캠퍼스">용산캠퍼스</option>
+                  <option value="종로캠퍼스">종로캠퍼스</option>
+                  <option value="중구캠퍼스">중구캠퍼스</option>
+                </datalist>
+              </fieldset>
+
+              <fieldset>
+                <input
+                  autocomplete="off"
+                  role="combobox"
+                  list="browsers1"
+                  type="text"
+                  id="class_select"
+                  name="browsers2"
+                  placeholder="클래스 선택"
+                />
+
+                <datalist id="browsers2" role="listbox"> </datalist>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap three">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">성별</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-1" />
+                <span class="custom_radio">여자</span>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-2" />
+                <span class="custom_radio">남자</span>
+              </label>
+              <label>
+                <input type="radio" name="radio-group" class="radio-image-2" />
+                <span class="custom_radio">미선택</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap four">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">희망직무</div>
+                <span class="has_modal">
+                  <img src="../src/img/Group 629971.png"
+                /></span>
+              </div>
+              <div class="profile_modal">
+                <div class="profile_modal_content">
+                  프로젝트에 참여 희망하는 직무를 선택해주세요
+                </div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="btn_list">
+                <div class="btn" id="btn0" onclick="toggleAnswer(0)">기획</div>
+                <div class="btn" id="btn1" onclick="toggleAnswer(1)">
+                  UX/UI디자인
+                </div>
+                <div class="btn" id="btn2" onclick="toggleAnswer(2)">
+                  퍼블리싱
+                </div>
+                <div class="btn" id="btn3" onclick="toggleAnswer(3)">
+                  프론트엔드
+                </div>
+                <div class="btn" id="btn4" onclick="toggleAnswer(4)">
+                  백엔드
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap five">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">멘토/멘티</div>
+                <span class="has_modal">
+                  <img src="../src/img/Group 629971.png"
+                /></span>
+              </div>
+              <div class="profile_modal">
+                <div class="profile_modal_content">
+                  해당 직무를 처음 접하는 교육생들을 위해 프로젝트 멘토/멘티
+                  짝꿍제도를 운영합니다. 수업을 따라가는데 문제가 없는
+                  수준이라면 멘토를 지원해주세요🥰
+                </div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-1"
+                  class="radio-image-1"
+                />
+                <span class="custom-radio">멘토</span>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-1"
+                  class="radio-image-2"
+                />
+                <span class="custom-radio">멘티</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- <a href="../profile/profie_2.html"> -->
+        <div class="button_container">
+          <button class="btn_save">가입완료</button>
+        </div>
+        <!-- </a> -->
+      </div>
+    </div>
+    <footer include-html="../common/footer.html"></footer>
+  </body>
+</html>

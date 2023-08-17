@@ -1,0 +1,316 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Datalist</title>
+    <link rel="stylesheet" href="../common/global_style.css" />
+    <style>
+      fieldset {
+        width: 296px;
+        border: none;
+        position: relative;
+        padding-bottom: 8px;
+      }
+      input[type='text'] {
+        font-size: 14px;
+        padding: 16px 32px;
+        border-radius: 4px;
+        color: var(--color-grayscale-500);
+        width: 100%;
+        border: 1px solid var(--color-grayscale-400);
+      }
+
+      datalist {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid var(--color-grayscale-200);
+        border-radius: 4px;
+        width: 296px;
+        margin-top: 8px;
+        padding: 16px 32px;
+        z-index: 1;
+      }
+
+      option {
+        background-color: white;
+        padding: 12px 8px;
+        color: var(--color-grayscale-600);
+        font-size: 14px;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      option:hover,
+      .active {
+        background-color: var(--color-grayscale-100);
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <input
+        autocomplete="off"
+        role="combobox"
+        list=""
+        id="input"
+        name="browsers"
+        placeholder="캠퍼스 선택"
+        type="text"
+      />
+      <!-- <span class="downdrop_span"
+        ><img src="../src/img/dropDown.png" alt=""
+      /></span> -->
+
+      <datalist id="browsers" role="listbox">
+        <option value="강동캠퍼스">강동캠퍼스</option>
+        <option value="강서캠퍼스">강서캠퍼스</option>
+        <option value="광진캠퍼스">광진캠퍼스</option>
+        <option value="금천캠퍼스">금천캠퍼스</option>
+        <option value="동작캠퍼스">동작캠퍼스</option>
+        <option value="마포캠퍼스">마포캠퍼스</option>
+        <option value="서대문캠퍼스">서대문캠퍼스</option>
+        <option value="용산캠퍼스">용산캠퍼스</option>
+        <option value="종로캠퍼스">종로캠퍼스</option>
+        <option value="중구캠퍼스">중구캠퍼스</option>
+      </datalist>
+    </fieldset>
+
+    <fieldset>
+      <input
+        autocomplete="off"
+        role="combobox"
+        list="browsers1"
+        type="text"
+        id="input2"
+        name="browsers"
+        placeholder="클래스 선택"
+      />
+
+      <datalist id="browsers1" role="listbox"> </datalist>
+    </fieldset>
+  </body>
+
+  <script>
+    // modal hover
+    const campusClasses = [
+      {
+        name: '강동캠퍼스',
+        classes: [
+          '모든 직무에서 활용 가능한 웹 퍼블리싱 과정',
+          '디지털 트레이드 엑스퍼트',
+          'NAVER Cloud 클라우드 실무교육과정',
+          '언리얼 엔진을 활용한 XR콘텐츠 개발자 양성 과정',
+          'GoogleCloud 기반 인공지능 개발자 과정    ',
+          '블록체인 플랫폼 융합 게임서버 개발자 양성 과정',
+        ],
+      },
+      {
+        name: '강서캠퍼스',
+        classes: [
+          '데이터기반 디지털 마케팅 실전 취업 원패스',
+          '이커머스 특화 전Z전능 콘텐츠 마케터 양성과정',
+        ],
+      },
+      {
+        name: '광진캠퍼스',
+        classes: [
+          '데이터 드리븐 패션 MD 실전',
+          '데이터 드리븐 퍼포먼스 마케팅 체인저스 1기',
+        ],
+      },
+      {
+        name: '금천캠퍼스',
+        classes: [
+          'ChatGPT를 활용한 생성형/대화형 인공지능 개발자',
+          'AI융합 서비스 개발자 양성과정',
+          '언리얼엔진을 활용한 인터렉티브 XR 실감콘텐츠 개발자 과정',
+        ],
+      },
+      {
+        name: '동작캠퍼스',
+        classes: [
+          '데이터 드리븐 서비스 기획 체인저스',
+          '유니콘 기업 현직자에게 배우는 IT 서비스 기획자 취업캠프',
+        ],
+      },
+      {
+        name: '마포캠퍼스',
+        classes: ['데이터 드리븐 퍼포먼스 마케팅 체인저스 2기'],
+      },
+      {
+        name: '서대문캠퍼스',
+        classes: [
+          '프로젝트와 포트폴리오를 한 번에! 3D 모션그래픽 취업 클래스',
+          '파이썬 기반의 풀스택 웹서비스 개발 과정',
+          '유니티와 로블록스를 활용한 메타버스 게임 제작 과정',
+          ' Python 기반의 탄탄한 데이터 분석 기초부터 인공지능&딥러닝 과정',
+        ],
+      },
+
+      {
+        name: '용산캠퍼스',
+        classes: [
+          '사풀스택 웹 융합 개발자 양성 과정',
+          '사물인터넷과 메타버스를 연계한 SW 개발자 과정',
+          '핀테크 특화 데이터/AI 엔지니어 <핀테커스>',
+          '하이브리드 클라우드 데이터옵스 엔지니어 양성과정',
+        ],
+      },
+      {
+        name: '종로캠퍼스',
+        classes: [
+          '실무요건 기반 핀테크 데이터 분석가 과정',
+          '주얼리 데이터 드리븐(Date-driven) MD 데뷔과정',
+          '브랜디 패션 플랫폼 콘텐츠 프로바이더 과정',
+        ],
+      },
+      {
+        name: '중구캠퍼스',
+        classes: [
+          '3D 디지털 융합 패션 전문가 양성과정-여성복',
+          '3D 디지털 융합 패션 전문가 양성과정-남성복',
+          '핀테크 특화 데이터 드리븐 UI/UX 디자이너 <핀테커스',
+        ],
+      },
+    ];
+    const profileModal = document.querySelectorAll('.profile_modal');
+    const titleBox = document.querySelectorAll('.has_modal');
+
+    for (let i = 0; i < titleBox.length; i++) {
+      titleBox[i].addEventListener('mouseenter', () => {
+        profileModal[i].style.display = 'block';
+      });
+      titleBox[i].addEventListener('mouseleave', () => {
+        profileModal[i].style.display = 'none';
+      });
+    }
+
+    // drop down
+    // 캠퍼스 선택
+    input.onfocus = function () {
+      browsers.value = '';
+      browsers.style.display = 'block';
+      input.style.borderRadius = '4px';
+    };
+    for (let option of browsers.options) {
+      option.onclick = function () {
+        input.value = option.value;
+        browsers.style.display = 'none';
+        input.style.borderRadius = '4px';
+      };
+    }
+
+    input.oninput = function () {
+      currentFocus = -1;
+      var text = input.value;
+      for (let option of browsers.options) {
+        if (option.value.toUpperCase().indexOf(text) > -1) {
+          option.style.display = 'block';
+        } else {
+          option.style.display = 'none';
+        }
+      }
+    };
+
+    let currentFocus = -1;
+    input.onkeydown = function (e) {
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(browsers.options);
+      } else if (e.keyCode == 38) {
+        currentFocus--;
+        addActive(browsers.options);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (browsers.options) browsers.options[currentFocus].click();
+        }
+      }
+    };
+
+    // 클래스 선택
+    const classSelect = document.querySelector('#class_select');
+
+    classSelect.onfocus = function () {
+      browsers2.innerHTML = '';
+      // class_select.value = '';
+      for (let i = 0; i < campusClasses.length; i++) {
+        if (input.value == campusClasses[i].name) {
+          for (let el of campusClasses[i].classes) {
+            const option = document.createElement('option');
+            console.log(el);
+            option.append(el);
+            option.setAttribute('value', el);
+            browsers2.append(option);
+          }
+        }
+      }
+      // browsers2.value = '';
+      browsers2.style.display = 'block';
+      classSelect.style.borderRadius = '4px';
+      for (let option of browsers2.options) {
+        console.log(option);
+        option.onclick = function () {
+          classSelect.value = option.value;
+          browsers2.style.display = 'none';
+          classSelect.style.borderRadius = '4px';
+          console.log(option.value);
+          console.log('얍');
+        };
+      }
+    };
+
+    classSelect.oninput = function () {
+      currentFocus2 = -1;
+      var text = classSelect.value;
+      for (let option of browsers2.options) {
+        if (option.value.toUpperCase().indexOf(text) > -1) {
+          option.style.display = 'block';
+        } else {
+          option.style.display = 'none';
+        }
+      }
+    };
+
+    let currentFocus2 = -1;
+    classSelect.onkeydown = function (e) {
+      if (e.key == 'ArrowUp') {
+        console.log(e.key);
+        currentFocus2--;
+        addActive2(browsers2.options);
+      } else if (e.key == 'ArrowDown') {
+        console.log(e.key);
+        currentFocus2++;
+        addActive2(browsers2.options);
+        console.log(browsers2.options);
+        console.log(currentFocus2);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus2 > -1) {
+          if (browsers2.options) browsers2.options[currentFocus2].click();
+          console.log(browsers2.options[currentFocus2]);
+        }
+      }
+    };
+
+    function addActive(x) {
+      if (!x) return false;
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = x.length - 1;
+      x[currentFocus].classList.add('active');
+    }
+
+    function addActive2(x) {
+      if (!x) return false;
+      removeActive(x);
+      if (currentFocus2 >= x.length) currentFocus2 = 0;
+      if (currentFocus2 < 0) currentFocus2 = x.length - 1;
+      x[currentFocus2].classList.add('active');
+    }
+    function removeActive(x) {
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove('active');
+      }
+    }
+  </script>
+</html>

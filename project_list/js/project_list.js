@@ -1,3 +1,4 @@
+includeHTML();
 window.addEventListener('DOMContentLoaded', () => {
   const filter_btn = document.querySelectorAll('.filter_btn');
 
@@ -12,7 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
   filter_btn.forEach((filter_btn_ele_click) => {
     filter_btn_ele_click.addEventListener('click', () => {
       filter_btn.forEach((filter_btn_ele) => {
@@ -22,7 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const role_filter_li = document.querySelectorAll('.role_filter .filter_item_list li');
+  const role_filter_li = document.querySelectorAll(
+    '.role_filter .filter_item_list li'
+  );
 
   role_filter_li.forEach((role_filter_li_click) => {
     role_filter_li_click.addEventListener('click', () => {
@@ -38,15 +40,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
       location.reload();
       // 프로젝트 리스트 나오게 하기
-
     });
   });
-  
-  const campus_filter_li = document.querySelectorAll('.campus_filter .filter_item_list li');
-  const filter_selection_alert = document.querySelector('.filter_selection_alert');
+
+  const campus_filter_li = document.querySelectorAll(
+    '.campus_filter .filter_item_list li'
+  );
+  const filter_selection_alert = document.querySelector(
+    '.filter_selection_alert'
+  );
   const filter_selection = document.querySelector('.filter_selection');
-  let filter_selection_li
-  
+  let filter_selection_li;
+
   campus_filter_li.forEach((campus_filter_li_click) => {
     campus_filter_li_click.addEventListener('click', () => {
       if (campus_filter_li_click.classList.contains('all')) {
@@ -78,7 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
       filter_selection.innerText = '';
       campus_filter_li.forEach((campus_filter_li_ele) => {
         if (campus_filter_li_ele.classList.contains('on')) {
-
           const li = document.createElement('li');
           li.innerText = campus_filter_li_ele.innerText;
           filter_selection.append(li);
@@ -96,23 +100,18 @@ window.addEventListener('DOMContentLoaded', () => {
             if(filter_selection_li_ele.innerText == campus_filter_li_ele.innerText){
               campus_filter_li_ele.classList.remove('on')
             }
-          })
-          filter_selection_li_ele.style.display = 'none'
-        })
-      })
-
+          });
+          filter_selection_li_ele.style.display = 'none';
+        });
+      });
     });
   });
 
+  const recruit_complete_checkbox_i = document.querySelector(
+    '.recruit_complete_checkbox i'
+  );
 
-
-  const recruit_complete_checkbox_i = document.querySelector('.recruit_complete_checkbox i')
-
-  recruit_complete_checkbox_i.addEventListener('click', ()=>{
-    recruit_complete_checkbox_i.classList.toggle('on')
+  recruit_complete_checkbox_i.addEventListener('click', () => {
+    recruit_complete_checkbox_i.classList.toggle('on');
   });
-
-
-
-
 });
