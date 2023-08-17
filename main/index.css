@@ -1,16 +1,31 @@
+body {
+  overflow: hidden;
+}
+
+.flex_box_row {
+  display: flex;
+}
+.flex_box_column {
+  display: flex;
+  flex-direction: column;
+}
+.flex_item {
+  flex: 1;
+}
+
+
 /* advert_box */
 .advert_box {
-  display: flex;
+  gap: 10px;
   justify-content: center;
   margin-bottom: 80px;
 }
 /* advert */
-.advert {
-  width: 1200px;
+/* .advert {
   display: flex;
   justify-content: space-between;
   margin-top: 112px;
-}
+} */
 /* swiper */
 .swiper {
   width: 906px;
@@ -51,8 +66,8 @@
   display: none;
 }
 
-.advert_box .advert .swiper:hover .ad_left,
-.advert_box .advert .swiper:hover .ad_right {
+.advert_box .swiper:hover .ad_left,
+.advert_box .swiper:hover .ad_right {
   display: block;
 }
 .swiper-button-next::after,
@@ -84,9 +99,6 @@
   /* padding: 0 20px; */
 }
 
-body {
-  overflow: hidden;
-}
 
 
 
