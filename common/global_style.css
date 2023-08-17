@@ -450,3 +450,12 @@ input[type='radio'] {
 .flex_item {
   flex: 1;
 }
+
+/* header */
+header {
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 999;
+}
