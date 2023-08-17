@@ -35,6 +35,10 @@ body {
   position: fixed;
   top: 0;
 } */
+.header_wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+}
 .util_wrap {
   justify-content: space-between;
   align-items: center;

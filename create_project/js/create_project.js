@@ -176,7 +176,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const recruit_position_list_xmark = document.querySelectorAll('.fa-xmark');
 
-    console.log(recruit_position_list_xmark)
 
     recruit_position_list_xmark.forEach((recruit_position_list_xmark_ele)=>{
       
@@ -214,15 +213,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   dropdown_list.forEach((dropdown_list_ele)=>{
   
-    console.log(dropdown_list_ele)
     Array.from(dropdown_list_ele.children).forEach((dropdown_list_li_ele)=>{
 
       if(dropdown_list_ele.classList.contains('campus_list')){
         campus_data_list.push(dropdown_list_li_ele.innerText)
-        console.log(campus_data_list.innerText)
       }else if(dropdown_list_ele.classList.contains('role_list')){
         role_data_list.push(dropdown_list_li_ele.innerText)
-        console.log(role_data_list.innerText)
       }
       // console.log(dropdown_list_li_ele)
 

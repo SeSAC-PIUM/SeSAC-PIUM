@@ -427,13 +427,13 @@ input[type='radio'] {
 }
 
 .modal {
-  /* display: none; */
-  display: block;
+  display: none;
+  flex-direction: column;
   position: absolute;
   bottom: calc(100% - 32px);
   bottom: 10px;
   left: 110px;
-  width: 186px;
+  width: 234px;
   height: auto;
   padding: 24px;
   z-index: 1;
@@ -461,6 +461,12 @@ header {
   padding: 16px 0;
   position: sticky;
   top: 0;
+  background: #fff;
+  z-index: 999;
+}
+footer {
+  position: sticky;
+  bottom: 0;
   background: #fff;
   z-index: 999;
 }
