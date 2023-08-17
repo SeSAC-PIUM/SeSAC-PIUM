@@ -35,16 +35,16 @@ const swiper = new Swiper('.swiper', {
 // heart-button
 const likeButton = document.querySelector('.like_button');
 const heartImage = document.querySelector('.heart_image');
-const cardFooter = document.querySelector('.card_footer_like');
-const recruitingContainer = document.querySelector('.Recruiting_container');
+const like_count = document.querySelector('.like_count');
+const recruiting_wrap = document.querySelector('.recruiting_wrap');
 
 // project modal hover
 const modal = document.querySelector('.modal');
 
-recruitingContainer.addEventListener('mouseenter', () => {
+recruiting_wrap.addEventListener('mouseenter', () => {
   modal.style.display = 'block';
 });
-recruitingContainer.addEventListener('mouseleave', () => {
+recruiting_wrap.addEventListener('mouseleave', () => {
   modal.style.display = 'none';
 });
 
@@ -57,7 +57,7 @@ let clickCount = 0;
 //     if (storedClickCount) {
 //       clickCount = parseInt(storedClickCount);
 //       isClicked = clickCount > 0;
-//       updateCardFooter();
+//       updateLikeCount();
 //     }
 //   });
 
@@ -75,19 +75,19 @@ likeButton.addEventListener('click', () => {
   // 클릭 상태를 로컬 스토리지에 저장
   localStorage.setItem('clickCount', clickCount.toString());
 
-  updateCardFooter();
+  updateLikeCount();
 });
 
-function updateCardFooter() {
-  cardFooter.textContent = `❤ ${clickCount}`;
-  //   function updateCardFooter() {
+function updateLikeCount() {
+  like_count.textContent = clickCount;
+  //   function updateLikeCount() {
   //     if (isClicked) {
   //       heartImage.src = '../src/img/Heart_02.png';
   //     } else {
   //       heartImage.src = '../src/img/empty_Heart_02.png';
   //     }
 
-  //     cardFooter.textContent = `${clickCount}`;
+  //     like_count.textContent = `${clickCount}`;
 }
 
 // card2
