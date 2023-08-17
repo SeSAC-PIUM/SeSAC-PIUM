@@ -1,12 +1,12 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
 
 /* advert_box */
 .advert_box {
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   margin-bottom: 80px;
 }
@@ -17,17 +17,17 @@ body {
   margin-top: 112px;
 } */
 /* swiper */
-.swiper {
+.advert_box .swiper {
   width: 906px;
   height: 260px;
   margin: 0 !important;
   border-radius: 8px;
 }
 
-.swiper-slide {
+.advert_box .swiper-slide {
   overflow: hidden;
 }
-.swiper-slide .count {
+.advert_box .swiper-slide .count {
   position: relative;
   top: 218px;
   left: 830px;
@@ -37,22 +37,24 @@ body {
   background-color: #fff;
   text-align: center;
   line-height: 26px;
+  letter-spacing: 1.12px;
 }
-.swiper-slide .slide-tit {
+.advert_box .swiper-slide .slide-tit {
   position: relative;
   top: 35px;
   left: 80px;
 }
-.swiper-slide .slide-tit div {
+.advert_box .swiper-slide .slide-tit .slide_title {
+  letter-spacing: -1px;
   margin-bottom: 24px;
 }
-.swiper-slide img {
+.advert_box .swiper-slide img {
   position: relative;
-  top: -150px;
+  top: -130px;
   left: 639px;
 }
-.ad_left,
-.ad_right {
+.advert_box .ad_left,
+.advert_box .ad_right {
   display: none;
 }
 
@@ -68,18 +70,25 @@ body {
 .box_wrap {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 12px;
+  /* justify-content: space-between; */
 }
-.green_box {
+.box_wrap a{
+  flex: 1;
+  display: block;
+}
+.box_wrap .green_box {
   width: 282px;
-  height: 124px;
+  height: 100%;
   background-color: #2da96e;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
   text-align: right;
-  justify-content: center;
-  padding: 2rem;
+  padding: 40px 32px 0;
+  gap: 8px;
+}
+.box_wrap .green_box .banner_point {
+  /* margin-bottom: 12px; */
+  font-weight: 400;
 }
 
 /* container */
@@ -93,86 +102,108 @@ body {
 main {
 }
 /* section*/
-main section {
+main .section1 {
+  margin-bottom: 80px;
 }
 
-main section .sub_wrap {
+/* main section .sub_wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+} */
+main .section1 .sub_wrap {
+  margin-bottom: 24px;
 }
-
-main section .sub_wrap .sub_tit {
+main .section1 .sub_wrap .sub_tit {
   margin-bottom: 12px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -1px;
 }
-main section .sub_wrap .sub_tit2 {
-  margin-bottom: 14px;
+main .section1 .sub_wrap .sub_tit img { 
+  margin-left: 5px;
 }
-
-main section .select_wrap {
-  display: flex;
+main .section1 .sub_wrap .sub_tit2 {
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+main .section1 .sub_wrap .sub_tit2 span {
+  color: #464656;
+}
+main .section1 .select_wrap {
   justify-content: center;
-  margin-bottom: 80px;
+  gap: 12px;
 }
-main section .select {
+/* main section .select {
   width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
-}
-
-main section .select .select_menu {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+} */
+main .section1 .select_wrap li {
   width: 180px;
   height: 65px;
   border-radius: 4px;
   background: #4f4f4f;
   box-shadow: 2px 2px 4px 0px rgba(223, 223, 223, 0.25);
-  cursor: pointer;
+}
+main .section1 .select_wrap li a {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
 /* section2 */
-.section2 {
+/* .section2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.section2 .section2_wrap {
-  width: 1200px;
-}
-.section2 .pr_tit {
+} */
+/* .section2 .pr_tit {
   display: flex;
   line-height: 24px;
+} */
+.section2 .project_tit {
+  margin-bottom: 12px;
 }
-.section2 .pr_tit span {
-  margin-left: 8px;
+.section2 .project_tit a {
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 .section2 .project_subtitle_wrap {
-  width: 1200px;
-  display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
+}
+.section2 .project_subtitle_wrap .project_subtitle {
+  padding: 0;
 }
 .section2 .card_wrap {
   display: flex;
   justify-content: space-between;
 }
-.section2 .card_wrap div div div {
+/* .section2 .card_wrap div div div {
   cursor: pointer;
+} */
+.section2 .card_wrap .card_tit {
+  margin-bottom: 16px;
 }
 
-.section2 .card_footer .Recruiting_container {
-  display: flex;
+.section2 .card_footer .recruiting_wrap {
+  gap: 4px;
 }
-.Recruiting_container span img {
+.section2 .card_footer .recruiting_wrap img {
   width: 100%;
 }
+
 
 .modal .group_list {
   width: 100%;
@@ -193,10 +224,10 @@ main section .select .select_menu {
   padding-bottom: 8px;
 }
 /*  card 2*/
-.section2 .card_footer .Recruiting_container2 {
+.section2 .card_footer .recruiting_wrap2 {
   display: flex;
 }
-.Recruiting_container2 span img {
+.recruiting_wrap2 span img {
   width: 100%;
 }
 
@@ -220,10 +251,10 @@ main section .select .select_menu {
 }
 
 /* card3 */
-.section2 .card_footer .Recruiting_container3 {
+.section2 .card_footer .recruiting_wrap3 {
   display: flex;
 }
-.Recruiting_container3 span img {
+.recruiting_wrap3 span img {
   width: 100%;
 }
 
@@ -247,10 +278,10 @@ main section .select .select_menu {
 }
 
 /* card4*/
-.section2 .card_footer .Recruiting_container4 {
+.section2 .card_footer .recruiting_wrap4 {
   display: flex;
 }
-.Recruiting_container4 span img {
+.recruiting_wrap4 span img {
   width: 100%;
 }
 
@@ -303,10 +334,10 @@ main section .select .select_menu {
   cursor: pointer;
 }
 
-.section3 .card_footer .Recruiting_container5 {
+.section3 .card_footer .recruiting_wrap5 {
   display: flex;
 }
-.Recruiting_container5 span img {
+.recruiting_wrap5 span img {
   width: 100%;
 }
 
@@ -329,10 +360,10 @@ main section .select .select_menu {
   padding-bottom: 8px;
 }
 /*  card 6*/
-.section3 .card_footer .Recruiting_container6 {
+.section3 .card_footer .recruiting_wrap6 {
   display: flex;
 }
-.Recruiting_container6 span img {
+.recruiting_wrap6 span img {
   width: 100%;
 }
 
@@ -356,10 +387,10 @@ main section .select .select_menu {
 }
 
 /* card7 */
-.section3 .card_footer .Recruiting_container7 {
+.section3 .card_footer .recruiting_wrap7 {
   display: flex;
 }
-.Recruiting_container7 span img {
+.recruiting_wrap7 span img {
   width: 100%;
 }
 
@@ -383,10 +414,10 @@ main section .select .select_menu {
 }
 
 /* card8*/
-.section3 .card_footer .Recruiting_container8 {
+.section3 .card_footer .recruiting_wrap8 {
   display: flex;
 }
-.Recruiting_container8 span img {
+.recruiting_wrap8 span img {
   width: 100%;
 }
 
