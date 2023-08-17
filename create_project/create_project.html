@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>PIUM</title>
     <link
       rel="stylesheet"
       href="../jquery-ui-1.13.2.custom/jquery-ui.min.css"
@@ -18,9 +18,11 @@
     <script src="../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
     <script src="../jquery-ui-1.13.2.custom/jquery-ui.js"></script>
     <script defer src="./js/create_project.js"></script>
+    <script src="../includeHTML.js"></script>
   </head>
   <body>
     <div class="container">
+      <header include-html="../common/header.html"></header>
       <main>
         <p class="page_title">
           <span class="page_title_point">프로젝트</span> 생성
@@ -193,5 +195,6 @@
         </section>
       </main>
     </div>
+    <footer include-html="../common/footer.html"></footer>
   </body>
 </html>

@@ -12,7 +12,7 @@
 .profile_container .profile_contents_container {
   margin: 0 auto;
   max-width: 696px;
-  padding: 40px 16px;
+  padding: 40px 16px 120px 16px;
   border-top: 1px solid var(--color-grayscale-600);
 }
 
