@@ -125,7 +125,7 @@ fieldset {
   position: relative;
   padding-bottom: 8px;
 }
-input[type='text'] {
+.input_text {
   font-size: 14px;
   padding: 16px 32px;
   border-radius: 4px;
