@@ -11,22 +11,6 @@ body {
 }
 
 
-/* common */
-.flex_box_row {
-  display: flex;
-  /* flex-wrap: wrap; */
-}
-.flex_box_column {
-  display: flex;
-  flex-direction: column;
-}
-.flex_item {
-  flex: 1;
-}
-.font_roboto {
-  font-family: 'Roboto';
-}
-
 
 /* header */
 /* container */

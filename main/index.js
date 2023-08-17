@@ -6,9 +6,9 @@ includeHTML();
 // swiper
 const swiper = new Swiper('.swiper', {
   // 자동 슬레이브
-  autoplay: {
-    delay: 4000,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  // },
   // Optional parameters
   direction: 'horizontal',
 
