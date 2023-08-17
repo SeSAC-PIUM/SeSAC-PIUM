@@ -1,4 +1,6 @@
 .profile_container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .profile_container .profile_header {
   padding: 64px 16px 40px 16px;
