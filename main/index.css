@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .flex_box_row {
@@ -12,7 +12,6 @@ body {
 .flex_item {
   flex: 1;
 }
-
 
 /* advert_box */
 .advert_box {
@@ -98,11 +97,6 @@ body {
   max-width: 1200px;
   /* padding: 0 20px; */
 }
-
-
-
-
-
 
 /* main */
 main {
