@@ -3,14 +3,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const filter_btn = document.querySelectorAll('.filter_btn');
 
   document.addEventListener('click', (e) => {
-    console.log(e);
-    console.log(e.target);
-
     if (
       !e.target.closest('.filter_btn') &&
       !e.target.closest('.filter_item_list')
     ) {
-      console.log(e.target.closest('.filter_item_list'));
       filter_btn.forEach((filter_btn_ele) => {
         filter_btn_ele.nextElementSibling.classList.remove('on');
       });
@@ -85,32 +81,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
       campus_filter_li_click.classList.toggle('on');
       filter_selection.innerText = '';
-      console.log(campus_filter_sum);
       campus_filter_li.forEach((campus_filter_li_ele) => {
         if (campus_filter_li_ele.classList.contains('on')) {
           const li = document.createElement('li');
           li.innerText = campus_filter_li_ele.innerText;
-          console.log(li);
           filter_selection.append(li);
           // console.log(campus_filter_li_ele)
         }
       });
 
-      filter_selection_li = document.querySelectorAll('.filter_selection li');
-      filter_selection_li.forEach((filter_selection_li_ele) => {
-        console.log('dd');
 
-        filter_selection_li_ele.addEventListener('click', () => {
-          console.log(filter_selection_li_ele);
-          console.log(filter_selection_li_ele.innerText);
-          console.log(campus_filter_li_click.innerText);
+      filter_selection_li = document.querySelectorAll('.filter_selection li')
+      filter_selection_li.forEach((filter_selection_li_ele)=>{
+    
+        filter_selection_li_ele.addEventListener('click', ()=>{
 
-          campus_filter_li.forEach((campus_filter_li_ele) => {
-            if (
-              filter_selection_li_ele.innerText ==
-              campus_filter_li_ele.innerText
-            ) {
-              campus_filter_li_ele.classList.remove('on');
+          campus_filter_li.forEach((campus_filter_li_ele)=>{
+            if(filter_selection_li_ele.innerText == campus_filter_li_ele.innerText){
+              campus_filter_li_ele.classList.remove('on')
             }
           });
           filter_selection_li_ele.style.display = 'none';
