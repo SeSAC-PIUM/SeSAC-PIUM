@@ -427,6 +427,9 @@ main section .select .select_menu {
   display: flex;
   line-height: 24px;
 }
+.section4 .pr_tit span {
+  margin-left: 8px;
+}
 .section4 .project_subtitle_wrap {
   width: 1200px;
   display: flex;
