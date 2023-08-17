@@ -10,6 +10,8 @@
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="../includeHTML.js"></script>
+
     <title>PIUM</title>
   </head>
   <body>
@@ -177,7 +179,6 @@
         color: var(--color-main-green);
       }
     </style>
-
     <div class="container">
       <div class="header">
         <div class="page_title">공간예약</div>
@@ -291,6 +292,7 @@
         </div>
       </div>
     </div>
+    <footer include-html="../common/footer.html"></footer>
 
     <script>
       const swiper = new Swiper('.swiper', {
