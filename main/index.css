@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -88,11 +88,6 @@ body {
   max-width: 1200px;
   /* padding: 0 20px; */
 }
-
-
-
-
-
 
 /* main */
 main {

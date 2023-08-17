@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="./common/global_style.css" />
     <link rel="stylesheet" href="./main/index.css" />
     <link rel="icon" href="./src/img/favicon.ico" type="image/ico" />
-
+    <!-- <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./footer.css" /> -->
     <script defer src="./main/index.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="container">
-    <header include-html="/header.html"></header>
-    <div class="advert_box flex_box_row">
-      <!-- <div class="advert"> -->
+      <!-- <header include-html="/header.html"></header> -->
+      <header include-html="../common/header.html"></header>
+      <div class="advert_box flex_box_row">
+        <!-- <div class="advert"> -->
         <!-- Slider main container -->
         <div class="swiper">
           <!-- Additional required wrapper -->
@@ -86,703 +91,738 @@
             </div>
           </a>
         </div>
-      <!-- </div> -->
-    </div>
-    <main>
-      <section class="section1">
-        <div class="sub_wrap">
-          <div class="sub_tit slide_title_desc">프로젝트의 시작 🌱</div>
-          <div class="sub_tit2 section_title_point">
-            직무별 <span class="section_title">프로젝트 둘러보기</span>
-          </div>
-        </div>
-        <div class="select_wrap">
-          <div class="select">
-            <a href="/project_list/project_list.html"
-              ><div class="select_menu">전체보기</div></a
-            >
-            <a href="/project_list/project_list.html"
-              ><div class="select_menu">기획</div></a
-            >
-            <a href="/project_list/project_list.html"
-              ><div class="select_menu">UX/UI디자인</div></a
-            >
-            <a href="/project_list/project_list.html"
-              ><div class="select_menu">퍼블리싱</div></a
-            >
-            <a href="/project_list/project_list.html"
-              ><div class="select_menu">프론트엔드</div></a
-            >
-            <a href="/project_list/project_list.html"
-              ><div class="select_menu">백엔드</div></a
-            >
-          </div>
-        </div>
-      </section>
-      <section class="section2">
-        <div class="section2_wrap">
-          <a href="/project_list/project_list.html"
-            ><div class="pr_tit project_title">
-              곧 마감 프로젝트 🚨
-              <span>
-                <img src="/src/img/next.png" alt="" />
-              </span></div
-          ></a>
-          <div class="project_subtitle_wrap">
-            <p class="project_subtitle">당신만 오면 바로 시작되는 프로젝트!</p>
-            <a href="/project_list/project_list.html"
-              ><p class="more_text">더보기</p></a
-            >
-          </div>
-          <div class="card_wrap">
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="/src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button">
-                  <span class="heart_icon"></span>
-                </div>
-              </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p></a
-                >
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="/src/img/Group 629971.png" />
-                  </span>
-                </div>
-                <div class="modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card_footer_like">
-                  <span>❤</span>
-                  <!-- <img class="heart_image" src="../src/img/Heart_02.png" alt="Heart" /> -->
-                  0
-                </div>
-              </div>
-            </div>
-            <!-- card2 -->
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="/src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button2 like_button">
-                  <span class="heart_icon2 heart_icon"></span>
-                </div>
-              </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
-                  <p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container2">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="/src/img/Group 629971.png" />
-                  </span>
-                </div>
-                <div class="modal2 modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card_footer_like2">
-                  <span>❤</span>
-                  0
-                </div>
-              </div>
-            </div>
-            <!-- card3 -->
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="/src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button3 like_button">
-                  <span class="heart_icon3 heart_icon"></span>
-                </div>
-              </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
-                  <p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container3">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="/src/img/Group 629971.png" />
-                  </span>
-                </div>
-                <div class="modal3 modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card_footer_like3">
-                  <span>❤</span>
-                  0
-                </div>
-              </div>
-            </div>
-            <!-- card4 -->
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="/src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button4 like_button">
-                  <span class="heart_icon4 heart_icon"></span>
-                </div>
-              </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
-                  <p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container4">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="/src/img/Group 629971.png" />
-                  </span>
-                </div>
-                <div class="modal4 modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card_footer_like4">
-                  <span>❤</span>
-                  0
-                </div>
-              </div>
+        <!-- </div> -->
+      </div>
+      <main>
+        <section class="section1">
+          <div class="sub_wrap">
+            <div class="sub_tit slide_title_desc">프로젝트의 시작 🌱</div>
+            <div class="sub_tit2 section_title_point">
+              직무별 <span class="section_title">프로젝트 둘러보기</span>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section3">
-        <div class="section3_wrap">
-          <a href="/project_list/project_list.html"
-            ><div class="pr_tit project_title">
-              최신 프로젝트 🎈
-              <span>
-                <img src="/src/img/next.png" alt="" />
-              </span></div
-          ></a>
-          <div class="project_subtitle_wrap">
-            <p class="project_subtitle">새로운 프로젝트를 탐색해봐요!</p>
-            <a href="/project_list/project_list.html"
-              ><p class="more_text">더보기</p></a
-            >
+          <div class="select_wrap">
+            <div class="select">
+              <a href="/project_list/project_list.html"
+                ><div class="select_menu">전체보기</div></a
+              >
+              <a href="/project_list/project_list.html"
+                ><div class="select_menu">기획</div></a
+              >
+              <a href="/project_list/project_list.html"
+                ><div class="select_menu">UX/UI디자인</div></a
+              >
+              <a href="/project_list/project_list.html"
+                ><div class="select_menu">퍼블리싱</div></a
+              >
+              <a href="/project_list/project_list.html"
+                ><div class="select_menu">프론트엔드</div></a
+              >
+              <a href="/project_list/project_list.html"
+                ><div class="select_menu">백엔드</div></a
+              >
+            </div>
           </div>
-          <div class="card_wrap">
-            <!-- card5 -->
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="/src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button5 like_button">
-                  <span class="heart_icon5 heart_icon"></span>
-                </div>
-              </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
-                  <p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container5">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="/src/img/Group 629971.png" />
-                  </span>
-                </div>
-                <div class="modal5 modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card_footer_like5">
-                  <span>❤</span>
-                  0
-                </div>
-              </div>
+        </section>
+        <section class="section2">
+          <div class="section2_wrap">
+            <a href="/project_list/project_list.html"
+              ><div class="pr_tit project_title">
+                곧 마감 프로젝트 🚨
+                <span>
+                  <img src="/src/img/next.png" alt="" />
+                </span></div
+            ></a>
+            <div class="project_subtitle_wrap">
+              <p class="project_subtitle">
+                당신만 오면 바로 시작되는 프로젝트!
+              </p>
+              <a href="/project_list/project_list.html"
+                ><p class="more_text">더보기</p></a
+              >
             </div>
-            <!-- card6 -->
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="/src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button6 like_button">
-                  <span class="heart_icon6 heart_icon"></span>
+            <div class="card_wrap">
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="/src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button">
+                    <span class="heart_icon"></span>
+                  </div>
                 </div>
-              </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
-                  <p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container6">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="/src/img/Group 629971.png" />
-                  </span>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p></a
+                  >
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
                 </div>
-                <div class="modal6 modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                <div class="card_footer">
+                  <div class="Recruiting_container">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="/src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card_footer_like6">
-                  <span>❤</span>
-                  0
-                </div>
-              </div>
-            </div>
-            <!-- card7 -->
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="../src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button7 like_button">
-                  <span class="heart_icon7 heart_icon"></span>
+                  <div class="card_footer_like">
+                    <span>❤</span>
+                    <!-- <img class="heart_image" src="../src/img/Heart_02.png" alt="Heart" /> -->
+                    0
+                  </div>
                 </div>
               </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
-                  <p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container7">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="./src/img/Group 629971.png" />
-                  </span>
+              <!-- card2 -->
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="/src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button2 like_button">
+                    <span class="heart_icon2 heart_icon"></span>
+                  </div>
                 </div>
-                <div class="modal7 modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+                    <p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
+                </div>
+                <div class="card_footer">
+                  <div class="Recruiting_container2">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="/src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal2 modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card_footer_like7">
-                  <span>❤</span>
-                  0
-                </div>
-              </div>
-            </div>
-            <!-- card8 -->
-            <div class="card">
-              <div class="thumb">
-                <a href="/crew_state/crew_state.html"
-                  ><img src="/src/img/thumbnail.png" alt="Thumb"
-                /></a>
-                <div class="like_button8 like_button">
-                  <span class="heart_icon8 heart_icon"></span>
+                  <div class="card_footer_like2">
+                    <span>❤</span>
+                    0
+                  </div>
                 </div>
               </div>
-              <div class="card_body">
-                <a href="/crew_state/crew_state.html"
-                  ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
-                  <p class="card_desc">프로젝트 설명란입니다.</p></a
-                >
-              </div>
-              <div class="card_footer">
-                <div class="Recruiting_container8">
-                  <div class="card_footer_text">모집중</div>
-                  <div class="Recruiting_member card_footer_text">4/5</div>
-                  <span class="Recruiting_information">
-                    <img src="/src/img/Group 629971.png" />
-                  </span>
+              <!-- card3 -->
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="/src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button3 like_button">
+                    <span class="heart_icon3 heart_icon"></span>
+                  </div>
                 </div>
-                <div class="modal8 modal">
-                  <div class="group_list">
-                    <div class="group">
-                      <div class="group_position modal_text_L">기획</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+                    <p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
+                </div>
+                <div class="card_footer">
+                  <div class="Recruiting_container3">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="/src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal3 modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">UX/UI디자인</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">퍼블리싱</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group">
-                      <div class="group_position modal_text_L">프론트엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="group" style="border-bottom: none">
-                      <div class="group_position modal_text_L">백엔드</div>
-                      <div class="group_position_member modal_text_S">
-                        <div class="mentor">멘토 1명</div>
-                        <div class="mentee">멘티 1명</div>
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div class="card_footer_like3">
+                    <span>❤</span>
+                    0
+                  </div>
                 </div>
-                <div class="card_footer_like8">
-                  <span>❤</span>
-                  0
+              </div>
+              <!-- card4 -->
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="/src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button4 like_button">
+                    <span class="heart_icon4 heart_icon"></span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+                    <p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
+                </div>
+                <div class="card_footer">
+                  <div class="Recruiting_container4">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="/src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal4 modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer_like4">
+                    <span>❤</span>
+                    0
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section4">
-        <div class="section4_wrap">
-          <a href="/complete_project/complete_project.html"
-            ><div class="pr_tit project_title">
-              완성 프로젝트 ✨
-              <span>
-                <img src="/src/img/next.png" alt="" />
-              </span></div
-          ></a>
-          <div class="project_subtitle_wrap">
-            <p class="project_subtitle">피움에서 완성된 프로젝트 모음</p>
+        </section>
+        <section class="section3">
+          <div class="section3_wrap">
+            <a href="/project_list/project_list.html"
+              ><div class="pr_tit project_title">
+                최신 프로젝트 🎈
+                <span>
+                  <img src="/src/img/next.png" alt="" />
+                </span></div
+            ></a>
+            <div class="project_subtitle_wrap">
+              <p class="project_subtitle">새로운 프로젝트를 탐색해봐요!</p>
+              <a href="/project_list/project_list.html"
+                ><p class="more_text">더보기</p></a
+              >
+            </div>
+            <div class="card_wrap">
+              <!-- card5 -->
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="/src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button5 like_button">
+                    <span class="heart_icon5 heart_icon"></span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+                    <p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
+                </div>
+                <div class="card_footer">
+                  <div class="Recruiting_container5">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="/src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal5 modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer_like5">
+                    <span>❤</span>
+                    0
+                  </div>
+                </div>
+              </div>
+              <!-- card6 -->
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="/src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button6 like_button">
+                    <span class="heart_icon6 heart_icon"></span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+                    <p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
+                </div>
+                <div class="card_footer">
+                  <div class="Recruiting_container6">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="/src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal6 modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer_like6">
+                    <span>❤</span>
+                    0
+                  </div>
+                </div>
+              </div>
+              <!-- card7 -->
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="../src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button7 like_button">
+                    <span class="heart_icon7 heart_icon"></span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+                    <p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
+                </div>
+                <div class="card_footer">
+                  <div class="Recruiting_container7">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="./src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal7 modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer_like7">
+                    <span>❤</span>
+                    0
+                  </div>
+                </div>
+              </div>
+              <!-- card8 -->
+              <div class="card">
+                <div class="thumb">
+                  <a href="/crew_state/crew_state.html"
+                    ><img src="/src/img/thumbnail.png" alt="Thumb"
+                  /></a>
+                  <div class="like_button8 like_button">
+                    <span class="heart_icon8 heart_icon"></span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <a href="/crew_state/crew_state.html"
+                    ><p class="card_title">[캠퍼스명] 프로젝트 타이틀</p>
+                    <p class="card_desc">프로젝트 설명란입니다.</p></a
+                  >
+                </div>
+                <div class="card_footer">
+                  <div class="Recruiting_container8">
+                    <div class="card_footer_text">모집중</div>
+                    <div class="Recruiting_member card_footer_text">4/5</div>
+                    <span class="Recruiting_information">
+                      <img src="/src/img/Group 629971.png" />
+                    </span>
+                  </div>
+                  <div class="modal8 modal">
+                    <div class="group_list">
+                      <div class="group">
+                        <div class="group_position modal_text_L">기획</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          UX/UI디자인
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">퍼블리싱</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <div class="group_position modal_text_L">
+                          프론트엔드
+                        </div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+
+                      <div class="group" style="border-bottom: none">
+                        <div class="group_position modal_text_L">백엔드</div>
+                        <div class="group_position_member modal_text_S">
+                          <div class="mentor">멘토 1명</div>
+                          <div class="mentee">멘티 1명</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card_footer_like8">
+                    <span>❤</span>
+                    0
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="completed_project_picture">
-            <div>
-              <a href=""
-                ><img src="/src/img/completed_pro1.png" alt="completed_pro1"
-              /></a>
+        </section>
+        <section class="section4">
+          <div class="section4_wrap">
+            <a href="/complete_project/complete_project.html"
+              ><div class="pr_tit project_title">
+                완성 프로젝트 ✨
+                <span>
+                  <img src="/src/img/next.png" alt="" />
+                </span></div
+            ></a>
+            <div class="project_subtitle_wrap">
+              <p class="project_subtitle">피움에서 완성된 프로젝트 모음</p>
             </div>
-            <div>
-              <a href=""
-                ><img src="/src/img/completed_pro2.png" alt="completed_pro2"
-              /></a>
-            </div>
-            <div>
-              <a href=""
-                ><img src="/src/img/completed_pro3.png" alt="completed_pro3"
-              /></a>
-            </div>
-            <div>
-              <a href=""
-                ><img src="/src/img/completed_pro4.png" alt="completed_pro4"
-              /></a>
+            <div class="completed_project_picture">
+              <div>
+                <a href=""
+                  ><img src="/src/img/completed_pro1.png" alt="completed_pro1"
+                /></a>
+              </div>
+              <div>
+                <a href=""
+                  ><img src="/src/img/completed_pro2.png" alt="completed_pro2"
+                /></a>
+              </div>
+              <div>
+                <a href=""
+                  ><img src="/src/img/completed_pro3.png" alt="completed_pro3"
+                /></a>
+              </div>
+              <div>
+                <a href=""
+                  ><img src="/src/img/completed_pro4.png" alt="completed_pro4"
+                /></a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section></section>
-    </main>
-    <footer include-html="/footer.html"></footer>
-    <script src="./includeHTML.js"></script>
+        </section>
+        <section></section>
+      </main>
+      <!-- <footer include-html="/footer.html"></footer> -->
+      <footer include-html="../common/footer.html"></footer>
+      <script src="./includeHTML.js"></script>
     </div>
   </body>
 </html>
