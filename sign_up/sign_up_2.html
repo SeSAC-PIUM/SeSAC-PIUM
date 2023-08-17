@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIUM</title>
+    <!-- <link rel="stylesheet" href="../common/root.css" /> -->
+    <link rel="stylesheet" href="./css/sign_up_2.css" />
+    <link rel="stylesheet" href="../common/global_style.css" />
+    <script defer src="./js/sign_up_2.js"></script>
+    <script src="../includeHTML.js"></script>
+  </head>
+
+  <body>
+    <div class="profile_container ques_text">
+      <header include-html="../common/header.html"></header>
+      <div class="profile_header">
+        <div class="page_title_point">
+          추가정보
+          <span class="page_title">입력</span>
+        </div>
+        <div class="section_title_desc">1/2</div>
+        <!-- <span class="skip_btn">SKIP</span> -->
+      </div>
+
+      <div class="profile_contents_container">
+        <div class="profile_contents">
+          <div class="profile_content_wrap one_1">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">취업경험</div>
+              </div>
+            </div>
+            <div class="answer_container">
+              <div class="label_container">
+                <label>
+                  <input
+                    type="radio"
+                    name="radio-group-3"
+                    class="radio-group-3"
+                  />
+                  <span class="custom_radio">유</span>
+                </label>
+
+                <label>
+                  <input
+                    type="radio"
+                    name="radio-group-3"
+                    class="radio-image-2"
+                  />
+                  <span class="custom_radio">무</span>
+                </label>
+              </div>
+
+              <div class="input_wrap">
+                <span style="padding-right: 16px">분야</span>
+                <input
+                  type="text"
+                  class="input"
+                  onclick="handleRadioClick('radio-group-3')"
+                />
+              </div>
+              <div class="input_wrap">
+                <span style="padding-right: 16px">연차</span>
+                <input
+                  type="text"
+                  class="input"
+                  style="width: 50px"
+                  onclick="handleRadioClick('radio-group-3')"
+                />
+                <span style="padding-left: 8px">년</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap two_1">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">창업경험</div>
+              </div>
+            </div>
+            <div class="label_container">
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-4"
+                  class="radio-image-1"
+                />
+                <span class="custom_radio">유</span>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="radio-group-4"
+                  class="radio-image-2"
+                />
+                <span class="custom_radio">무</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="profile_content_wrap three_1">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">전공</div>
+              </div>
+            </div>
+
+            <input type="text" class="input" />
+          </div>
+
+          <div class="profile_content_wrap four_1">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">github 주소</div>
+              </div>
+            </div>
+
+            <input type="text" class="input" />
+          </div>
+
+          <div class="profile_content_wrap five_1">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">포트폴리오 파일</div>
+              </div>
+            </div>
+            <!-- <div
+              class="answer_container"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 400px;
+                width: 100%;
+              "
+            > -->
+            <!-- <input type="text" class="input" style="margin-right: 8px" /> -->
+            <div class="answer_container">
+              <input type="file" id="fileInput" style="display: none" />
+              <button
+                class="btn_add_file button_selected_all"
+                style="margin-bottom: 8px"
+              >
+                파일 추가
+              </button>
+              <div
+                class="box"
+                style="max-width: 300px; width: 100%; padding: 24px 16px"
+              >
+                <ul id="fileList"></ul>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+
+          <div class="profile_content_wrap six_1">
+            <div class="title">
+              <div class="title_box">
+                <div class="ques_text">포트폴리오 링크</div>
+              </div>
+            </div>
+            <div class="answer_container">
+              <input type="text" class="input" style="margin-bottom: 8px" />
+              <input type="text" class="input" />
+            </div>
+          </div>
+        </div>
+        <div class="button_container">
+          <a href="../selection/selection.html" target="_blank">
+            <div class="skip_btn">SKIP</div>
+          </a>
+          <!-- <a href="../profile/profie_3.html"> -->
+          <button class="btn_save">저장하기</button>
+          <!-- </a> -->
+        </div>
+      </div>
+      <footer include-html="../common/footer.html"></footer>
+    </div>
+  </body>
+</html>
