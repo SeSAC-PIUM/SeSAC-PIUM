@@ -13,6 +13,7 @@ body {
 .header_wrap {
   margin: 0 auto;
   max-width: 1200px;
+  /* padding: 0px 16px; */
 }
 .util_wrap {
   justify-content: space-between;

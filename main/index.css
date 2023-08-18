@@ -121,6 +121,7 @@ main .section1 .select_wrap {
 }
 main .section1 .select_wrap li {
   width: 180px;
+  padding: 16px 32px;
   height: 65px;
   border-radius: 4px;
   background: #4f4f4f;
@@ -153,12 +154,13 @@ main .section1 .select_wrap li a {
 .card_sec .card_wrap {
   display: flex;
   justify-content: space-between;
+  /* flex-wrap: wrap; */
 }
 .card_sec .card_wrap .thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #85C29D;
+  background-color: #85c29d;
 }
 .card_sec .card_wrap .thumb .thumb_text {
   position: absolute;
@@ -206,7 +208,38 @@ section .sub_wrap .sub_tit {
   /* border: 1px solid red; */
 }
 
+/* 카드 컨테이너 가로 스크롤  */
+.card_container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card_container .card_wrap {
+  /* padding: 8px 0px; */
+}
+
+.card_container .card_wrap .card_size {
+  width: 280px;
+}
+
+.card_container .card_wrap .card_size img {
+  width: 100%;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; */
+}
+
+.card_container .card_wrap li {
+  margin-right: 24px;
+}
+.card_container::-webkit-scrollbar {
+  width: 0;
+}
+
+/* loop 애니메이션 */
 .cards_container {
+  width: 100%;
   white-space: nowrap;
   padding-top: 48px;
   overflow: hidden;
@@ -236,5 +269,17 @@ section .sub_wrap .sub_tit {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.project_btn_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+  main .section1 .select_wrap li {
+    width: 30%;
   }
 }
