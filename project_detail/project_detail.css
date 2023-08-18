@@ -155,10 +155,36 @@
 }
 
 /* text */
+.project_title {
+  width: 714px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--color-grayscale-600);
+}
+
+.project_title2 {
+  width: 714px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--color-grayscale-600);
+}
+
+.project_sub_title {
+  width: 714px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 36px;
+  color: var(--color-grayscale-600);
+}
+
 .pro_de_text {
   width: 714px;
   font-size: 16px;
   margin-bottom: 120px;
+  line-height: 36px;
+  color: var(--color-grayscale-600);
 }
 
 /* crwew_member */
