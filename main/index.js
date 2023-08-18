@@ -37,23 +37,21 @@ const recruiting_wrap = document.querySelectorAll('.recruiting_wrap');
 // project modal hover
 const modal = document.querySelectorAll('.modal');
 
-recruiting_wrap.forEach((recruiting_wrap_ele)=>{
-  recruiting_wrap_ele.addEventListener('mouseenter', ()=>{
+recruiting_wrap.forEach((recruiting_wrap_ele) => {
+  recruiting_wrap_ele.addEventListener('mouseenter', () => {
     recruiting_wrap_ele.nextElementSibling.style.display = 'flex';
-  })
-})
-recruiting_wrap.forEach((recruiting_wrap_ele)=>{
-  recruiting_wrap_ele.addEventListener('mouseleave', ()=>{
+  });
+});
+recruiting_wrap.forEach((recruiting_wrap_ele) => {
+  recruiting_wrap_ele.addEventListener('mouseleave', () => {
     recruiting_wrap_ele.nextElementSibling.style.display = 'none';
-  })
-})
+  });
+});
 
-
-
-likeButton.forEach((likeButton_ele)=>{
+likeButton.forEach((likeButton_ele) => {
   let isClicked = false;
   let clickCount = 0;
-  likeButton_ele.addEventListener('click', ()=>{
+  likeButton_ele.addEventListener('click', () => {
     if (!isClicked) {
       likeButton_ele.classList.add('clicked');
       clickCount++;
@@ -66,7 +64,8 @@ likeButton.forEach((likeButton_ele)=>{
 
     localStorage.setItem('clickCount', clickCount.toString());
 
-    likeButton_ele.parentNode.parentNode.querySelector('.like_count').textContent = clickCount
-  })
-})
-
+    likeButton_ele.parentNode.parentNode.querySelector(
+      '.like_count'
+    ).textContent = clickCount;
+  });
+});
