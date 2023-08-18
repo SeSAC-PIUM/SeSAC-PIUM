@@ -125,6 +125,21 @@ input[type='radio'] {
   border: 1px solid var(--color-main-green);
 }
 
+.button_chatting {
+  width: fit-content;
+  font-size: 14px;
+  color: var(--color-main-green);
+  font-weight: 600;
+  padding: 8px 15px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid var(--color-main-green);
+  background: #fff;
+  line-height: 100%;
+}
+
 .input {
   display: flex;
   max-width: 300px;
@@ -361,6 +376,13 @@ input[type='radio'] {
   font-size: 16px;
   font-weight: 500;
   padding-bottom: 16px;
+}
+
+/* 16.태그 14px 400 그레이 */
+.tag_title {
+  color: var(--color-grayscale-600);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* 프로젝트 설명란 */

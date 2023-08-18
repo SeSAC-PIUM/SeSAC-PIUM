@@ -1,9 +1,4 @@
-@import url(reset.css);
 @import url(/common/global_style.css);
-
-* {
-  font-family: 'Pretendard-Regular';
-}
 
 .dropdown_list li:hover,
 .chips_list li:hover {

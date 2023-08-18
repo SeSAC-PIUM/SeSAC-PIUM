@@ -15,3 +15,212 @@
   padding: 40px 16px;
   border-top: 1px solid var(--color-grayscale-600);
 }
+
+.pro_de_wrap {
+  display: flex;
+  margin-bottom: 48px;
+}
+/* left */
+.section2 {
+  margin-top: 64px;
+}
+.pro_de_wrap .pro_de_left .pro_de_img {
+  width: 714px;
+  height: 354px;
+  border-radius: 8px 8px 0px 0px;
+  background: #f5f5f9;
+  margin: 0px 80px 48px 0;
+}
+
+.pro_de_wrap .pro_de_left .pro_de_name {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.pro_de_wrap .pro_de_left .tag_title_wrap {
+  display: flex;
+  height: 37px;
+}
+.pro_de_wrap .pro_de_left .tag_title_wrap a {
+  margin-right: 16px;
+}
+
+.pro_de_wrap .pro_de_left .tag_title_wrap div {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--gy-2, #e9e9ee);
+  background: #fff;
+}
+
+/* pro_de_right */
+.pro_de_right {
+  width: 406px;
+  height: 406px;
+  border-radius: 4px;
+  border: 1px solid var(--gy-2, #e9e9ee);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 360px;
+}
+.pro_de_right .pro_de_state {
+  width: 326px;
+  height: 100%px;
+  margin: 40px;
+}
+.pro_de_right .pro_de_state .pro_de_title {
+  width: fit-content;
+  line-height: 100%;
+}
+.pro_de_right .pro_de_state .pro_de_titl span {
+  color: var(--color-grayscale-500);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+}
+.pro_de_right .pro_de_state .pro_de_hr {
+  margin: 24px 0;
+  background: #e9e9ee;
+}
+
+.pro_de_right .pro_de_state .pro_de_state_list {
+  display: flex;
+  justify-content: space-between;
+  line-height: 100%;
+}
+.pro_de_right .pro_de_state .pro_de_state_list div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+.pro_de_right .pro_de_state .pro_de_state_list :first-child {
+  align-items: start;
+}
+
+.pro_de_right .pro_de_state .pro_de_state_list div p {
+  margin-bottom: 24px;
+}
+.pro_de_right .pro_de_state .pro_de_state_list div p:last-child {
+  margin-bottom: 0;
+}
+.pro_de_right .pro_de_state .pro_de_state_list div :first-of-type {
+  margin-top: 24px;
+}
+.pro_de_right .pro_de_state button {
+  margin-top: 34px;
+  padding: 16px 139.5px 16px 130.5px;
+  width: fit-content;
+}
+
+/* leader */
+.leader_state {
+  width: 406px;
+  height: 128px;
+  margin-top: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--color-grayscale-200);
+  background: #fff;
+}
+.leader_state .leader_state_wrap {
+  margin: 40px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leader_state .leader_state_wrap .leader_state_img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f5f5f9;
+  margin-right: 16px;
+}
+.leader_state .leader_state_wrap .leader_name_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  margin-right: 113px;
+}
+.leader_state .leader_state_wrap .leader_name {
+  width: 71px;
+  margin-bottom: 8px;
+}
+.leader_state .leader_state_wrap button {
+  width: 78px;
+  height: 30px;
+}
+
+/* text */
+.pro_de_text {
+  width: 714px;
+  font-size: 16px;
+  margin-bottom: 120px;
+}
+
+/* crwew_member */
+.section4 {
+  margin-bottom: 321px;
+}
+.crew_member_hr {
+  width: 714px;
+  height: 1px;
+  background: #e9e9ee;
+  margin-bottom: 48px;
+}
+
+.crew_member_title {
+  margin-bottom: 24px;
+}
+.crew_member_wrap {
+  width: 714px;
+  height: 112px;
+  margin-top: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--color-grayscale-200);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crew_member {
+  width: 100%;
+  height: 48px;
+  margin: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crew_member .crew_member_img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f5f5f9;
+  margin-right: 24px;
+}
+.crew_member .crew_member_name_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+}
+.crew_member .crew_member_name {
+  margin-bottom: 8px;
+  margin-right: 48px;
+}
+
+.crew_member .crew_member_introduce {
+  line-height: 14px;
+  margin-right: 213px;
+}
+
+.crew_member button {
+  border-radius: 999px;
+  border: 1px solid var(--gy-2, #e9e9ee);
+  background: var(--gy-1, #f5f5f9);
+  width: 80px;
+  height: 30px;
+}
