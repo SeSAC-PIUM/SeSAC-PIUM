@@ -31,13 +31,16 @@ main .search_wrap input {
   border: none;
   font-weight: bold;
 }
+main .search_wrap input:focus {
+  outline: none;
+}
 main .search_wrap i {
   font-size: 24px;
   padding-right: 10px;
 }
 main .filter_wrap {
   display: flex;
-  margin-top: 84px;
+  margin: 84px 0 23px;
   justify-content: space-between;
 }
 main .filter_wrap .filter_left {
@@ -67,6 +70,7 @@ main .filter_wrap .filter_item_list {
   margin-top: 9px;
   position: absolute;
   background-color: #fff;
+  z-index: 9;
 }
 main .filter_wrap .filter_left .role_filter .filter_item_list {
   width: 304px;
@@ -187,4 +191,40 @@ main .filter_wrap .filter_right .order_filter .filter_item_list li:last-child {
 }
 main .filter_wrap .filter_right .order_filter .filter_item_list li:hover {
   background-color: rgba(45, 169, 109, 0.5);
+}
+
+
+.project_list_wrap {
+
+}
+.project_list_wrap > li {
+  margin-bottom: 64px;
+}
+.project_list_wrap li .project_list_row_4 {
+  display: flex;
+  justify-content: space-between;
+}
+.project_list_wrap li .project_list_row_4 .card_tit {
+  margin-bottom: 16px;
+}
+.project_list_wrap li .project_list_row_4 .card_footer .recruiting_wrap {
+  gap: 4px;
+}
+.project_list_wrap li .project_list_row_4 .card_footer .recruiting_wrap img {
+  width: 100%;
+}
+.project_list_wrap li .project_list_row_4 .modal li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-grayscale-200);
+}
+.project_list_wrap li .project_list_row_4 .modal li:first-child {
+  padding-top: 0;
+}
+.project_list_wrap li .project_list_row_4 .modal li:last-child {
+  padding-bottom: 0;
+}
+.project_list_wrap li .project_list_row_4 .modal li .flex_box_column {
+  gap: 8px;
 }

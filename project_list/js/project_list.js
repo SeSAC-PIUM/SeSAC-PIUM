@@ -114,4 +114,166 @@ window.addEventListener('DOMContentLoaded', () => {
   recruit_complete_checkbox_i.addEventListener('click', () => {
     recruit_complete_checkbox_i.classList.toggle('on');
   });
+
+  
+  const project_list_wrap = document.querySelector('.project_list_wrap');
+  let num = 8
+
+  projectListAdd()
+
+  function projectListAdd() {
+    
+    for(let a = 1; a <= num; a++){
+      const project_list_wrap_li = document.createElement('li');
+      const project_list_row_4 = document.createElement('ul');
+      project_list_row_4.classList.add('project_list_row_4')
+      project_list_wrap.append(project_list_wrap_li)
+      project_list_wrap_li.append(project_list_row_4)
+      
+      for(let i = 1; i <= 4; i++){
+        const card = document.createElement('li');
+        card.classList.add('card')
+        card.innerHTML = `<div class="thumb">
+        <a href="/crew_state/crew_state.html">
+          <img src="/src/img/thumbnail.png" alt="모집중 프로젝트 사진"/>
+        </a>
+        <span class="like_button"></span>
+      </div>
+      <div class="card_body">
+        <p class="card_tit">
+          <a href="/crew_state/crew_state.html" class="card_title">[캠퍼스명] 프로젝트 타이틀</a>
+        </p>
+        <p>
+          <a href="/crew_state/crew_state.html" class="card_desc">프로젝트 설명란입니다.</a>
+        </p>
+      </div>
+      <div class="card_footer">
+        <div class="recruiting_wrap flex_box_row">
+          <span class="card_footer_text">모집중</span>
+          <span class="card_footer_text">4/5</span>
+          <img src="/src/img/Group 629971.png" />
+        </div>
+        <ul class="modal">
+            <li>
+              <div class="group_position modal_text_L">기획</div>
+              <div class="modal_text_S flex_box_column">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </li>
+            <li>
+              <div class="group_position modal_text_L">UX/UI디자인</div>
+              <div class="modal_text_S flex_box_column">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </li>
+            <li>
+              <div class="group_position modal_text_L">퍼블리싱</div>
+              <div class="modal_text_S flex_box_column">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </li>
+            <li>
+              <div class="group_position modal_text_L">프론트엔드</div>
+              <div class="modal_text_S flex_box_column">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </li>
+            <li style="border-bottom: none">
+              <div class="group_position modal_text_L">백엔드</div>
+              <div class="modal_text_S flex_box_column">
+                <div class="mentor">멘토 1명</div>
+                <div class="mentee">멘티 1명</div>
+              </div>
+            </li>
+        </ul>
+        <div class="card_footer_like">
+          <span>❤</span>
+          <span class="like_count">0</span>
+        </div>
+      </div>`
+  
+      project_list_row_4.append(card);
+  
+      }
+
+    }
+
+    modalDisplay()
+    likeBtnClickCount()
+  }
+  
+
+
+
+  function modalDisplay() {
+    // project modal hover
+    const recruiting_wrap = document.querySelectorAll('.recruiting_wrap');
+    
+    
+    recruiting_wrap.forEach((recruiting_wrap_ele)=>{
+      recruiting_wrap_ele.addEventListener('mouseenter', ()=>{
+        recruiting_wrap_ele.nextElementSibling.style.display = 'flex';
+      })
+    })
+    recruiting_wrap.forEach((recruiting_wrap_ele)=>{
+      recruiting_wrap_ele.addEventListener('mouseleave', ()=>{
+        recruiting_wrap_ele.nextElementSibling.style.display = 'none';
+      })
+    })
+  }
+
+  function likeBtnClickCount() {
+    // heart-button
+    const likeButton = document.querySelectorAll('.like_button');
+    
+    likeButton.forEach((likeButton_ele)=>{
+      let isClicked = false;
+      let clickCount = 0;
+      likeButton_ele.addEventListener('click', ()=>{
+        if (!isClicked) {
+          likeButton_ele.classList.add('clicked');
+          clickCount++;
+          isClicked = true;
+        } else {
+          likeButton_ele.classList.remove('clicked');
+          clickCount--;
+          isClicked = false;
+        }
+    
+        localStorage.setItem('clickCount', clickCount.toString());
+    
+        likeButton_ele.parentNode.parentNode.querySelector('.like_count').textContent = clickCount
+      })
+    })
+
+  }
+
+
+  window.addEventListener('scroll', ()=>{
+
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      num = 1
+      projectListAdd()
+    }
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
