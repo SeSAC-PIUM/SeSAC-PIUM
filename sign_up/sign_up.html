@@ -37,7 +37,12 @@
                 </div>
               </div>
             </div>
-            <input type="text" class="input_text" style="width: 300px" />
+            <input
+              type="text"
+              class="input_text"
+              style="width: 300px"
+              placeholder="실명을 입력해주세요 (ex.이새싹) "
+            />
           </div>
 
           <div class="profile_content_wrap two">
@@ -130,19 +135,17 @@
 
             <div class="box">
               <div class="btn_list">
-                <div class="btn" id="btn0" onclick="toggleAnswer(0)">기획</div>
-                <div class="btn" id="btn1" onclick="toggleAnswer(1)">
+                <div class="btn" id="btn0" onclick="openAnswer(0)">기획</div>
+                <div class="btn" id="btn1" onclick="openAnswer(1)">
                   UX/UI디자인
                 </div>
-                <div class="btn" id="btn2" onclick="toggleAnswer(2)">
+                <div class="btn" id="btn2" onclick="openAnswer(2)">
                   퍼블리싱
                 </div>
-                <div class="btn" id="btn3" onclick="toggleAnswer(3)">
+                <div class="btn" id="btn3" onclick="openAnswer(3)">
                   프론트엔드
                 </div>
-                <div class="btn" id="btn4" onclick="toggleAnswer(4)">
-                  백엔드
-                </div>
+                <div class="btn" id="btn4" onclick="openAnswer(4)">백엔드</div>
               </div>
             </div>
           </div>

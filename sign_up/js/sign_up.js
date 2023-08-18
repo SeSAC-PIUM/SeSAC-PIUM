@@ -224,20 +224,28 @@ function removeActive(x) {
     x[i].classList.remove('active');
   }
 }
-// box btn 클릭
-const selectedBtnIds = [];
 
-function toggleAnswer(btnIndex) {
-  const clickedBtnId = `btn${btnIndex}`;
-  const clickedBtn = document.getElementById(clickedBtnId);
-
-  if (selectedBtnIds.includes(clickedBtnId)) {
-    selectedBtnIds.splice(selectedBtnIds.indexOf(clickedBtnId), 1);
-    clickedBtn.classList.remove('selected');
-  } else {
-    selectedBtnIds.push(clickedBtnId);
-    clickedBtn.classList.add('selected');
+// input 바깥 영역을 클릭하면 선택창이 닫히게 하는 코드.
+document.addEventListener('click', function (event) {
+  if (event.target !== input && event.target !== classSelect) {
+    browsers.style.display = 'none';
+    browsers2.style.display = 'none';
+    input.style.borderRadius = '4px';
+    classSelect.style.borderRadius = '4px';
   }
+});
+
+// box btn 클릭
+
+let selectedBtnId = null;
+
+function openAnswer(btnIndex) {
+  if (selectedBtnId !== null) {
+    document.getElementById(selectedBtnId).classList.remove('selected');
+  }
+
+  selectedBtnId = `btn${btnIndex}`;
+  document.getElementById(selectedBtnId).classList.add('selected');
 }
 
 //항목을 다 채워야 다음페이지로 넘어갈 수 있게 설정
