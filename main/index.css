@@ -2,8 +2,6 @@ body {
   /* overflow: hidden; */
 }
 
-
-
 /* advert_box */
 .advert_box {
   gap: 12px;
@@ -80,7 +78,7 @@ body {
   gap: 12px;
   /* justify-content: space-between; */
 }
-.box_wrap a{
+.box_wrap a {
   flex: 1;
   display: block;
 }
@@ -129,7 +127,7 @@ main .section1 .sub_wrap .sub_tit {
   text-align: center;
   letter-spacing: -1px;
 }
-main .section1 .sub_wrap .sub_tit img { 
+main .section1 .sub_wrap .sub_tit img {
   margin-left: 5px;
 }
 main .section1 .sub_wrap .sub_tit2 {
@@ -183,11 +181,9 @@ main .section1 .select_wrap li a {
 }
 .card_sec .project_tit {
   margin-bottom: 12px;
+  padding: 0;
 }
 .card_sec .project_tit a {
-  padding: 0;
-  display: flex;
-  align-items: center;
 }
 .card_sec .project_subtitle_wrap {
   justify-content: space-between;
