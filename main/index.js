@@ -15,7 +15,10 @@ const swiper = new Swiper('.swiper', {
   // pagination: {
   //   el: '.swiper-pagination',
   // },
-
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -27,6 +30,13 @@ const swiper = new Swiper('.swiper', {
   //   el: '.swiper-scrollbar',
   // },
 });
+
+const slide_count = document.querySelector('.count')
+
+slide_count
+
+
+
 
 // heart-button
 const likeButton = document.querySelectorAll('.like_button');

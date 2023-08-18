@@ -1,34 +1,20 @@
-body {
-  /* overflow: hidden; */
-}
-
 /* advert_box */
 .advert_box {
   gap: 12px;
   justify-content: center;
   margin-bottom: 80px;
 }
-/* advert */
-/* .advert {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 112px;
-} */
-/* swiper */
 .advert_box .swiper {
   width: 906px;
   height: 260px;
   margin: 0 !important;
   border-radius: 8px;
 }
-
-.advert_box .swiper-slide {
-  overflow: hidden;
-}
-.advert_box .swiper-slide .count {
-  position: relative;
-  top: 218px;
-  left: 830px;
+.advert_box .swiper .count {
+  position: absolute;
+  left: auto;
+  right: 16px;
+  bottom: 16px;
   width: 60px;
   height: 26px;
   border-radius: 999px;
@@ -36,10 +22,15 @@ body {
   text-align: center;
   line-height: 26px;
   letter-spacing: 1.12px;
+  z-index: 999;
+}
+.advert_box .swiper-slide {
+  overflow: hidden;
 }
 .advert_box .swiper-slide .slide-tit {
   position: relative;
-  top: 35px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 80px;
 }
 .advert_box .swiper-slide .slide-tit .slide_title {
@@ -48,7 +39,7 @@ body {
 }
 .advert_box .swiper-slide img {
   position: relative;
-  top: -130px;
+  top: -110px;
   left: 639px;
 }
 .advert_box .ad_left,
@@ -62,7 +53,6 @@ body {
 .advert_box .ad_right {
   right: 16px;
 }
-
 .advert_box .swiper:hover .ad_left,
 .advert_box .swiper:hover .ad_right {
   display: block;
@@ -71,12 +61,12 @@ body {
 .swiper-button-prev::after {
   display: none;
 }
+
 /* 랜덤매칭 신청&프로젝트 생성 */
 .box_wrap {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* justify-content: space-between; */
 }
 .box_wrap a {
   flex: 1;
@@ -92,7 +82,6 @@ body {
   gap: 8px;
 }
 .box_wrap .green_box .banner_point {
-  /* margin-bottom: 12px; */
   font-weight: 400;
 }
 
@@ -100,25 +89,12 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  /* padding: 0 20px; */
 }
 
 /* main */
-main {
-}
-/* section*/
 main .section1 {
   margin-bottom: 80px;
 }
-
-/* main section .sub_wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-} */
-
 main .section1 .sub_wrap {
   margin-bottom: 24px;
 }
@@ -128,7 +104,6 @@ main .section1 .sub_wrap .sub_tit {
   text-align: center;
   letter-spacing: -1px;
 }
-
 main .section1 .sub_wrap .sub_tit img {
   margin-left: 5px;
 }
@@ -144,13 +119,6 @@ main .section1 .select_wrap {
   justify-content: center;
   gap: 12px;
 }
-/* main section .select {
-  width: 1200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: space-around;
-} */
 main .section1 .select_wrap li {
   width: 180px;
   height: 65px;
@@ -168,24 +136,12 @@ main .section1 .select_wrap li a {
 }
 
 /* card_sec */
-/* .card_sec {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-/* .card_sec .pr_tit {
-  display: flex;
-  line-height: 24px;
-} */
 .card_sec {
   margin-bottom: 70px;
 }
 .card_sec .project_tit {
   margin-bottom: 12px;
   padding: 0;
-}
-.card_sec .project_tit a {
 }
 .card_sec .project_subtitle_wrap {
   justify-content: space-between;
@@ -198,13 +154,9 @@ main .section1 .select_wrap li a {
   display: flex;
   justify-content: space-between;
 }
-/* .card_sec .card_wrap div div div {
-  cursor: pointer;
-} */
 .card_sec .card_wrap .card_tit {
   margin-bottom: 16px;
 }
-
 .card_sec .card_footer .recruiting_wrap {
   gap: 4px;
 }
@@ -226,35 +178,6 @@ main .section1 .select_wrap li a {
 .card_sec .modal li .flex_box_column {
   gap: 8px;
 }
-
-/* section4 */
-/* .section4 {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-/* .section4 .section4_wrap {
-  width: 1200px;
-} */
-/* .section4 .pr_tit {
-  display: flex;
-  line-height: 24px;
-}
-.section4 .pr_tit span {
-  margin-left: 8px;
-}
-.section4 .project_subtitle_wrap {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-} */
-/* .section4 .completed_project_picture {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 80px;
-} */
 
 /* 공간예약 */
 
