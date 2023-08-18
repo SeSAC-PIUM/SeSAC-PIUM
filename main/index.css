@@ -208,16 +208,38 @@ section .sub_wrap .sub_tit {
   /* border: 1px solid red; */
 }
 
+/* 카드 컨테이너 가로 스크롤  */
 .card_container {
-  width: 100%;
   overflow-x: scroll;
   white-space: nowrap;
-  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
+.card_container .card_wrap {
+  /* padding: 8px 0px; */
+}
+
+.card_container .card_wrap .card_size {
+  width: 280px;
+}
+
+.card_container .card_wrap .card_size img {
+  width: 100%;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; */
+}
+
+.card_container .card_wrap li {
+  margin-right: 24px;
+}
+.card_container::-webkit-scrollbar {
+  width: 0;
+}
+
+/* loop 애니메이션 */
 .cards_container {
   width: 100%;
-  overflow-x: scroll;
   white-space: nowrap;
   padding-top: 48px;
   overflow: hidden;
