@@ -118,6 +118,7 @@ main .section1 {
   align-items: center;
   cursor: pointer;
 } */
+
 main .section1 .sub_wrap {
   margin-bottom: 24px;
 }
@@ -127,10 +128,12 @@ main .section1 .sub_wrap .sub_tit {
   text-align: center;
   letter-spacing: -1px;
 }
+
 main .section1 .sub_wrap .sub_tit img {
   margin-left: 5px;
 }
-main .section1 .sub_wrap .sub_tit2 {
+main .section1 .sub_wrap .sub_tit2,
+section .sub_wrap .sub_tit2 {
   font-size: 32px;
   text-align: center;
   letter-spacing: -1px;
@@ -253,3 +256,63 @@ main .section1 .select_wrap li a {
   justify-content: space-between;
   margin-bottom: 80px;
 } */
+
+/* 공간예약 */
+
+section .sub_wrap {
+  margin: 96px 0px;
+}
+
+section .title_wrap {
+  /* border: 1px solid red; */
+}
+
+section .title_wrap .sub_tit {
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+section .title_wrap .sub_tit2 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.cards_container {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  padding-top: 45px;
+}
+
+.card_img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 318px;
+  height: 176px;
+  margin-bottom: 16px;
+  /* margin-right: 24px; */
+  /* margin: 0 24px 24px 0; */
+  /* width: 384px; */
+  /* height: 210px; */
+}
+
+@media screen and (max-width: 1600px) {
+  .cards_container {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* border: 1px solid red; */
+    /* padding-top: 45px; */
+  }
+
+  .card_img {
+    margin: 16px;
+  }
+}

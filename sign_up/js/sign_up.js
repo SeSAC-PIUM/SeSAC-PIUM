@@ -292,3 +292,6 @@ console.log(validateInputs);
 // 가입완료 버튼 클릭 시 함수 호출
 const btnSave = document.querySelector('.btn_save');
 btnSave.addEventListener('click', goToNextPage);
+
+// 로컬스토리지
+function saveData() {}
