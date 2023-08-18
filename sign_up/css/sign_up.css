@@ -137,7 +137,7 @@ datalist {
   width: 300px;
   margin-top: 8px;
   padding: 16px 32px;
-  z-index: 1;
+  z-index: 100;
 }
 
 option {
@@ -146,7 +146,7 @@ option {
   color: var(--color-grayscale-600);
   font-size: 14px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
 }
 
