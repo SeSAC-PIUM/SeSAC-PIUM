@@ -292,7 +292,7 @@ function validateInputs() {
 function goToNextPage() {
   if (validateInputs()) {
     // 모든 항목이 유효하다면 다음 페이지로 이동
-    window.location.href = '../profile/profie_2.html';
+    window.location.href = '../sign_up/sign_up_2.html';
   }
 }
 

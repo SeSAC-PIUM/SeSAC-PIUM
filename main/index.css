@@ -208,7 +208,16 @@ section .sub_wrap .sub_tit {
   /* border: 1px solid red; */
 }
 
+.card_container {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .cards_container {
+  width: 100%;
+  overflow-x: scroll;
   white-space: nowrap;
   padding-top: 48px;
   overflow: hidden;
