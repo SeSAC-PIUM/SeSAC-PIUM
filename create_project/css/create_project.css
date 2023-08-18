@@ -26,9 +26,6 @@ section:last-child {
   background-color: #C6C6D0;
   margin-bottom: 48px;
 }
-.sec_cont_wrap {
-  
-}
 .flex_box_column {
   display: flex;
   flex-direction: column;
@@ -40,9 +37,6 @@ section:last-child {
 .flex_item {
   flex: 1;
 }
-.select_box {
-  
-}
 .card_title {
   font-weight: bold;
 }
@@ -50,7 +44,7 @@ section:last-child {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #E9E9EE;
 }
 .dropdown_btn.selected {
@@ -66,7 +60,7 @@ section:last-child {
 .dropdown_btn_input {
   padding: 16px 20px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
   border: none;
 }
 .dropdown_btn_input:focus {
@@ -76,7 +70,7 @@ section:last-child {
   display: none;
   position: absolute;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 10px;
   border: 1px solid #E9E9EE;
   background-color: #fff;
@@ -90,7 +84,7 @@ section:last-child {
   line-height: 40px;
   font-size: 16px;
   padding: 0 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
 }
 .dropdown_list li:hover {
@@ -110,7 +104,7 @@ section:last-child {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #E9E9EE;
 }
 .date_btn.selected {
@@ -126,7 +120,7 @@ section:last-child {
 .date_btn_input {
   padding: 16px 20px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
   border: none;
 }
 .date_btn_input:focus {
@@ -136,7 +130,7 @@ section:last-child {
   gap: 12px;
   padding: 16px;
   border: 1px solid #E9E9EE;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: #fff;
   width: fit-content;
 }
@@ -151,7 +145,7 @@ section:last-child {
   color: #fff;
 }
 .box {
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #E9E9EE;
   padding: 16px 32px;
   width: fit-content;
@@ -159,12 +153,12 @@ section:last-child {
 .plus_minus_btn {
   padding: 16px 32px;
   border: 1px solid #E9E9EE;
-  border-radius: 10px;
+  border-radius: 4px;
   height: fit-content;
 }
 .add_btn {
   padding: 16px 32px;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: #2DA96E;
   height: fit-content;
   color: #fff;
@@ -174,7 +168,7 @@ section:last-child {
   padding: 16px 20px;
   width: 100%;
   max-width: 500px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #E9E9EE;
 }
 .input_box input:focus {
@@ -183,7 +177,7 @@ section:last-child {
 .input_box textarea {
   width: 100%;
   padding: 16px 20px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #E9E9EE;
   resize: none;
 }
@@ -196,11 +190,6 @@ section:last-child {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 20px;
-}
-main .page_tit {
-}
-main section {
-
 }
 main section .sec_cont_wrap .select_box {
   position: relative;
@@ -233,13 +222,6 @@ main section .sec_cont_wrap .add_select_box .recruit_position_list li i {
   transform: translateY(1px);
   cursor: pointer;
 }
-/* main section .sec_cont_wrap .add_select_box .recruit_position_list li::after {
-  content: '\f00d';
-  font-family: 'fontawesome';
-  margin-left: 10px;
-  transform: translateY(1px);
-  cursor: pointer;
-} */
 main section .sec_cont_wrap .add_select_box .flex_box_row {
   gap: 12px;
 }
@@ -255,28 +237,17 @@ main section .sec_cont_wrap .add_select_box .plus_minus_btn i {
   cursor: pointer;
 }
 main section .file_upload_box {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 1.5;
-  border-radius: 10px;
+  width: 282px;
+  height: 140px;
+  border-radius: 4px;
   border: 1px solid #E9E9EE;
   margin-bottom: 20px;
+  padding-bottom: 0;
   overflow: hidden;
 }
 main section .file_upload_box img {
   width: 100%;
   height: 100%;
-}
-main section .file_upload_button {
-  display: inline-block;
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  background-color:#2DA96E;
-  border-radius: 4px;
-  text-align: center;
-  color: white;
-  cursor: pointer;
 }
 main section .file_upload_input {
   display: none;

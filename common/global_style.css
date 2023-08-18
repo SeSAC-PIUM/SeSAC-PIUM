@@ -208,14 +208,21 @@ input[type='radio'] {
   top: 10px;
   right: 10px;
   cursor: pointer;
+  color: #fff;
 }
 
 .like_button::before {
-  content: '\2661'; /* 빈 하트 유니코드 */
+  content: '❤';
+
+  /* 빈 하트 유니코드 */
+  /* content: '\2661'; */
 }
 
 .like_button.clicked::before {
-  content: '\2665'; /* 빨간 하트 유니코드 */
+  content: '❤';
+
+  /* 빨간 하트 유니코드 */
+  /* content: '\2665'; */
   color: red;
 }
 .card_body {
@@ -248,7 +255,7 @@ input[type='radio'] {
 .nav_text {
   color: var(--color-grayscale-600);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .nav_text2 {
   color: var(--color-grayscale-600);
@@ -388,7 +395,7 @@ input[type='radio'] {
 /* 프로젝트 설명란 */
 .card_desc {
   color: var(--color-grayscale-500);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 
