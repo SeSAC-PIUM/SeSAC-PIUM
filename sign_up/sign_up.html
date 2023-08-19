@@ -67,6 +67,7 @@
                   placeholder="캠퍼스 선택"
                   type="text"
                   class="input_text"
+                  style="z-index: 999; position: relative"
                 />
 
                 <datalist id="browsers" role="listbox">
@@ -93,6 +94,7 @@
                   name="browsers2"
                   placeholder="클래스 선택"
                   class="input_text"
+                  style="z-index: 1; position: relative"
                 />
 
                 <datalist id="browsers2" role="listbox"> </datalist>
@@ -194,7 +196,9 @@
         </div>
         <!-- <a href="../profile/profie_2.html"> -->
         <div class="button_container">
-          <button class="btn_save">가입완료</button>
+          <button class="btn_save" onclick="saveDataInLocalStorage()">
+            가입완료
+          </button>
         </div>
         <!-- </a> -->
       </div>

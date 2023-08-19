@@ -254,19 +254,15 @@ function validateInputs() {
   const campusSelectInput = document.querySelector(
     '.profile_content_wrap.two #input'
   );
-
   const classSelectInput = document.querySelector(
     '.profile_content_wrap.two #class_select'
   );
-
   const selectedRadio = document.querySelector(
     '.profile_content_wrap.three input:checked'
   );
-
   const selectedJob = document.querySelector(
     '.profile_content_wrap.four .btn.selected'
   );
-
   const selectedMentor = document.querySelector(
     '.profile_content_wrap.five input:checked'
   );
@@ -297,9 +293,14 @@ function goToNextPage() {
 }
 
 console.log(validateInputs);
+
 // 가입완료 버튼 클릭 시 함수 호출
 const btnSave = document.querySelector('.btn_save');
 btnSave.addEventListener('click', goToNextPage);
 
-// 로컬스토리지
-function saveData() {}
+// Local Storage
+function saveDataInLocalStorage() {
+  // const nameInput = document.querySelector('.profile_contents_container input');
+  window.localStorage.setItem('userName', nameInput.value);
+  console.log(window.localStorage.getItem('userName'));
+}
