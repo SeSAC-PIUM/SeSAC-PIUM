@@ -248,23 +248,26 @@ function openAnswer(btnIndex) {
   document.getElementById(selectedBtnId).classList.add('selected');
 }
 
+const nameInput = document.querySelector('.profile_content_wrap.one input');
+const selectedCampus = document.querySelector(
+  '.profile_content_wrap.two #input'
+);
+const selectedClassInput = document.querySelector(
+  '.profile_content_wrap.two #class_select'
+);
+
 //항목을 다 채워야 다음페이지로 넘어갈 수 있게 설정
 function validateInputs() {
-  const nameInput = document.querySelector('.profile_content_wrap.one input');
-  const selectedCampus = document.querySelector(
-    '.profile_content_wrap.two #input'
-  );
-  const selectedClassInput = document.querySelector(
-    '.profile_content_wrap.two #class_select'
-  );
-  const selectedSex = document.querySelector(
-    '.profile_content_wrap.three input:checked'
-  );
+  // console.log(selectedJob);
   const selectedJob = document.querySelector(
     '.profile_content_wrap.four .btn.selected'
   );
   const selectedPosition = document.querySelector(
     '.profile_content_wrap.five input:checked'
+  );
+
+  const selectedSex = document.querySelector(
+    '.profile_content_wrap.three input:checked'
   );
 
   if (!nameInput.value) {
@@ -287,12 +290,12 @@ function validateInputs() {
 
 function goToNextPage() {
   if (validateInputs()) {
+    saveDataInLocalStorage();
+
     // 모든 항목이 유효하다면 다음 페이지로 이동
     window.location.href = '../sign_up/sign_up_2.html';
   }
 }
-
-// console.log(validateInputs);
 
 // 가입완료 버튼 클릭 시 함수 호출
 const btnSave = document.querySelector('.btn_save');
@@ -300,11 +303,24 @@ btnSave.addEventListener('click', goToNextPage);
 
 // Local Storage
 function saveDataInLocalStorage() {
-  // const nameInput = document.querySelector('.profile_contents_container input');
+  const selectedSex = document.querySelector(
+    '.profile_content_wrap.three input:checked'
+  );
+
+  const selectedJob = document.querySelector(
+    '.profile_content_wrap.four .btn.selected'
+  );
+
+  const selectedPosition = document.querySelector(
+    '.profile_content_wrap.five input:checked'
+  );
+
+  console.log(selectedJob.innerText);
+
   window.localStorage.setItem('userName', nameInput.value);
   window.localStorage.setItem('userSex', selectedSex.value);
-  window.localStorage.setItem('userCampus', selectedCampusInput.value);
+  window.localStorage.setItem('userCampus', selectedCampus.value);
   window.localStorage.setItem('userClass', selectedClassInput.value);
-  window.localStorage.setItem('userJob', selectedJob.value);
+  window.localStorage.setItem('userJob', selectedJob.innerText);
   window.localStorage.setItem('userPosition', selectedPosition.value);
 }

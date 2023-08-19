@@ -23,6 +23,7 @@ console.log(userClass);
 
 const userJob = window.localStorage.getItem('userJob');
 const user_job = document.querySelector('.user_job');
+user_job.innerText = userJob;
 console.log(userJob);
 
 const userPosition = window.localStorage.getItem('userPosition');
