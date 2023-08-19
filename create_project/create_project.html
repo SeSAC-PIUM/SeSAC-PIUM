@@ -189,7 +189,10 @@
             </div>
             <div class="input_box">
               <p class="card_title">프로젝트 설명</p>
-              <textarea rows="30" value></textarea>
+
+              <!-- 프로젝트 설명 에딧박스 -->
+              <textarea name="text" class="editor" id="editor1"></textarea>
+
             </div>
 
             <a href="../project_list/project_list.html">
@@ -203,5 +206,35 @@
       </main>
     </div>
     <footer include-html="../common/footer.html"></footer>
+
+    <script src="./ckeditor5/build/ckeditor.js"></script>
+    <script type="text/javascript">
+        // editor 
+        ClassicEditor
+            .create(document.querySelector("#editor1"))
+            .then(editor => {
+                const textLines = [
+                    "📢",
+                    "프로젝트 파악이 쉽도록 한줄정도의 소개를 적어주세요!",
+                ];
+
+                const textToAdd = textLines.join("<br/><br/>");
+                editor.setData(textToAdd);
+
+                const addTextButton = document.querySelector("#templateBringing");
+                addTextButton.addEventListener('click', function() {
+                    const currentData = editor.getData();
+                    const newData = currentData ? currentData + "<br/><br/>" + textToAdd : textToAdd;
+                    editor.setData(newData);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+    </script>
+
+
   </body>
 </html>
+
