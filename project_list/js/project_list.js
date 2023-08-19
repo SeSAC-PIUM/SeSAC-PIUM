@@ -131,70 +131,73 @@ window.addEventListener('DOMContentLoaded', () => {
       for (let i = 1; i <= 4; i++) {
         const card = document.createElement('li');
         card.classList.add('card');
-        card.innerHTML = `<div class="thumb">
-        <a href="/project_detail/project_detail.html">
-          <img src="/src/img/thumbnail.png" alt="모집중 프로젝트 사진"/>
-        </a>
-        <span class="like_button"></span>
-      </div>
-      <div class="card_body">
-        <p class="card_tit">
-          <a href="/project_detail/project_detail.html" class="card_title">
-          [캠퍼스명] 프로젝트 타이틀
-          </a>
-        </p>
-        <p>
-          <a href="/project_detail/project_detail.html" class="card_desc">프로젝트 설명란입니다.</a>
-        </p>
-      </div>
-      <div class="card_footer">
-        <div class="recruiting_wrap flex_box_row">
-          <span class="card_footer_text">모집중</span>
-          <span class="card_footer_text">4/5</span>
-          <img src="/src/img/Group 629971.png" />
-        </div>
-        <ul class="modal">
-            <li>
-              <div class="group_position modal_text_L">기획</div>
-              <div class="modal_text_S flex_box_column">
-                <div class="mentor">멘토 1명</div>
-                <div class="mentee">멘티 1명</div>
+        card.innerHTML = `
+              <span class="like_button"></span>
+              <a href="/project_detail/project_detail.html">
+                <div class="thumb">
+                  <p class="thumb_text">PIUM</p>
+                  <img src="/src/img/thumbnail.png" alt="모집중 프로젝트 사진">
+                </div>
+              </a>
+              <a href="/project_detail/project_detail.html">
+                <div class="card_body">
+                  <p class="card_title">
+                    [캠퍼스명] 프로젝트 타이틀
+                  </p>
+                  <p class="card_desc">
+                    푸시알림 관심제품 추천 및 핫딜 공유 서비스
+                  </p>
+                </div>
+              </a>
+              <div class="card_footer">
+                <div class="recruiting_wrap flex_box_row">
+                  <span class="card_footer_text">모집중</span>
+                  <span class="card_footer_text">4/5</span>
+                  <img src="/src/img/Group 629971.png" />
+                </div>
+                <ul class="modal">
+                  <li>
+                    <div class="group_position modal_text_L">기획</div>
+                    <div class="modal_text_S flex_box_column">
+                      <div class="mentor">멘토 1명</div>
+                      <div class="mentee">멘티 1명</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="group_position modal_text_L">UX/UI디자인</div>
+                    <div class="modal_text_S flex_box_column">
+                      <div class="mentor">멘토 1명</div>
+                      <div class="mentee">멘티 1명</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="group_position modal_text_L">퍼블리싱</div>
+                    <div class="modal_text_S flex_box_column">
+                      <div class="mentor">멘토 1명</div>
+                      <div class="mentee">멘티 1명</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="group_position modal_text_L">프론트엔드</div>
+                    <div class="modal_text_S flex_box_column">
+                      <div class="mentor">멘토 1명</div>
+                      <div class="mentee">멘티 1명</div>
+                    </div>
+                  </li>
+                  <li style="border-bottom: none">
+                    <div class="group_position modal_text_L">백엔드</div>
+                    <div class="modal_text_S flex_box_column">
+                      <div class="mentor">멘토 1명</div>
+                      <div class="mentee">멘티 1명</div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_footer_like">
+                  <span>❤</span>
+                  <span class="like_count">0</span>
+                </div>
               </div>
-            </li>
-            <li>
-              <div class="group_position modal_text_L">UX/UI디자인</div>
-              <div class="modal_text_S flex_box_column">
-                <div class="mentor">멘토 1명</div>
-                <div class="mentee">멘티 1명</div>
-              </div>
-            </li>
-            <li>
-              <div class="group_position modal_text_L">퍼블리싱</div>
-              <div class="modal_text_S flex_box_column">
-                <div class="mentor">멘토 1명</div>
-                <div class="mentee">멘티 1명</div>
-              </div>
-            </li>
-            <li>
-              <div class="group_position modal_text_L">프론트엔드</div>
-              <div class="modal_text_S flex_box_column">
-                <div class="mentor">멘토 1명</div>
-                <div class="mentee">멘티 1명</div>
-              </div>
-            </li>
-            <li style="border-bottom: none">
-              <div class="group_position modal_text_L">백엔드</div>
-              <div class="modal_text_S flex_box_column">
-                <div class="mentor">멘토 1명</div>
-                <div class="mentee">멘티 1명</div>
-              </div>
-            </li>
-        </ul>
-        <div class="card_footer_like">
-          <span>❤</span>
-          <span class="like_count">0</span>
-        </div>
-      </div>`;
+      `;
 
         project_list_row_4.append(card);
       }
@@ -240,7 +243,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         localStorage.setItem('clickCount', clickCount.toString());
 
-        likeButton_ele.parentNode.parentNode.querySelector(
+        likeButton_ele.parentNode.querySelector(
           '.like_count'
         ).textContent = clickCount;
       });

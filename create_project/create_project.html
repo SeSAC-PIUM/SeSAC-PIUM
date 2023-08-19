@@ -133,7 +133,7 @@
                     <input
                       type="text"
                       class="role_input dropdown_btn_input"
-                      placeholder="프론트엔드, 백엔드..."
+                      placeholder="포지션을 선택해주세요"
                     />
                     <!-- <i class="fa-solid fa-chevron-down"></i> -->
                   </div>
@@ -172,6 +172,7 @@
               src="../src/img/choose_file_img.png"
               alt=""
             />
+            <p class="upload_size_alert">권장사이즈는 1600px 900px 입니다</p>
             <input type="file" class="file_upload_input" accept="image/*" />
           </label>
         </section>
@@ -182,6 +183,7 @@
             <div class="input_box">
               <p class="card_title">프로젝트명</p>
               <input
+                class="project_name"
                 type="text"
                 placeholder="12글자 이내로 작성"
                 maxlength="12"
@@ -189,7 +191,59 @@
             </div>
             <div class="input_box">
               <p class="card_title">프로젝트 설명</p>
-              <textarea rows="30" value></textarea>
+              <input
+                class="project_desc"
+                type="text"
+                rows="53"
+                value="
+              📢
+              프로젝트 파악이 쉽도록 한줄정도의 소개를 적어주세요!
+              (예시)
+              “사이드 프로젝트 접근이 어려운 새싹 수강생들을 위한 프로젝트 매칭 플랫폼”
+              PIUM(Project Insight User Matching)
+              
+              ‍👩🏻‍💻 [프로젝트 소개]
+              프로젝트 배경, 목적, 타겟 등 자유롭게 적어주세요!
+              (예시)
+              “기존에 존재하는 프로젝트 매칭 플랫폼은 경험자들 뿐인데
+              새싹 수강생들 같은 초심자들은 프로젝트를 어디서 어떻게 찾지?”
+              
+              새싹 수강생들은 다른 분야에서 진입한 사람들이 많고
+              팀프로젝트에 대한 부담과 걱정이 있을 수 밖에 없습니다.
+              또한 새싹 교육과정은 기획/디자인/개발 등 분야가 나뉘어서 배우고
+              하나의 캠퍼스에서 팀프로젝트를 자발적으로 모으기 힘들다고 생각하여
+              팀프로젝트의 진입장벽을 낮추고 이를 통해 협업을 배우고 함께 성장할 수 있도록 지원하는 것입니다.
+              
+              📌 [주요기능]
+              대략적인 아이디어만 있는 상태라면 생략가능합니다.
+              (예시)
+              프로젝트 생성페이지
+              멘토-멘티 매칭서비스
+               -> 프로젝트 진행시 각 직무별로 최소 한 명의 멘토와 멘티를 둠.
+                    해당 시스템에선 멘토라고 해도 같은 수강생이므로 기술적인 전문성보다
+                    지식을 나누고 함께 성장하는 경험 강조 & 수업을 따라가는데 문제가 없는 정도라면
+                    멘티 지원을 권유 랜덤매칭 서비스
+               -> 팀 선택이 어려운 수강생들을 위해 랜덤으로 팀을 매칭해주는 서비스
+                    새싹 캠퍼스별 공간 예약 서비스
+               -> 구글폼을 통해 각 캠퍼스별 스터디 공간, 날짜, 이용시간 예약가능
+              
+               😊 이런 분이라면 더 좋아요 
+              (예시)
+              책임감을 갖고 열정적으로 하실 수 있는 분
+              프로젝트 리드 경험이 있거나 가능하신 분
+              서비스를 장기적으로 함께 이끌어나가고 싶은 분
+              사용자 경험을 우선하는 프로젝트를 진행하고 싶은 분
+              아이디어, 의견 등을 적극적으로 제안해주실 수 있는 분
+              타인을 배려한 커뮤니케이션이 가능하신 분
+              
+              📌 [프로젝트 진행 방식]
+              (예시)
+              주 1-2회 온/오프라인 병행 
+                    (온라인 : Zoom, Slack, Discord) (오프라인 : 각 새싹 캠퍼스 이용)
+              팀원들이 모두 모인 후 조율 가능합니다!
+              협업툴 : Zoom, Slack, Notion, Figma, Discord
+              
+              📌 [프로젝트 기간]"></input>
             </div>
 
             <a href="../project_list/project_list.html">
