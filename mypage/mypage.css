@@ -12,7 +12,7 @@
 
 .profile_container .profile_contents_container {
   margin: 0 auto;
-  max-width: 696px;
+  max-width: 750px;
   padding: 40px 16px;
   border-top: 1px solid var(--color-grayscale-600);
 }
@@ -30,18 +30,20 @@ section {
   /* border: 1px solid blue; */
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .profile_img {
-  width: 200px;
+  width: 250px;
   height: 250px;
+  margin: 1rem;
   border-radius: 8px;
-  background-image: url('../src/img/profile.png');
+  background-image: url('../src/img/profile_1.png');
   background-size: cover;
   background-position: center center;
 }
 
-@media screen and (max-width: 688px) {
+@media screen and (max-width: 800px) {
   .profile_img {
     margin: 16px auto;
     padding-bottom: 8px;
@@ -50,8 +52,9 @@ section {
 .my_data {
   /* border: 1px solid blue; */
   line-height: 140%;
-  margin-left: 16px;
-  /* padding: 16px 0px; */
+  /* margin: 0px 16px; */
+
+  padding: 16px;
 }
 .items {
   display: flex;

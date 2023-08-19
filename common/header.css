@@ -14,6 +14,7 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   /* padding: 0px 16px; */
+  /* box-shadow: 2px 2px 2px 0px rgba(211, 211, 211, 0.25); */
 }
 .util_wrap {
   justify-content: space-between;
