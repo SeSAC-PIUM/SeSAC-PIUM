@@ -33,13 +33,18 @@
   transform: translateY(-50%);
   left: 80px;
 }
+.advert_box .swiper-slide .slide-tit .slide_title2 {
+  letter-spacing: -1.28px;
+  margin-bottom: 16px;
+}
+
 .advert_box .swiper-slide .slide-tit .slide_title {
   letter-spacing: -1px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .advert_box .swiper-slide img {
   position: relative;
-  top: -110px;
+  top: -90px;
   left: 639px;
 }
 .advert_box .ad_left,
