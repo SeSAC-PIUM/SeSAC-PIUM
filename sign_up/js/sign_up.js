@@ -149,7 +149,7 @@ classSelect.onfocus = function () {
     if (input.value == campusClasses[i].name) {
       for (let el of campusClasses[i].classes) {
         const option = document.createElement('option');
-        console.log(el);
+        // console.log(el);
         option.append(el);
         option.setAttribute('value', el);
         browsers2.append(option);
@@ -160,13 +160,13 @@ classSelect.onfocus = function () {
   browsers2.style.display = 'block';
   classSelect.style.borderRadius = '4px';
   for (let option of browsers2.options) {
-    console.log(option);
+    // console.log(option);
     option.onclick = function () {
       classSelect.value = option.value;
       browsers2.style.display = 'none';
       classSelect.style.borderRadius = '4px';
       console.log(option.value);
-      console.log('얍');
+      // console.log('얍');
     };
   }
 };
@@ -186,20 +186,20 @@ classSelect.oninput = function () {
 let currentFocus2 = -1;
 classSelect.onkeydown = function (e) {
   if (e.key == 'ArrowUp') {
-    console.log(e.key);
+    // console.log(e.key);
     currentFocus2--;
     addActive2(browsers2.options);
   } else if (e.key == 'ArrowDown') {
-    console.log(e.key);
+    // console.log(e.key);
     currentFocus2++;
     addActive2(browsers2.options);
-    console.log(browsers2.options);
-    console.log(currentFocus2);
+    // console.log(browsers2.options);
+    // console.log(currentFocus2);
   } else if (e.keyCode == 13) {
     e.preventDefault();
     if (currentFocus2 > -1) {
       if (browsers2.options) browsers2.options[currentFocus2].click();
-      console.log(browsers2.options[currentFocus2]);
+      // console.log(browsers2.options[currentFocus2]);
     }
   }
 };
@@ -251,33 +251,33 @@ function openAnswer(btnIndex) {
 //항목을 다 채워야 다음페이지로 넘어갈 수 있게 설정
 function validateInputs() {
   const nameInput = document.querySelector('.profile_content_wrap.one input');
-  const campusSelectInput = document.querySelector(
+  const selectedCampus = document.querySelector(
     '.profile_content_wrap.two #input'
   );
-  const classSelectInput = document.querySelector(
+  const selectedClassInput = document.querySelector(
     '.profile_content_wrap.two #class_select'
   );
-  const selectedRadio = document.querySelector(
+  const selectedSex = document.querySelector(
     '.profile_content_wrap.three input:checked'
   );
   const selectedJob = document.querySelector(
     '.profile_content_wrap.four .btn.selected'
   );
-  const selectedMentor = document.querySelector(
+  const selectedPosition = document.querySelector(
     '.profile_content_wrap.five input:checked'
   );
 
   if (!nameInput.value) {
     alert('이름을 입력해 주세요');
-  } else if (!campusSelectInput.value) {
+  } else if (!selectedCampus.value) {
     alert('캠퍼스를 선택해주세요.');
-  } else if (!classSelectInput.value) {
+  } else if (!selectedClassInput.value) {
     alert('클래스를 선택해주세요.');
-  } else if (!selectedRadio) {
+  } else if (!selectedSex) {
     alert('성별을 선택해주세요.');
   } else if (!selectedJob) {
     alert('희망직무를 선택해주세요');
-  } else if (!selectedMentor) {
+  } else if (!selectedPosition) {
     alert('멘토/멘티를 선택해주세요');
   } else {
     // 모든 항목이 유효하다면 true 반환
@@ -292,7 +292,7 @@ function goToNextPage() {
   }
 }
 
-console.log(validateInputs);
+// console.log(validateInputs);
 
 // 가입완료 버튼 클릭 시 함수 호출
 const btnSave = document.querySelector('.btn_save');
@@ -302,5 +302,9 @@ btnSave.addEventListener('click', goToNextPage);
 function saveDataInLocalStorage() {
   // const nameInput = document.querySelector('.profile_contents_container input');
   window.localStorage.setItem('userName', nameInput.value);
-  console.log(window.localStorage.getItem('userName'));
+  window.localStorage.setItem('userSex', selectedSex.value);
+  window.localStorage.setItem('userCampus', selectedCampusInput.value);
+  window.localStorage.setItem('userClass', selectedClassInput.value);
+  window.localStorage.setItem('userJob', selectedJob.value);
+  window.localStorage.setItem('userPosition', selectedPosition.value);
 }
