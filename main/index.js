@@ -74,7 +74,8 @@ likeButton.forEach((likeButton_ele) => {
 
     localStorage.setItem('clickCount', clickCount.toString());
 
-    likeButton_ele.parentNode.parentNode.querySelector(
+    console.log()
+    likeButton_ele.parentNode.querySelector(
       '.like_count'
     ).textContent = clickCount;
   });

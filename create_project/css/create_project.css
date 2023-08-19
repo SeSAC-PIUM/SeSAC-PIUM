@@ -164,25 +164,28 @@ section:last-child {
   color: #fff;
   cursor: pointer;
 }
-.input_box input {
+.input_box .project_name {
   padding: 16px 20px;
   width: 100%;
   max-width: 500px;
   border-radius: 4px;
   border: 1px solid #e9e9ee;
 }
-.input_box input:focus {
+.input_box .project_name:focus {
   outline: 1px solid #2da96e;
 }
-.input_box textarea {
+.input_box .project_desc {
   width: 100%;
   padding: 16px 20px;
   border-radius: 4px;
   border: 1px solid #e9e9ee;
   resize: none;
 }
-.input_box textarea:focus {
+.input_box .project_desc:focus {
   outline: 1px solid #2da96e;
+}
+.input_box .project_desc::placeholder {
+  
 }
 
 .container {
@@ -236,6 +239,7 @@ main section .sec_cont_wrap .add_select_box .plus_minus_btn i {
   cursor: pointer;
 }
 main section .file_upload_box {
+  position: relative;
   width: 282px;
   height: 140px;
   border-radius: 4px;
@@ -247,6 +251,14 @@ main section .file_upload_box {
 main section .file_upload_box img {
   width: 100%;
   height: 100%;
+}
+main section .file_upload_box .upload_size_alert {
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  width: 100%;
+  color: #2da96e;
+  font-size: 12px;
 }
 main section .file_upload_input {
   display: none;

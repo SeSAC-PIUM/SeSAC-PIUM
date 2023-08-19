@@ -133,7 +133,7 @@
                     <input
                       type="text"
                       class="role_input dropdown_btn_input"
-                      placeholder="프론트엔드, 백엔드..."
+                      placeholder="포지션을 선택해주세요"
                     />
                     <!-- <i class="fa-solid fa-chevron-down"></i> -->
                   </div>
@@ -172,6 +172,7 @@
               src="../src/img/choose_file_img.png"
               alt=""
             />
+            <p class="upload_size_alert">권장사이즈는 1600px 900px 입니다</p>
             <input type="file" class="file_upload_input" accept="image/*" />
           </label>
         </section>
@@ -182,6 +183,7 @@
             <div class="input_box">
               <p class="card_title">프로젝트명</p>
               <input
+                class="project_name"
                 type="text"
                 placeholder="12글자 이내로 작성"
                 maxlength="12"
@@ -189,7 +191,6 @@
             </div>
             <div class="input_box">
               <p class="card_title">프로젝트 설명</p>
-
               <!-- 프로젝트 설명 에딧박스 -->
               <textarea name="text" class="editor" id="editor1"></textarea>
 

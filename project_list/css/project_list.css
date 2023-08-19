@@ -192,6 +192,20 @@ main .filter_wrap .filter_right .order_filter .filter_item_list li:hover {
   display: flex;
   justify-content: space-between;
 }
+.project_list_wrap li .project_list_row_4 .thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #85c29d;
+}
+.project_list_wrap li .project_list_row_4  .thumb .thumb_text {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
 .project_list_wrap li .project_list_row_4 .card_tit {
   margin-bottom: 16px;
 }
