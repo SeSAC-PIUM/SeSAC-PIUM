@@ -23,3 +23,29 @@
 .footer_content .right_wrap span.footer_line {
   margin: 0 12px;
 }
+@media screen and (max-width: 800px) {
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  .footer_content .left_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer_content .right_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 16px;
+  }
+  .footer_content .left_wrap span img {
+    transform: translateY(-2px);
+    padding-right: 8px;
+  }
+  .footer_content .right_wrap a img {
+    transform: translateY(-2px);
+  }
+}
