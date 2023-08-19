@@ -230,7 +230,7 @@ input[type='radio'] {
 
   /* 빨간 하트 유니코드 */
   /* content: '\2665'; */
-  color: #FF5454;
+  color: #ff5454;
 }
 .card_body {
   height: 130px;
@@ -292,7 +292,24 @@ input[type='radio'] {
   font-size: 40px;
   font-weight: 600;
 }
-
+.slide_title2 {
+  color: var(--color-grayscale-600);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+}
+.slide_title3 {
+  color: var(--color-text-orange);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+}
+.slide_title4 {
+  color: var(--color-text-yellow-600);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+}
 /* 6. 슬라이드 타이틀 설명  */
 /* 21. (6 중복)signUp 질문 14px 500 그레이6
 22. (6 중복) signUp 내용 동일 */
