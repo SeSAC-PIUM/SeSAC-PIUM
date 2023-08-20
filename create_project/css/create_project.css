@@ -184,9 +184,22 @@ section:last-child {
 .input_box .project_desc:focus {
   outline: 1px solid #2da96e;
 }
-.input_box .project_desc::placeholder {
+/* .input_box .project_desc::placeholder {
   
-}
+} */
+/* .project_desc_main_gy600 {
+  color: var(--color-grayscale-600);
+  color: red;
+  font-size: 20px;
+  font-weight: 700;
+} */
+
+
+
+
+
+
+
 
 .container {
   margin: 0 auto;

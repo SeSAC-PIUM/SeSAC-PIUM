@@ -31,9 +31,20 @@ const swiper = new Swiper('.swiper', {
   // },
 });
 
-const slide_count = document.querySelector('.count')
 
-slide_count
+const select_wrap_li = document.querySelectorAll('.select_wrap li');
+
+select_wrap_li.forEach((select_wrap_li_ele)=>{
+  select_wrap_li_ele.addEventListener('click', ()=>{
+
+    console.log(select_wrap_li_ele.innerText)
+    let select_wrap_li_text = select_wrap_li_ele.innerText.trim();
+
+    location.href = `/project_list/project_list.html?${select_wrap_li_text}`;
+    
+    
+  })
+})
 
 
 
