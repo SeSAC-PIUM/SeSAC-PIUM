@@ -49,11 +49,6 @@ body {
   flex: 1;
   width: 100%;
   background: var(--gy-1, #f5f5f9);
-
-  background-image: url(/src/img/search.svg);
-  background-repeat: no-repeat;
-  background-position: calc(100%);
-
   border: none;
 }
 .login_wrap .search form input:focus {
@@ -207,15 +202,26 @@ body {
     background: var(--gy-1, #f5f5f9);
     /* margin: 24px 0px; */
   }
-  .nav_list .flex_box_col .search input {
+  .nav_list .flex_box_col .search form {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+  }
+  .nav_list .flex_box_col .search form input {
     width: 100%;
     background: var(--gy-1, #f5f5f9);
-    background-image: url(/src/img/search.svg);
-    background-repeat: no-repeat;
-    background-position: calc(100%);
     border: none;
   }
-  .nav_list .flex_box_col .search input:focus {
+  .nav_list .flex_box_col .search form input:focus {
     outline: none;
+  }
+  .nav_list .flex_box_col .search form button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  .nav_list .flex_box_col .search form button i {
+    font-size: 14px;
+    color: #626273;
   }
 }

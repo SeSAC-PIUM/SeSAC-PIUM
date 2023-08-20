@@ -36,14 +36,24 @@ function includeHTML(callback) {
   // }, 0);
 
 
-  const search_form = document.querySelector('.search_form');
-  const search_form_input = document.querySelector('.search_form input');
+  const login_wrap_search_form = document.querySelector('.login_wrap .search_form');
+  const login_wrap_search_form_input = document.querySelector('.login_wrap .search_form input');
 
-  search_form.addEventListener('submit', (e)=>{
+  login_wrap_search_form.addEventListener('submit', (e)=>{
     e.preventDefault()
-    let search_value = search_form_input.value
+    let search_value = login_wrap_search_form_input.value
     location.href = `/project_list/project_list.html?${search_value}`;
-  
   })
+
+
+  const nav_list_search_form = document.querySelector('.nav_list .search_form');
+  const nav_list_search_form_input = document.querySelector('.nav_list .search_form input');
+
+  nav_list_search_form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    let search_value = nav_list_search_form_input.value
+    location.href = `/project_list/project_list.html?${search_value}`;
+  })
+
 
 }
