@@ -185,7 +185,7 @@ input[type='radio'] {
 .card {
   position: relative;
   width: 282px;
-  height: 328px;
+  /* height: 328px; */
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -204,7 +204,8 @@ input[type='radio'] {
 } */
 
 .thumb img {
-  width: 100%;
+  /* width: 100%; */
+  /* width: 275px; */
   height: 100%;
   object-fit: cover;
 }
