@@ -1,8 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const mobileNavIcon = document.querySelector('.hamburger');
-  const navList = document.querySelector('.nav_list');
-  const closeBtn = document.querySelector('.btn_close');
-  console.log(closeBtn);
+let mobileNavIcon, navList, closeBtn;
+
+setTimeout(() => {
+  mobileNavIcon = document.querySelector('.hamburger');
+  navList = document.querySelector('.nav_list');
+  closeBtn = document.querySelector('.btn_close');
 
   // 햄버거 아이콘 클릭 시 네비게이션 목록 토글
   mobileNavIcon.addEventListener('click', function () {
@@ -21,4 +22,4 @@ document.addEventListener('DOMContentLoaded', function () {
       navList.classList.remove('active');
     }
   });
-});
+}, 1000);
