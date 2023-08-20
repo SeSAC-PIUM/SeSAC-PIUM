@@ -32,6 +32,8 @@
   top: 50%;
   transform: translateY(-50%);
   left: 80px;
+  z-index: 1;
+  width: 80%;
 }
 .advert_box .swiper-slide .slide-tit .slide_title2 {
   letter-spacing: -1.28px;
@@ -41,11 +43,16 @@
 .advert_box .swiper-slide .slide-tit .slide_title {
   letter-spacing: -1px;
   margin-bottom: 16px;
+  position: relative;
 }
 .advert_box .swiper-slide img {
-  position: relative;
-  top: -90px;
-  left: 639px;
+  /* position: relative; */
+  /* top: -90px; */
+  /* left: 639px; */
+  position: absolute;
+  top: 40px;
+  right: 8%;
+  /* left: 70%; */
 }
 .advert_box .ad_left,
 .advert_box .ad_right {
@@ -61,6 +68,7 @@
 .advert_box .swiper:hover .ad_left,
 .advert_box .swiper:hover .ad_right {
   display: block;
+  z-index: 2;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -159,9 +167,25 @@ main .section1 .select_wrap li a {
 }
 .card_sec .card_wrap {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  /* justify-content: space-between; */
   /* flex-wrap: wrap; */
+  overflow-x: scroll;
 }
+
+.card_sec .card_wrap li {
+  /* width: 100%; */
+  /* margin-right: 24px; */
+}
+
+.card_sec .card_wrap li.card:not(:last-child) {
+  margin-right: 24px;
+}
+/* .card_sec .card_wrap li.card {
+  margin-right: 24px;
+} */
+
 .card_sec .card_wrap .thumb {
   display: flex;
   justify-content: center;
@@ -239,7 +263,9 @@ section .sub_wrap .sub_tit {
 .card_container .card_wrap li {
   margin-right: 24px;
 }
-.card_container::-webkit-scrollbar {
+
+.card_container::-webkit-scrollbar,
+.card_sec .card_wrap::-webkit-scrollbar {
   width: 0;
 }
 
@@ -287,5 +313,44 @@ section .sub_wrap .sub_tit {
 @media screen and (max-width: 800px) {
   main .section1 .select_wrap li {
     width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .advert_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .advert_box .swiper {
+    width: 100%;
+  }
+
+  .advert_box .swiper-slide .slide-tit {
+    left: 40px;
+  }
+
+  .advert_box .swiper-slide img {
+    right: 20px;
+    /* display: none; */
+  }
+
+  .box_wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .box_wrap .flex_box_column {
+    width: 100%;
+
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .advert_box .swiper-slide img {
+    display: none;
   }
 }
