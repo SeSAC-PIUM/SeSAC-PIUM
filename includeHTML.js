@@ -35,16 +35,7 @@ function includeHTML(callback) {
   //   callback();
   // }, 0);
 
-
-  const search_form = document.querySelector('.search_form');
-  const search_form_input = document.querySelector('.search_form input');
-
-  search_form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let search_value = search_form_input.value;
-    location.href = `/project_list/project_list.html?${search_value}`;
-  });
-
+  
   //header hamburger click
   const mobileNavIcon = document.querySelector('.hamburger');
   const navList = document.querySelector('.nav_list');
