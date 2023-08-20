@@ -33,9 +33,19 @@
     flex-wrap: wrap;
   }
   .section .section_inner .slide_wrap {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     width: 100%;
+  }
+
+  .section .section_inner aside {
+    display: flex;
+    padding: 0px 0px;
+    width: 500px;
+  }
+
+  .section .section_inner aside .box .btn_wrap .btn {
+    font-size: 12px;
   }
 }
 
@@ -57,10 +67,6 @@
 
 .section .section_inner .box_wrap {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: flex-start; */
-  /* border: 1px solid blue; */
-  padding-top: 80px;
   padding: 80px 16px 0px 16px;
 
   /* max-width: 500px; */
