@@ -21,8 +21,8 @@
   background-color: #fff;
   text-align: center;
   line-height: 26px;
-  letter-spacing: 1.12px;
   z-index: 999;
+  color: #626273;
 }
 .advert_box .swiper-slide {
   overflow: hidden;
