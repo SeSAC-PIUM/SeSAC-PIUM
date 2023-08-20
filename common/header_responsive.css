@@ -40,33 +40,16 @@ body {
   border-radius: 999px;
   background: var(--gy-1, #f5f5f9);
 }
-.login_wrap .search form {
-  display: flex;
-  height: 100%;
-  gap: 10px;
-}
-.login_wrap .search form input {
-  flex: 1;
+.login_wrap .search input {
   width: 100%;
   background: var(--gy-1, #f5f5f9);
-
   background-image: url(/src/img/search.svg);
   background-repeat: no-repeat;
   background-position: calc(100%);
-
   border: none;
 }
-.login_wrap .search form input:focus {
+.login_wrap .search input:focus {
   outline: none;
-}
-.login_wrap .search form button {
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
-.login_wrap .search form button i {
-  font-size: 14px;
-  color: #626273;
 }
 .login_wrap .alarm {
   width: 28px;
