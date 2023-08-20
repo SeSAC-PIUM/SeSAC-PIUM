@@ -101,6 +101,7 @@ const campusClasses = [
 input.onfocus = function () {
   browsers.value = '';
   browsers.style.display = 'block';
+  browsers.style.position = 'relative';
   input.style.borderRadius = '4px';
 };
 for (let option of browsers.options) {
