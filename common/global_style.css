@@ -330,8 +330,8 @@ input[type='radio'] {
 /* 8. 우 배너 타이틀 24px 600 흰fff 이지만 grayscale로 함 */
 .banner_title {
   color: var(--color-grayscale-100);
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .banner_point {
