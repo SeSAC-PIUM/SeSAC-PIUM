@@ -1,5 +1,26 @@
 includeHTML();
 window.addEventListener('DOMContentLoaded', () => {
+
+
+  const search_wrap_input = document.querySelector('.search_wrap input')
+  let search_text_data = decodeURI(location.href);
+  search_text_data = search_text_data.split("?")[1];
+
+  if(search_text_data){
+    search_wrap_input.value = search_text_data
+  }
+
+
+  const search_form = document.querySelector('.search_form');
+  const search_form_input = document.querySelector('.search_form input');
+
+  search_form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    let search_value = search_form_input.value
+    location.href = `/project_list/project_list.html?${search_value}`;
+  })
+
+  
   const filter_btn = document.querySelectorAll('.filter_btn');
 
   document.addEventListener('click', (e) => {
