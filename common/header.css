@@ -15,11 +15,13 @@ body {
   max-width: 1200px;
   /* padding: 0px 16px; */
   /* box-shadow: 2px 2px 2px 0px rgba(211, 211, 211, 0.25); */
+  border: 1px solid black;
 }
 .util_wrap {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+  border: 1px solid red;
 }
 .util_wrap .logo {
   height: 36px;
@@ -63,6 +65,7 @@ body {
 .gnb_wrap {
   justify-content: space-between;
   align-items: center;
+  border: 1px solid blue;
 }
 .gnb_wrap .gnb {
   gap: 12px;
@@ -86,4 +89,10 @@ body {
 
 .gnb_wrap .desc_text img {
   margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .header_wrap {
+    /* display: none; */
+  }
 }

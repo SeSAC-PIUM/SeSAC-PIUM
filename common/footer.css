@@ -23,7 +23,7 @@
 .footer_content .right_wrap span.footer_line {
   margin: 0 12px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .footer_content {
     display: flex;
     flex-direction: column;
