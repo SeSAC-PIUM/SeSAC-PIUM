@@ -13,7 +13,7 @@ function showAlert() {
     confirmButtonColor: '#2da96e', // confrim 버튼 색깔 지정
     cancelButtonColor: '#c6c6d0', // cancel 버튼 색깔 지정
     confirmButtonText: '신청하기', // confirm 버튼 텍스트 지정
-    cancelButtonText: '취소하기', // cancel 버튼 텍스트 지정
+    cancelButtonText: '창 닫기', // cancel 버튼 텍스트 지정
 
     // reverseButtons: true, // 버튼 순서 거꾸로
   }).then((result) => {
