@@ -166,11 +166,14 @@ main .section1 .select_wrap li a {
   padding: 0;
 }
 .card_sec .card_wrap {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  flex-wrap: wrap; */
   display: flex;
   width: 100%;
   height: 100%;
   /* justify-content: space-between; */
-  /* flex-wrap: wrap; */
   overflow-x: scroll;
 }
 
@@ -347,6 +350,11 @@ section .sub_wrap .sub_tit {
 
     padding: 24px;
   }
+
+  /* .card_sec .card_wrap {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+  } */
 }
 
 @media screen and (max-width: 480px) {
