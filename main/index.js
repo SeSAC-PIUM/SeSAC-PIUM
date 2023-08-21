@@ -16,8 +16,8 @@ const swiper = new Swiper('.swiper', {
   //   el: '.swiper-pagination',
   // },
   pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
+    el: '.swiper-pagination',
+    type: 'fraction',
   },
   // Navigation arrows
   navigation: {
@@ -31,23 +31,16 @@ const swiper = new Swiper('.swiper', {
   // },
 });
 
-
 const select_wrap_li = document.querySelectorAll('.select_wrap li');
 
-select_wrap_li.forEach((select_wrap_li_ele)=>{
-  select_wrap_li_ele.addEventListener('click', ()=>{
-
-    console.log(select_wrap_li_ele.innerText)
+select_wrap_li.forEach((select_wrap_li_ele) => {
+  select_wrap_li_ele.addEventListener('click', () => {
+    console.log(select_wrap_li_ele.innerText);
     let select_wrap_li_text = select_wrap_li_ele.innerText.trim();
 
     location.href = `/project_list/project_list.html?${select_wrap_li_text}`;
-    
-    
-  })
-})
-
-
-
+  });
+});
 
 // heart-button
 const likeButton = document.querySelectorAll('.like_button');
@@ -85,9 +78,8 @@ likeButton.forEach((likeButton_ele) => {
 
     localStorage.setItem('clickCount', clickCount.toString());
 
-    console.log()
-    likeButton_ele.parentNode.querySelector(
-      '.like_count'
-    ).textContent = clickCount;
+    console.log();
+    likeButton_ele.parentNode.querySelector('.like_count').textContent =
+      clickCount;
   });
 });
