@@ -1,3 +1,13 @@
+.inner .header {
+  padding: 64px 0px;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.section {
+  padding: 0px 16px;
+}
+
 .leader_wrapper::before {
   content: '';
   display: block;
@@ -14,8 +24,11 @@
 }
 
 main .inner {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding-bottom: 48px;
+  border: 1px solid black;
 }
 
 main h3 {
@@ -24,6 +37,14 @@ main h3 {
   margin-bottom: 100px;
   text-align: center;
   font-weight: 600;
+}
+
+.member_wrapper {
+  border: 1px solid red;
+}
+
+.leader_wrapper {
+  border: 1px solid red;
 }
 
 main h3 .pium_color {
@@ -95,4 +116,11 @@ main .inner .button {
   text-align: center;
   line-height: 48px;
   margin: 120px auto 8%;
+}
+
+@media screen and (max-width: 768px) {
+  main .inner section .member_start {
+    display: flex;
+    flex-direction: column;
+  }
 }
