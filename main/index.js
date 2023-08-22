@@ -35,7 +35,6 @@ const select_wrap_li = document.querySelectorAll('.select_wrap li');
 
 select_wrap_li.forEach((select_wrap_li_ele) => {
   select_wrap_li_ele.addEventListener('click', () => {
-    console.log(select_wrap_li_ele.innerText);
     let select_wrap_li_text = select_wrap_li_ele.innerText.trim();
 
     location.href = `/project_list/project_list.html?${select_wrap_li_text}`;
@@ -78,7 +77,6 @@ likeButton.forEach((likeButton_ele) => {
 
     localStorage.setItem('clickCount', clickCount.toString());
 
-    console.log();
     likeButton_ele.parentNode.querySelector('.like_count').textContent =
       clickCount;
   });
