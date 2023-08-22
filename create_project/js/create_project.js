@@ -201,7 +201,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const selected_file = file_upload_input.files[0];
     const file_reader = new FileReader();
 
+    // console.log()
+    
     file_reader.readAsDataURL(selected_file);
+    console.log(file_reader)
 
     file_reader.onload = function () {
       document.querySelector('.preview_img').src = file_reader.result;
@@ -229,82 +232,5 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // console.log(campus_data_list)
 
-  // dropdown_btn_input.forEach((dropdown_btn_input_ele)=>{
-
-  //   dropdown_btn_input_ele.onkeyup = (e)=>{
-  //     const value = dropdown_btn_input_ele.value.trim();
-
-  //     // console.log(value)
-
-  //     const matchDataList = value
-  //     ? campus_data_list.filter((label) => label.includes(value))
-  //     : [];
-
-  //     switch (e.keyCode) {
-  //       // UP KEY
-  //       case 38:
-  //         nowIndex = Math.max(nowIndex - 1, 0);
-  //         break;
-
-  //         // DOWN KEY
-  //         case 40:
-  //           nowIndex = Math.min(nowIndex + 1, matchDataList.length - 1);
-  //           break;
-
-  //           // ENTER KEY
-  //           case 13:
-  //             document.querySelector("#search").value = matchDataList[nowIndex] || "";
-  //             // 초기화
-  //             nowIndex = 0;
-  //             matchDataList.length = 0;
-  //             break;
-
-  //             // 그외 다시 초기화
-  //             default:
-  //               nowIndex = 0;
-  //               break;
-  //             }
-
-  //             console.log('matchDataLis', matchDataList)
-  //             console.log('value', value)
-  //             console.log('nowIndex', nowIndex)
-  //             showList(matchDataList, value, nowIndex);
-
-  //           }
-
-  //           const showList = (data, value, nowIndex) => {
-
-  //             console.log(data, value, nowIndex)
-  //             // 정규식으로 변환
-  //             const regex = new RegExp(`(${value})`, "g");
-
-  //             auto_complete.innerHTML = data
-  //             .map(
-  //               (label, index) => `
-  //               <li class='${nowIndex === index ? "active" : ""}'>
-  //               ${label.replace(regex, "<mark>$1</mark>")}
-  //               </li>
-  //               `
-  //               )
-  //               .join("");
-  //             };
-
-  //             dropdown_btn_input_ele.addEventListener('input', ()=>{
-  //               console.log(dropdown_btn_input_ele)
-  //               if(dropdown_btn_input_ele.value == ''){
-  //                 console.log('없음')
-  //                 let dropdown_list_li_inner = dropdown_btn_input_ele.parentNode.parentNode.querySelector('.dropdown_list')
-  //                 campus_data_list.forEach((campus_data_list_ele)=>{
-  //                   console.log(campus_data_list_ele)
-  //                   console.log(dropdown_list_li_inner)
-  //                   dropdown_list_li_inner.innerText += `<li>${campus_data_list_ele}</li>`
-
-  //                 })
-
-  //               }
-  //             })
-
-  //           })
 });
