@@ -498,8 +498,7 @@ input[type='radio'] {
   box-shadow: 2px 2px 4px 0px rgba(211, 211, 211, 0.25);
 }
 
-.project_list_wrap li .project_list_row_4 li:nth-child(even) .modal,
-.card_sec .card_wrap li:nth-child(even) .modal {
+.project_list_wrap li .project_list_row_4 li:nth-child(even) .modal {
   left: -80px;
   bottom: 30px;
 }
