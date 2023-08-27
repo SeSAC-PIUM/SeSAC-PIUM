@@ -107,7 +107,6 @@ window.addEventListener('DOMContentLoaded', () => {
           const li = document.createElement('li');
           li.innerText = campus_filter_li_ele.innerText;
           filter_selection.append(li);
-          // console.log(campus_filter_li_ele)
         }
       });
 

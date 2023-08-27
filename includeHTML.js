@@ -40,7 +40,6 @@ function includeHTML(callback) {
   const mobileNavIcon = document.querySelector('.hamburger');
   const navList = document.querySelector('.nav_list');
   const closeBtn = document.querySelector('.btn_close');
-  console.log(closeBtn);
 
   // 햄버거 아이콘 클릭 시 네비게이션 목록 토글
   mobileNavIcon.addEventListener('click', function () {
