@@ -36,10 +36,8 @@
 ## ✨ 프로젝트 설명
 > SeSAC 수강생들이 프로젝트를 진행하면서 느낀 불편함을 분석하여 프로젝트 탐색/생성, 랜덤매칭, 멘토링, 공간예약 기능을 제공하는 프로젝트 매칭 플랫폼입니다.
 <br/>
-
 <img src='https://github.com/SeSAC-PIUM/SeSAC-PIUM/assets/107837292/5f9cadaf-5c33-485a-8c5c-60d2e2f68006' width="80%" />
 <img src='https://github.com/SeSAC-PIUM/SeSAC-PIUM/assets/107837292/69fd26ba-cefc-48bc-883d-b76f07b28c05' width="80%"/>
-<br/><br/><br/>
 <img src='https://github.com/SeSAC-PIUM/SeSAC-PIUM/assets/107837292/95094837-8cbf-4547-9b91-2df8e981875e' width="80%" />
 
 
@@ -60,8 +58,7 @@
 
 <pre>
 <strong> ✨온보딩 </strong> </br>
-[지현]</br>- input 태그의 autocomplete 기능 구현 </br>- (?) hover 시 modal창 띄우기 </br>- validation 유효성 검사, 항목을 채우지 않을 경우 Alert 창 띄우기("__을 입력해 주세요")  </br> - file upload 기능 </br> - UX를 고려한 기능 구현 (onfocus, onkeydown, option 외 영역 클릭 시 datalist 닫기, </br> input 엔터키 입력 감지, option hover시 background 색 추가, radio 버튼 label로 묶기, </br> 중복 선택 막기)
-</br>
+[지현]</br>- input 태그의 autocomplete 기능 구현 </br>- (?) hover 시 modal창 띄우기 </br>- validation 유효성 검사, 항목을 채우지 않을 경우 Alert 창 띄우기("__을 입력해 주세요")  </br> - file upload 기능 </br> - UX를 고려한 기능 구현 (onfocus, onkeydown, option 외 영역 클릭 시 datalist 닫기, </br> input 엔터키 입력 감지, option hover시 background 색 추가, radio 버튼 label로 묶기, </br> 중복 선택 막기)</br>
 [소연]</br>- 레이아웃 구성과 페이지 이동 기능 구현</br>
 </pre>
 
@@ -77,8 +74,7 @@
 
 <pre>
 <strong> ✨공간예약 </strong> </br>
-[지현]</br>- swiper.js를 이용한 슬라이드 </br>- 예약하기 버튼 클릭 시 구글폼 이동 </br>- 반응형 적용 (레이아웃, 폰트 사이즈 변경)
- </br>
+[지현]</br>- swiper.js를 이용한 슬라이드 </br>- 예약하기 버튼 클릭 시 구글폼 이동 </br>- 반응형 적용 (레이아웃, 폰트 사이즈 변경)</br>
 </pre>
 
 |마이페이지|프로젝트 리스트|
@@ -88,8 +84,7 @@
 
 <pre>
 <strong> ✨마이페이지 </strong> </br>
-[지현]</br>- localStorage를 활용하여 브라우저에 저장 된 input 입력 값을 보여줌(이름, 성별, 캠퍼스 등)</br>- 백그라운드, 팀프로젝트 희망사항 card container 바깥 영역은 overflow hidden, 내부 영역은 가로 스크롤 적용</br>- 반응형 적용 (레이아웃 및 폰트 사이즈 변경)
- </br>
+[지현]</br>- localStorage를 활용하여 브라우저에 저장 된 input 입력 값을 보여줌(이름, 성별, 캠퍼스 등)</br>- 백그라운드, 팀프로젝트 희망사항 card container 바깥 영역은 overflow hidden, 내부 영역은 가로 스크롤 적용</br>- 반응형 적용 (레이아웃 및 폰트 사이즈 변경)</br>
 </pre>
 
 <pre>
