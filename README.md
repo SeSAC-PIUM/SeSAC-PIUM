@@ -47,11 +47,13 @@
 <strong> ✨메인 </strong> </br>
 [미정]</br>- 시안에 맞게 UI 디테일 수정 </br>- 반복되는 코드를 함수로 묶거나 반복문을 사용하여 간결하게 하는 작업</br>
 [희광]</br>- JavaScript를 활용하여 header,footer 각 페이지별 동일하게 구현</br>- flex를 이용한 main page 구현</br>- swiper library를 통해 banner 구현</br>- JavaScript를 활용하여 하트클릭  on/off 구현</br>- localStorage를 활용하여  하트 수량 체크 구현</br> 
+[지현]</br>- root.css, global style 설정하여 공통 component 생성 </br>- 메인페이지 전체 반응형 작업(header, footer, banner, 프로젝트, 캠퍼스공간예약) </br>- 공간예약 keyframe으로 무한 sliding  효과 구현 
 </pre>
 
 <pre>
 <strong> ✨온보딩 </strong> </br>
-[지현]</br>- 설명텍스트 </br>
+[지현]</br>- input 태그의 autocomplete 기능 구현 </br>- validation 유효성 검사, 항목을 채우지 않을 경우 Alert 창으로 메세지 띄움("__을 입력해 주세요") </br> - file upload 기능 </br> - UX를 고려한 기능 구현 (onfocus, onkeydown, option 외 영역 클릭 시 datalist 닫기, input 엔터키 입력 감지, </br> option hover시 background 색 추가, radio label로 묶기, 중복 선택 막기, button 1개만 클릭 가능)
+</br>
 [소연]</br>- 레이아웃 구성과 페이지 이동 기능 구현</br>
 </pre>
 
@@ -67,7 +69,8 @@
 
 <pre>
 <strong> ✨공간예약 </strong> </br>
-[지현]</br>- 설명텍스트 </br>
+[지현]</br>- swiper.js를 이용한 슬라이드 </br>- 예약하기 버튼 클릭 시 구글폼 이동 </br>- 반응형 적용 (레이아웃 및 폰트 사이즈 변경)
+ </br>
 </pre>
 
 |마이페이지|프로젝트 리스트|
@@ -77,7 +80,8 @@
 
 <pre>
 <strong> ✨마이페이지 </strong> </br>
-[지현]</br>- 설명텍스트 </br>
+[지현]</br>- localStorage를 활용하여 브라우저에 저장 된 input 입력 값을 보여줌(이름, 성별, 캠퍼스 등)</br>- 백그라운드, 팀프로젝트 희망사항 card container 바깥 영역은 overflow hidden, 내부 영역은 가로 스크롤 적용</br>- 반응형 적용 (레이아웃 및 폰트 사이즈 변경)
+ </br>
 </pre>
 
 <pre>
