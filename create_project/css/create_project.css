@@ -278,9 +278,12 @@ main section .preview {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 main section .preview .preview_tit {
+  text-align: center;
   color: #fff;
+  word-break: break-all;
 }
 main section .input__title {
   width: 282px;
