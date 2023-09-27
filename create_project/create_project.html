@@ -41,7 +41,7 @@
             <div class="flex_box_row">
               <div class="select_box flex_item">
                 <p class="card_title">작업 공간</p>
-                <div class="dropdown_btn">
+                <div class="dropdown_btn place_select_btn">
                   <input
                     type="text"
                     class="dropdown_btn_input"
@@ -132,13 +132,17 @@
               <ul class="recruit_position_list"></ul>
               <div class="flex_box_row">
                 <div class="select_box flex_item">
-                  <div class="dropdown_btn">
-                    <input
-                      type="text"
-                      class="role_input dropdown_btn_input"
-                      placeholder="포지션을 선택해주세요"
-                    />
-                    <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                  <!-- wrap 만들기 -->
+                  <div class="dropdown_btn_wrap">
+                    <div class="dropdown_btn role_select_btn">
+                      <input
+                        type="text"
+                        class="role_input dropdown_btn_input"
+                        placeholder="포지션을 선택해주세요"
+                      />
+                      <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                    </div>
+                    <p class="role_input_alert">이곳을 클릭해 포지션을 선택해주세요</p>
                   </div>
                   <!-- <div class="auto_complete"></div> -->
                   <ul class="dropdown_list role_list">
@@ -169,14 +173,32 @@
         <section>
           <p class="section_title">프로젝트 대표 이미지를 설정해주세요.</p>
           <p class="border_bottom"></p>
-          <label class="file_upload_box">
+          <div class="preview">
+            <p class="preview_tit">텍스트를 입력해주세요</p>
+          </div>
+          <input type="text" class="input__title box" placeholder="텍스트를 입력해주세요">
+          <div class="preview_btn_wrap flex_box_row">
+            <label class="file_upload_btn">
+              이미지 첨부
+              <!-- <img
+                class="preview_img"
+                src="../src/img/choose_file_img.png"
+                alt=""
+              /> -->
+              <input type="file" class="file_upload_input" accept="image/*" />
+            </label>
+            <div class="random__gradient">
+              랜덤 배경 변경
+            </div>
+          </div>
+          <!-- <label class="file_upload_box">
             <img
               class="preview_img"
               src="../src/img/choose_file_img.png"
               alt=""
             />
             <input type="file" class="file_upload_input" accept="image/*" />
-          </label>
+          </label> -->
         </section>
         <section>
           <p class="section_title">프로젝트에 대해 소개해주세요</p>
