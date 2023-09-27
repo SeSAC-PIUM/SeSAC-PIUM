@@ -95,11 +95,11 @@ section:last-child {
   background-color: #2da96e;
   color: var(--color-grayscale-100);
 }
-.dropdown_list li input {
+/* .dropdown_list li input {
   margin-left: 10px;
   height: 30px;
   width: 100%;
-}
+} */
 .date_btn {
   position: relative;
   width: 100%;
@@ -221,12 +221,12 @@ main section .sec_cont_wrap .select_box .flex_box_row {
 main section .sec_cont_wrap .select_box .flex_box_row .date_input_wrap {
   position: relative;
 }
-main section .sec_cont_wrap .select_box .dropdown_list li:last-child {
+/* main section .sec_cont_wrap .select_box .dropdown_list li:last-child {
   align-items: center;
 }
 main section .sec_cont_wrap .select_box .dropdown_list li:last-child input {
   padding-left: 10px;
-}
+} */
 main section .sec_cont_wrap .add_select_box .recruit_position_list li {
   margin-bottom: 12px;
 }
